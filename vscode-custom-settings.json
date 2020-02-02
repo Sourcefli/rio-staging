@@ -1,0 +1,241 @@
+"editor.tokenColorCustomizations": {
+    "[Abyss]": {
+        "keywords": "#73a2e9",
+        "types": "#52dff8",
+        "comments": "#727272",
+        "strings": "#ccb585",
+        "textMateRules": [{
+                "scope": "entity.name.tag",
+                "settings": {
+                    "foreground": "#216636",
+                }
+            }]
+            // "textMateRules": [
+            //     {
+            //         "scope": "entity.name.tag",
+            //         "settings": {
+            //             "foreground": "#7ea4df"
+            //         }
+            //     }
+            // ]
+    },
+    "comments": "#999999",
+    "textMateRules": [{
+            "name": "Comment",
+            "scope": [
+                "comment",
+                "punctuation.definition.comment"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#7a7a7a",
+            }
+        },
+        {
+            "name": "JS Objects",
+            "scope": [
+                "source.js",
+                "string.quoted.double.js",
+                "punctuation.definition.string.end.js"
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#7a7a7a",
+            }
+        },
+        {
+            "name": "JSON Values",
+            "scope": [
+                "string.quoted.double.js",
+                "source.js"
+            ],
+            "settings": {
+                "fontStyle": "none",
+                "foreground": "#1192c5",
+            }
+        },
+        {
+            "scope": "entity.name.function",
+            "settings": {
+                "foreground": "#dfd9a8"
+            }
+        },
+        {
+            "name": "JSON Values",
+            "scope": [
+                "meta.brace.curly.litobj.js",
+                "source.js"
+            ],
+            "settings": {
+                "fontStyle": "none",
+                "foreground": "#c75615",
+            }
+        },
+        {
+            "name": "Blade Text",
+            "scope": [
+                // "keyword.blade",
+                "text.html.php.blade"
+            ],
+            "settings": {
+                // "fontStyle": "italic",
+                "foreground": "#ecececad",
+            }
+        },
+        {
+            "name": "PHP Classes",
+            "scope": [
+                "entity.name.class.php",
+                "source.php"
+            ],
+            "settings": {
+                "fontStyle": "italic bold",
+                "foreground": "#496ad6",
+            }
+        },
+        {
+            "name": "PHP Methods in blade.php files",
+            "scope": [
+                "meta.method-call.static.php",
+                "punctuation.definition.arguments.begin.bracket.round.php",
+                "source.php"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#811b70"
+            }
+        },
+        {
+            "name": "PHP Methods in .php files",
+            "scope": [
+                "entity.name.function.php",
+                "meta.function.php",
+                "meta.class.body.php",
+                "meta.class.php",
+                "source.php",
+                "meta.embedded.block.php",
+                "text.html.php",
+            ],
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#99be6d"
+            }
+        },
+        {
+            "name": "PHP Typehints in .php files",
+            "scope": [
+                "storage.type.php",
+                "meta.function.parameter.typehinted.php",
+                "meta.function.parameters.php",
+                "meta.function.php",
+                "meta.class.body.php",
+                "meta.class.php",
+                "source.php",
+                "meta.embedded.block.php",
+                "text.html.php",
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#e6724f"
+            }
+        },
+        {
+            "name": "PHP Method Parenthesis",
+            "scope": [
+                "punctuation.definition.arguments.begin.bracket.round.php",
+                "meta.function-call.php",
+                "meta.class.body.php",
+                "meta.class.php",
+                "source.php",
+                "meta.embedded.block.php",
+                "text.html.php"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#e6724f"
+            }
+        },
+        {
+            "name": "PHP Class Names",
+            "scope": [
+                "entity.name.type.class.php",
+                "meta.class.php",
+                "source.php",
+                "meta.embedded.block.php",
+                "text.html.php"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#db930e"
+            }
+        },
+        {
+            "name": "HTML Tags",
+            "scope": [
+                "entity.name.tag"
+            ],
+            "settings": {
+                "fontStyle": "",
+                "foreground": "#069906"
+            }
+        },
+        {
+            "name": "entity.name.function",
+            "scope": [
+                "entity.name.function",
+                "entity.name.selector"
+            ],
+            "settings": {
+                "foreground": "#6de6e6",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Keyword Control",
+            "scope": [
+                "keyword.operator"
+            ],
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#b47e08"
+            }
+        },
+        {
+            "scope": "entity.other.attribute-name",
+            "settings": {
+                "fontStyle": "italic",
+                "foreground": "#fc5000"
+            }
+        },
+        // {
+        //     "name": "HTML Attributes",
+        //     "scope": [
+        //         "text.html.basic entity.other.attribute-name.html",
+        //         "entity.other.attribute-name"
+        //     ],
+        //     "settings": {
+        //         "fontStyle": "italic",
+        //         "foreground": "#855b0f"
+        //     }
+        // },
+        {
+            "scope": "variable.other",
+            "settings": {
+                "foreground": "#09ce34"
+            }
+        },
+        //     {
+        //         "scope": "support.function",
+        //         "settings": {
+        //             "fontStyle": "italic",
+        //             "foreground": "#dfd9a8"
+        //         }
+        //     },
+        //     {
+        //         "scope": "string",
+        //         "settings": {
+        //             "foreground": "#CE9178"
+        //         }
+        //     }
+    ]
+},

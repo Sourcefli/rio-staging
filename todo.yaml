@@ -1,0 +1,86 @@
+
+# ====================
+#         TODOs
+# ====================
+
+# ************* REFACTORS AFTER V1
+  - Refactor client-resoures.blade to loop through carrier data, which will minimize HTML content within file
+  - Use 'laravel/options' package as key/value store instead of config files
+
+
+# ************* INCLUDES
+
+
+# ************* TEMPLATES
+
+## LAYOUTS
+CREATE LAYOUTS:
+  # MAIN
+  # SIDEBAR
+
+##PAGES
+CREATE PAGES:
+  # Home
+  # About
+  - Services
+  - Retirement Services
+  - Client Resources
+  - Blog
+  - Contact
+
+FIX PAGES:
+  - 
+
+## INCLUDES
+...
+
+## PARTIALS
+...
+## SCHEMA
+    Entities:
+      - Business
+      - Each Service
+      - Local Business
+      - Website
+      - Products (maybe carriers?)
+      -
+
+## TRACKING SCRIPTS
+    ALL PAGES:
+      # Facebook pixel
+      # QTracker
+      # GAnalytics
+      # Custom Pixel
+
+
+## SOCIAL META
+...
+Facebook:
+  OG Tags:
+    - Home
+    - About
+    - Services
+    - Retirement Services
+    - Client Resources
+    - Blog
+    - Contact
+
+Twitter:
+  Twitter Cards:
+    - Home
+    - About
+    - Services
+    - Retirement Services
+    - Client Resources
+    - Blog
+    - Contact
+
+
+# ************* DATA.JSON
+
+Agent Data:
+  - team
+  - bios
+
+
+# ************* STATIC

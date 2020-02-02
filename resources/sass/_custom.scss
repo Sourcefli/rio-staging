@@ -1,0 +1,77 @@
+
+
+// Home HERO ONE Responsive Image Set
+$srcOneHeroImgXl: "../img/heros/lg-retirement-seniors-piggybacking.jpg";
+$srcOneHeroImgLg: "../img/heros/lg-retirement-seniors-piggybacking.jpg";
+$srcOneHeroImgMd: "../img/heros/md-retirement-seniors-piggybacking.jpg";
+$srcOneHeroImgSm: "../img/heros/sm-retirement-seniors-piggybacking.jpg";
+// Home HERO TWO Responsive Image Set
+$srcTwoHeroImgXl: "../img/heros/xl-financial-well-being-with-american-senior-benefits.png";
+$srcTwoHeroImgLg: "../img/heros/lg-financial-well-being-with-american-senior-benefits.png";
+$srcTwoHeroImgMd: "../img/heros/md-financial-well-being-with-american-senior-benefits.png";
+$srcTwoHeroImgSm: "../img/heros/sm-financial-well-being-with-american-senior-benefits.png";
+//Home HERO THREE Responsive Image Set
+$srcThreeHeroImgXl: "../img/heros/lg-caregiver-pushing-wheelchair-through-the-meadows.jpg";
+$srcThreeHeroImgLg: "../img/heros/lg-caregiver-pushing-wheelchair-through-the-meadows.jpg";
+$srcThreeHeroImgMd: "../img/heros/md-caregiver-pushing-wheelchair-through-the-meadows.jpg";
+$srcThreeHeroImgSm: "../img/heros/sm-caregiver-pushing-wheelchair-through-the-meadows.jpg";
+
+@media screen and (max-width: 560px) {
+    .responsiveHeroOne {
+        background-image: url($srcOneHeroImgSm) !important;
+    }
+    .responsiveHeroTwo {
+        background-image:linear-gradient(95deg, rgba(235, 231, 0, 0.102), rgba(0, 0, 0, 0.3)), url($srcTwoHeroImgSm) !important;
+    } 
+    .responsiveHeroThree {
+        background-image:linear-gradient(95deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url($srcThreeHeroImgSm) !important;
+    } 
+}
+
+// ======= SMALL
+// @media screen and (max-width: 767px) {   
+@media screen and (max-width: 767px) {   
+    #responsiveHeroOne {
+        background-image: url($srcOneHeroImgMd) !important;
+    }
+    #responsiveHeroTwo {
+        background-image:linear-gradient(95deg, rgba(235, 231, 0, 0.102), rgba(0, 0, 0, 0.3)), url($srcTwoHeroImgMd) !important;
+    } 
+    #responsiveHeroThree {
+        background-image:linear-gradient(95deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url($srcThreeHeroImgMd) !important;
+    } 
+}
+
+
+// ======= MEDIUM
+@media screen and (min-width: 768px) {      
+    #responsiveHeroOne {
+        background-image:linear-gradient(95deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url($srcOneHeroImgLg);
+    }
+    #responsiveHeroTwo {
+        background-image:linear-gradient(95deg, rgba(235, 231, 0, 0.102), rgba(0, 0, 0, 0.3)), url($srcTwoHeroImgLg);
+    } 
+    #responsiveHeroThree {
+        background-image:linear-gradient(95deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url($srcThreeHeroImgLg);
+    } 
+} 
+
+
+// ======= LARGE
+@media (min-width: 992px) {      
+    //
+}
+
+// ======= X-LARGE
+@media (min-width: 1200px) {    
+    #responsiveHeroOne {
+        background-image:linear-gradient(95deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url($srcOneHeroImgXl);
+    }
+    #responsiveHeroTwo {
+        background-image:linear-gradient(95deg, rgba(255, 253, 160, 0.102), rgba(0, 0, 0, 0.596)), url($srcTwoHeroImgXl);
+    } 
+    #responsiveHeroThree {
+        background-image:linear-gradient(95deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url($srcThreeHeroImgXl);
+        
+    } 
+}

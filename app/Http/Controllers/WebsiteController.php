@@ -81,7 +81,7 @@ class WebsiteController extends Controller
     */
     public function getBlogPage()
     {
-        return view('blog');
+        return view('blog-tmpl');
     }
 
     /*

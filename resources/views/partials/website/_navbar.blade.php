@@ -38,7 +38,7 @@
 </div>
 <!-- #end Topbar -->
 <!-- Navbar -->
-<div class="navbar navbar-primary">
+<div class="navbar navbar-primary is-sticky">
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="/">

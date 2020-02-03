@@ -27,10 +27,10 @@
                     @foreach ($serviceCardData as $i)
                         <div class="{{ $i["outerClass"] }}">
                             {{-- {# Service Card CONTENT #} --}}
-                            <div class="{{ $i["innerClass"] }}">
+                            <div class="{{ $i["innerClass"] }}" style="border-radius: 2px;box-shadow:0 10px 40px 0 rgba(0,0,0,.1);">
                                 <a href="{{ $i["href"] }}">
                                     <div class="{{ $i["photoClass"] }}">
-                                        <img src="{{ $i["fakeImg"] }}" alt="{{ $i["title"] }}" />
+                                        <img src="{{ $i["img"] }}" alt="{{ $i["title"] }}" />
                                         {{-- {# ^ CHANGE FOR PRODUCTION ^ #} --}}
                                     </div>
                                     <div class="{{ $i["contentClass"] }}">

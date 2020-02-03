@@ -27,7 +27,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam.</p>
                     </div>
                     <div class="col-sm-5 pad-l-md">
-                        <img src="image/photo-md-e.jpg" alt="">
+                        <img src="img/services/opt/opt-retirement-savings.jpg" alt="">
                     </div>
                 </div>
                 <div class="gaps size-lg"></div>
@@ -40,7 +40,7 @@
                         <h6>For a complete list of services, <a href="{{ config('sourcefli.siteData.nav.items.services.uri') }}">click here</a> or <a href="{{ config('sourcefli.siteData.nav.quote.uri') }}">get a quote now.</a></h6>
                     </div>
                     <div class="col-sm-5 pad-l-md">
-                        <img src="image/photo-md-a.jpg" alt="">
+                        <img src="img/services/opt/opt-mind-the-gap.jpg" alt="">
                     </div>
                 </div>
 

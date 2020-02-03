@@ -207,7 +207,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=medicare-services",
-            "img" => "img/services/",
+            "img" => "img/services/opt/opt-medicare-service-two.jpg",
             "fakeImg" => "image/photo-md-f.jpg"
         ],
         [
@@ -219,7 +219,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=final-expenses",
-            "img" => "img/services/",
+            "img" => "img/services/opt/opt-burial-protection.jpg",
             "fakeImg" => "image/photo-md-f.jpg"
         ],
         [
@@ -231,7 +231,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=income-protection",
-            "img" => "img/services/",
+            "img" => "img/services/opt/opt-asset-protection-two.png",
             "fakeImg" => "image/photo-md-f.jpg"
         ],
         [
@@ -243,7 +243,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=dental-vision",
-            "img" => "img/services/",
+            "img" => "img/services/opt/opt-dentist-service.png",
             "fakeImg" => "image/photo-md-f.jpg"
         ]
     ],

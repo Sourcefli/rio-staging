@@ -12,7 +12,7 @@ Route::get('/privacy', 'WebsiteController@getPrivacyPage')->name('privacyPage');
 Route::get('/sitemap', 'WebsiteController@getSitemapPage')->name('sitemapPage');
 
 // Blog Routes
-Route::get('/blog', 'PostController@getBlogPage')->name('blogPage');
+// Route::get('/blog', 'PostController@getBlogPage')->name('blogPage');
 //************ */ Run php artisan make:controller PostController -mr **********
 
 //Test S3
@@ -32,3 +32,10 @@ Route::get('/burial-preperation', 'WebsiteController@getBurialPreperationPage')-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('blog')->group(function () {
+    Route::get('/', 'BlogController@getPosts')->name('blog.index');
+    Route::middleware('Canvas\Http\Middleware\ViewThrottle')->get('{slug}', 'BlogController@findPostBySlug')->name('blog.post');
+    Route::get('tag/{slug}', 'BlogController@getPostsByTag')->name('blog.tag');
+    Route::get('topic/{slug}', 'BlogController@getPostsByTopic')->name('blog.topic');
+});

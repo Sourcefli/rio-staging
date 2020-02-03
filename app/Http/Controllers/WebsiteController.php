@@ -13,19 +13,6 @@ class WebsiteController extends Controller
     */
     public function getHomePage()
     {
-
-        // $setTitle = serviceCards.title %} 
-        // $setHtmlTitle = serviceCards.htmlTitle %} 
-        // $setSummary = serviceCards.summary %} 
-        // $setImgClass = serviceCards.photoClass %} 
-        // $setContentClass = serviceCards.contentClass %} 
-        // $setOuterClass = serviceCards.outerClass %} 
-        // $setInnerClass = serviceCards.innerClass %} 
-        // $setHref = serviceCards.href %} 
-        // $setImg = serviceCards.img %} 
-        // $setFakeImg = serviceCards.fakeImg %} 
-
-
         $serviceCardData = config('sourcefli.siteData.serviceCards');
         return view('home', compact('serviceCardData'));
     }

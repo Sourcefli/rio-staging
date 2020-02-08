@@ -9,7 +9,7 @@ Route::get('/client-resources', 'WebsiteController@getClientResourcesPage')->nam
 Route::get('/contact', 'WebsiteController@getContactPage')->name('contactPage');
 Route::get('/get-a-quote', 'WebsiteController@getGetAQuotePage')->name('getAQuotePage');
 Route::get('/privacy', 'WebsiteController@getPrivacyPage')->name('privacyPage');
-Route::get('/sitemap', 'WebsiteController@getSitemapPage')->name('sitemapPage');
+Route::get('/sitemap', 'ƒ@getSitemapPage')->name('sitemapPage');
 
 // Blog Routes
 // Route::get('/blog', 'PostController@getBlogPage')->name('blogPage');

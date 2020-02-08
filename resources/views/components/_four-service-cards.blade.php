@@ -52,7 +52,7 @@
     </div>
     <!-- End service cards content -->
     
-    <div class="section section-content section-pad no-pt">
+    {{-- <div class="section section-content section-pad no-pt">
         <!-- Text Below Service Cards -->
         <div class="container">
             <div class="content row">
@@ -65,6 +65,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- End Text below Service Cards -->
     

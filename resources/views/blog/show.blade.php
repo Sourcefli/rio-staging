@@ -84,7 +84,8 @@
             <hr>
 
             <p class="text-center font-italic pt-3 my-5">
-                {{ __('canvas::blog.buttons.canonical') }} <a href="{{ url($data['meta']['canonical_link']) }}" target="_blank" class="text-dark" rel="noopener">{{ parse_url($data['meta']['canonical_link'])['host'] }}</a>
+                {{-- {{ dd($data) }} --}}
+                {{ __('canvas::blog.buttons.canonical') }} <a href="{{ url($data['meta']['canonical_link']) }}" target="_blank" class="text-dark" rel="noopener">{{ parse_url($data['meta']['canonical_link']) }}</a>
             </p>
         </div>
     @endisset
@@ -133,3 +134,5 @@
         });
     </script>
 @endpush
+
+

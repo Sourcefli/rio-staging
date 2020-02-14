@@ -4,7 +4,7 @@ return array(
     // ["name" => "aetna", "smImg" => "img/carriers/opt-aetna-logo.jpg", ],
     "aetna" => [
         "name" => "Aetna",
-        "smImg" => "img/carriers/opt-aetna-logo.jpg",
+        "smImg" => "img/carriers/aetna-logo-sm.jpg",
         "generalSupport" => "1 (800) 872-3862",
         "customerSupport" => "1 (800) 358-8749",
         "supportUrl" => "https://www.aetna.com/individuals-families/member-rights-resources/member-services.html",
@@ -12,7 +12,7 @@ return array(
     ],
     "cigna" => [
         "name" => "Cigna",
-        "smImg" => "img/carriers/opt-cigna-medicare-coverage.jpg",
+        "smImg" => "img/carriers/cigna-logo-sm.jpg",
         "generalSupport" => "1 (800) 997-1654",
         "customerSupport" => "1 (866) 459-4272",
         "supportUrl" => "https://www.cigna.com/contact-us/",
@@ -20,7 +20,7 @@ return array(
     ],
     "mutualOfOmaha" => [
         "name" => "Mutual Of Omaha",
-        "smImg" => "img/carriers/opt-mutual-of-omaha-logo.jpg.png",
+        "smImg" => "img/carriers/mutual-of-omaha-logo-sm.png",
         "generalSupport" => "1 (800) 228-7104",
         "customerSupport" => "1 (800) 775-1000",
         "supportUrl" => "https://www.mutualofomaha.com/support/phone",
@@ -28,7 +28,7 @@ return array(
     ],
     "transamerica" => [
         "name" => "Transamerica",
-        "smImg" => "img/carriers/opt-transamerica-logo.jpg",
+        "smImg" => "img/carriers/transamerica-logo-sm.jpg",
         "generalSupport" => "1 (800) 797-2643",
         "customerSupport" => "1 (800) 797-2643",
         "supportUrl" => "https://www.transamerica.com/contact-us/",
@@ -36,7 +36,7 @@ return array(
     ],
     "humana" => [
         "name" => "Humana",
-        "smImg" => "img/carriers/opt-humana.jpg",
+        "smImg" => "img/carriers/humana-logo-sm.jpg",
         "generalSupport" => "1 (844) 330-7799",
         "customerSupport" => "1 (800) 457-4708",
         "supportUrl" => "https://www.humana.com/help",
@@ -44,7 +44,7 @@ return array(
     ],
     "unitedHealthcare" => [
         "name" => "Unitedhealthcare",
-        "smImg" => "img/carriers/opt-uhc-logo-280x110.jpg",
+        "smImg" => "img/carriers/united-healthcare-logo-sm.jpg",
         "generalSupport" => "1 (866) 414-1959",
         "customerSupport" => "1 (800) 523-5800",
         "supportUrl" => "https://www.uhc.com/contact-us",
@@ -52,7 +52,7 @@ return array(
     ],
     "aig" => [
         "name" => "AIG",
-        "smImg" => "img/carriers/opt-aig-logo.jpg",
+        "smImg" => "img/carriers/aig-logo-sm.jpg",
         "generalSupport" => "1 (800) 448-2542",
         "customerSupport" => "1 (800) 888-2452",
         "supportUrl" => "https://www.aig.com/individual/insurance/life/life-contact-us",
@@ -60,7 +60,7 @@ return array(
     ],
     "royalNeighbors" => [
         "name" => "Royal Neighbors of America",
-        "smImg" => "img/carriers/opt-royal-neighbors-of-america-logo.jpg",
+        "smImg" => "img/carriers/royal-neighbors-logo-sm.jpg",
         "generalSupport" => "1 (800) 627-4762",
         "customerSupport" => "1 (800) 627-4762",
         "supportUrl" => "https://www.royalneighbors.org/about-us/contact-us",

@@ -46,6 +46,42 @@ return [
                 "md" => "img/heros/lg-financial-well-being-with-american-senior-benefits.png",
                 "sm" => "img/heros/lg-financial-well-being-with-american-senior-benefits.png"
             ],
+        ],
+        "heroCopy" => [
+            "about" => "A message for the about page",
+            "services" => "A message for the services page",
+            "clientResources" => "A message for the client resources page",
+            "contact" => "A message for the contact page",
+            "quote" => "A message for the quotes page",
+            "blog" => "A message for the blog banner",
+            "faqs" => "A message for the faq banner",
+            "serviceDetails" => [
+                "wiseRetirement" => "A message for the wise retirement page",
+                "protectedInvestments" => "A message for the protected investments page",
+                "diversify" => "A message for the diversification page",
+                "theUnexpected" => "A message for the 'unexpected' page",
+                "medicare360" => "A message for the medicare360 page",
+                "burialPlanning" => "A message for the burial planning page"
+            ],
+            "fallback" => "A message that shows as a fallback"
+        ],
+        "heroInnerBannerCopy" => [
+            "about" => "A message for the about banner",
+            "services" => "A message for the services banner",
+            "clientResources" => "A message for the client resources banner",
+            "contact" => "A message for the contact banner",
+            "quote" => "A message for the quotes banner",
+            "blog" => "A message for the blog banner",
+            "faqs" => "A message for the FAQ banner",
+            "serviceDetails" => [
+                "wiseRetirement" => "A message for the wise retirement banner",
+                "protectedInvestments" => "A message for the protected investments banner",
+                "diversify" => "A message for the diversification banner",
+                "theUnexpected" => "A message for the 'unexpected' banner",
+                "medicare360" => "A message for the medicare360 banner",
+                "burialPlanning" => "A message for the burial planning banner"
+            ],
+            "fallback" => "A message that shows as a fallback"
         ]
     ]
 ];

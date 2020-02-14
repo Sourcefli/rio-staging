@@ -2,6 +2,8 @@ require("./gmaps");
 
 require("./bootstrap");
 
+var navbarMain = document.getElementById('navbar-main');
+
 (function ($) {
   "use strict";
 
@@ -101,21 +103,39 @@ require("./bootstrap");
       if ($win.width() > 991) {
         if ($scroll > $navm.top + 4) {
           if (!$is_sticky.hasClass("has-fixed")) {
-            $is_sticky.addClass("has-fixed");
+            $is_sticky.addClass("has-fixed add-shadow");
           }
         } else {
           if ($is_sticky.hasClass("has-fixed")) {
-            $is_sticky.removeClass("has-fixed");
+            $is_sticky.removeClass("has-fixed add-shadow");
           }
         }
       } else {
         if ($is_sticky.hasClass("has-fixed")) {
-          $is_sticky.removeClass("has-fixed");
+          $is_sticky.removeClass("has-fixed add-shadow");
         }
       }
     });
-  } // Slider
+  } //navbar shadow
 
+
+  var navbarMain = $("#navbar-main");
+  $(window).scroll(function () {
+    var y = window.scrollY;
+
+    if (y >= 49) {
+      // $(navbarMain).css('boxShadow', '2px 5px 10px rgba(0, 0, 0, 0.4)');
+      $(navbarMain).addClass('add-shadow');
+    }
+  });
+  $(window).scroll(function () {
+    var y = window.scrollY;
+
+    if (y <= 49) {
+      // $(navbarMain).css('boxShadow', '2px 5px 10px rgba(0, 0, 0, 0.4)');
+      $(navbarMain).removeClass('add-shadow');
+    }
+  }); // Slider
 
   var $slider = $("#slider");
 

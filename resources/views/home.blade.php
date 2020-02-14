@@ -13,12 +13,12 @@
     @include('components/_four-service-cards')
     @include('partials/website/_two-column-overviews')
 @endsection
-    
+
 @section('content')
-    
+
     @include('components/_carriers-we-represent')
-    @include('partials/website/_full-width-imgbg')
-    
+{{--    @include('partials/website/_full-width-imgbg')--}}
+
 @endsection
 
 @section('belowMain')
@@ -38,7 +38,7 @@
                 search = /([^&=]+)=?([^&]*)/g,
                 decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
                 query  = window.location.search.substring(1);
-        
+
             urlParams = {};
             while (match = search.exec(query))
                 urlParams[decode(match[1])] = decode(match[2]);

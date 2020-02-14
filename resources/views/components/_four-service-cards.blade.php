@@ -1,23 +1,23 @@
-{{-- !!! TODOs !!! #} 
-{# [] Change card image real link #} 
+{{-- !!! TODOs !!! #}
+{# [] Change card image real link #}
 
 
-{# ====== PAGE VARIABLES ===== #} 
-{# Shorten Loop Vars #} 
-{% set title = serviceCards.title %} 
-{% set hTitle = serviceCards.htmlTitle %} 
-{% set summary = serviceCards.summary %} 
-{% set imgClass = serviceCards.photoClass %} 
-{% set contentClass = serviceCards.contentClass %} 
-{% set outerClass = serviceCards.outerClass %} 
-{% set innerClass = serviceCards.innerClass %} 
-{% set href = serviceCards.href %} 
-{% set img = serviceCards.img %} 
-{% set fakeImg = serviceCards.fakeImg %} 
+{# ====== PAGE VARIABLES ===== #}
+{# Shorten Loop Vars #}
+{% set title = serviceCards.title %}
+{% set hTitle = serviceCards.htmlTitle %}
+{% set summary = serviceCards.summary %}
+{% set imgClass = serviceCards.photoClass %}
+{% set contentClass = serviceCards.contentClass %}
+{% set outerClass = serviceCards.outerClass %}
+{% set innerClass = serviceCards.innerClass %}
+{% set href = serviceCards.href %}
+{% set img = serviceCards.img %}
+{% set fakeImg = serviceCards.fakeImg %}
 {# ====== END VARIABLES ===== --}}
 
 
-    
+
     <div class="section section-services section-pad-md section-overup">
         <div class="container">
             <div class="content row">
@@ -51,7 +51,7 @@
         </div>
     </div>
     <!-- End service cards content -->
-    
+
     {{-- <div class="section section-content section-pad no-pt">
         <!-- Text Below Service Cards -->
         <div class="container">
@@ -67,4 +67,3 @@
         </div>
     </div> --}}
     <!-- End Text below Service Cards -->
-    

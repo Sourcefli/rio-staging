@@ -8,7 +8,7 @@
         <div class="content row">
 
             <div class="wide-sm center">
-                <h2>Reach Out To Our Team Anytime</h2>
+                <h2>The Team @ ASB Southwest</h2>
             </div>
             <div class="gaps size-lg"></div>
             <div class="row center-md">
@@ -22,7 +22,7 @@
                             <small class="team-phone">{{ $teamData["management"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["management"]["email"] }}" target="_blank">Send {{ $teamData["management"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["management"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["management"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -37,7 +37,7 @@
                             <small class="team-phone">{{ $teamData["rEdwards"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rEdwards"]["email"] }}" target="_blank">Send {{ $teamData["rEdwards"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["rEdwards"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rEdwards"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -53,7 +53,7 @@
                             <small class="team-phone">{{ $teamData["rSchlemmer"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rSchlemmer"]["email"] }}" target="_blank">Send {{ $teamData["rSchlemmer"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["rSchlemmer"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rSchlemmer"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -68,7 +68,7 @@
                             <small class="team-phone">{{ $teamData["sBantz"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["sBantz"]["email"] }}" target="_blank">Send {{ $teamData["sBantz"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["sBantz"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["sBantz"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -86,7 +86,7 @@
                             <small class="team-phone">{{ $teamData["rAtkins"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rAtkins"]["email"] }}" target="_blank">Send {{ $teamData["rAtkins"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["rAtkins"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rAtkins"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -101,7 +101,7 @@
                             <small class="team-phone">{{ $teamData["sLange"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["sLange"]["email"] }}" target="_blank">Send {{ $teamData["sLange"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["sLange"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["sLange"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -117,7 +117,7 @@
                             <small class="team-phone">{{ $teamData["rFink"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rFink"]["email"] }}" target="_blank">Send {{ $teamData["rFink"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["rFink"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rFink"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -132,7 +132,7 @@
                             <small class="team-phone">{{ $teamData["mCrain"]["role"] }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["mCrain"]["email"] }}" target="_blank">Send {{ $teamData["mCrain"]["first"] }} An Email</a>
+                                <a href="mailto:{{ $teamData["mCrain"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["mCrain"]["first"] }} An Email</a>
                             </span>
                         </p>
                     </div>

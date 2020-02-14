@@ -1,17 +1,36 @@
 <div class="section section-content section-pad bg-light">
-	<div class="container">
+	@php
+        // 3 Items within this section
+
+        //Item One - full width section with 2 column layout ... text on left - img on right
+        $SectionItemOneTitle = config('sourcefli.siteData.aboutPageData.heroHeading');
+        $SectionItemOneSummary = config('sourcefli.siteData.aboutPageData.fullRetirementServicesParagraph');
+        $SectionItemOneImg = "img/sections/opt-income-protection.png";
+
+        //Item Two - Image with text overlay
+        $SectionItemTwoTitle = '';
+        $SectionItemTwoSummary = '';
+        $SectionItemTwoImg = "img/sections/opt-medicare-card.jpg";
+
+        //Item Three - Image with text overlay
+        $SectionItemThreeTitle = '';
+        $SectionItemThreeSummary = '';
+        $SectionItemThreeImg = "img/sections/opt-retirement-savings.jpg";
+	@endphp
+
+    <div class="container">
 		<div class="content row">
 
 			<div class="box-s1 pd-x5 no-round">
 				<div class="row row-vm">
 					<div class="col-sm-6 res-m-bttm pad-r-md">
-						<h2 class="color-primary">Insurify offering Auto, Boat, Business, Car, Flood, Home &amp; Motorcylce Insurance.</h2>
-						<h4>Quality coverage at competitive rates.</h4>
-						<p>As a full-service independent insurance company sed ut perspiciatis unde omnis. Iseste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ollo inventore.</p>
-						<h5>We're helps you to making decisions about insurance.</h5>
+						<h2 class="color-primary"></h2>
+						<h4>{{ $SectionItemOneTitle }}</h4>
+						<p>{{ $SectionItemOneSummary }}</p>
+						<h5>We're here to help on every level</h5>
 					</div>
 					<div class="col-sm-6 pad-l-md">
-						<img src="image/photo-md-m.jpg" alt="">
+						<img src="{{ $SectionItemOneImg }}" alt="{{ $SectionItemOneTitle }}">
 					</div>
 				</div>
 			</div>
@@ -23,12 +42,11 @@
 					<div class="feature-imagebox has-bg light pd-x5">
 						<div class="block">
 							<span class="gaps size-lg"></span>
-							<h3>Switch to Insurify <strong>Home</strong> <br> <strong>Insurance</strong> and you could 
-								<br><strong>Save up 16%</strong>.</h3>
-								<a href="#" class="btn-link">Learn about homeowners</a>
+							<h3>Highly <strong>knowledgeable</strong> staff<strong> to walk you through</strong> the "Medicare maze".
+								<a href="/contact" class="btn-link">Sit with an agent</a>
 							</div>
 							<div class="imagebg">
-								<img src="image/photo-md-o.jpg" alt="">
+                                <img src="{{ $SectionItemTwoImg }}" alt="{{ $SectionItemTwoTitle }}">
 							</div>
 						</div>
 					</div>
@@ -36,16 +54,16 @@
 						<div class="feature-imagebox has-bg light pd-x5">
 							<div class="block">
 								<span class="gaps size-lg"></span>
-								<h3>Protecting <strong>Auto + Property</strong> <br> <strong>Insurance</strong> now you could <br><strong>Save 5% extra.</strong></h3>
-								<a href="#" class="btn-link">Learn about personal</a>
+								<h3>Protect the <strong>Assets</strong> <br> you've spent your <strong>entire life</strong> <br>working for.</h3>
+								<a href="/get-quote" class="btn-link">Speak to a retirement professional</a>
 							</div>
 							<div class="imagebg">
-								<img src="image/photo-md-p.jpg" alt="">
+                                <img src="{{ $SectionItemThreeImg }}" alt="{{ $SectionItemThreeTitle }}">
 							</div>
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 </div>

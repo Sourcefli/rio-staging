@@ -1,7 +1,13 @@
+
+@php
+    $sectionItemOneTitle = 'Our work lasts for generations!';
+    $sectionItemOneSummary = '';
+    $sectionItemOneBgImg = "img/sections/opt-full-family-in-forest-1920x980.jpg";
+@endphp
 <div class="section section-contents section-pad">
     <div class="container">
         <div class="content row">
-            
+
             <div class="row">
                 <div class="col-sm-6">
                     <h4 class="heading-sm-lead">Who We Are</h4>
@@ -10,11 +16,11 @@
                     <p><a href="#" class="btn-link focus">More about us</a></p>
                 </div>
             </div>
-            
+
 
         </div>
     </div>
     <div class="imagebg">
-        <img src="image/plx-air-a.jpg" alt="">
+        <img src="{{ $sectionItemOneBgImg }}" alt="{{ $sectionItemOneTitle }}">
     </div>
 </div>

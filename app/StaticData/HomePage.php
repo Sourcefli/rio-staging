@@ -1,15 +1,11 @@
 <?php
 
-namespace App;
+namespace App\StaticData;
 
-use Appstract\Options\Option;
-use Illuminate\Database\Eloquent\Model;
+class HomePage {
 
-class WebsiteData extends Model {
+    public static function threeCardSection() {
 
-    protected $guarded = [];
-
-    public static function setHomeData() {
 
         option([
 
@@ -32,15 +28,9 @@ class WebsiteData extends Model {
             "home_cardThreeTitle" => "Tools & Advice",
             "home_cardThreeSummary" => "Powerful calculations, decades of experience, and a full a support team",
             "home_cardThreeImg" => "img/sections/opt-income-protection.png",
+
+            "test" => "123",
         ]);
-
     }
 
-    public static function setAboutData() {
-//        option([
-//            "about_" => "",
-//            "about_" => "",
-//            "about_" => ""
-//        ]);
-    }
 }

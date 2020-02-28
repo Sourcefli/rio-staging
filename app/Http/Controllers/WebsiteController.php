@@ -16,12 +16,10 @@ class WebsiteController extends Controller
     public function getHomePage()
     {
 
-        $homeData = [
-            HomePage::threeColumnSectionOne(),
-            Homepage::threeColumnSectionTwo()
-        ];
+        //Set Home Page Static Data
+        HomePage::threeColumnSectionOne();
+        Homepage::threeColumnSectionTwo();
 
-//        dd($cardData);
         $serviceCardData = config('sourcefli.siteData.serviceCards');
 
         return view('home', [

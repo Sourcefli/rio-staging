@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
     "serviceList" => [
         "headline" => "One place for all things retirement..",
         "short" => [
@@ -66,4 +66,4 @@ return array(
             "readMoreLink" => "/burial-preperation"
         ]
     ]
-);
+];

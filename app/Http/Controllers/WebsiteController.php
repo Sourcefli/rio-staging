@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Appstract\Options\Option;
 use Illuminate\Http\Request;
+use App\WebsiteData;
 
 class WebsiteController extends Controller
 {
@@ -13,8 +15,17 @@ class WebsiteController extends Controller
     */
     public function getHomePage()
     {
+
+        $cardData = WebsiteData::setHomeData();
+
+
         $serviceCardData = config('sourcefli.siteData.serviceCards');
-        return view('home', compact('serviceCardData'));
+
+        return view('home', [
+            "serviceCardData" => $serviceCardData,
+            "cards" => $cardData
+        ]);
+
     }
 
     /*

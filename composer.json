@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "appstract/laravel-options": "^3.0",
         "calebporzio/laravel-helpers-file": "^0.1.2",
         "cnvs/canvas": "^5.1",
         "fideloper/proxy": "^4.0",

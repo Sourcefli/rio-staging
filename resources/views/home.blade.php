@@ -10,8 +10,10 @@
 @endsection
 
 @section('belowHero')
-    @include('components/_four-service-cards')
-    @include('partials/website/_two-column-overviews')
+{{--    @include('components/_four-service-cards')--}}
+@include('partials/website/_three-column-overviews')
+@include('partials/website/_single-card-with-text-column-overview')
+{{--@include('partials/website/_two-column-overviews')--}}
 @endsection
 
 @section('content')

@@ -12,3 +12,4 @@ if (! function_exists('carbon')) {
         return new Carbon($parseString, $tz);
     }
 }
+

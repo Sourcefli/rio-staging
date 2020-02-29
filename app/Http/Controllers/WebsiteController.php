@@ -37,6 +37,7 @@ class WebsiteController extends Controller
     {
         AboutPage::bannerData();
         AboutPage::bannerCtaData();
+        AboutPage::sectionOne();
         $serviceCardData = config('sourcefli.siteData.serviceCards');
         return view('about');
     }

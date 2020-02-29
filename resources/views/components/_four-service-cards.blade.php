@@ -1,23 +1,23 @@
-{{-- !!! TODOs !!! #} 
-{# [] Change card image real link #} 
+{{-- !!! TODOs !!! #}
+{# [] Change card image real link #}
 
 
-{# ====== PAGE VARIABLES ===== #} 
-{# Shorten Loop Vars #} 
-{% set title = serviceCards.title %} 
-{% set hTitle = serviceCards.htmlTitle %} 
-{% set summary = serviceCards.summary %} 
-{% set imgClass = serviceCards.photoClass %} 
-{% set contentClass = serviceCards.contentClass %} 
-{% set outerClass = serviceCards.outerClass %} 
-{% set innerClass = serviceCards.innerClass %} 
-{% set href = serviceCards.href %} 
-{% set img = serviceCards.img %} 
-{% set fakeImg = serviceCards.fakeImg %} 
+{# ====== PAGE VARIABLES ===== #}
+{# Shorten Loop Vars #}
+{% set title = serviceCards.title %}
+{% set hTitle = serviceCards.htmlTitle %}
+{% set summary = serviceCards.summary %}
+{% set imgClass = serviceCards.photoClass %}
+{% set contentClass = serviceCards.contentClass %}
+{% set outerClass = serviceCards.outerClass %}
+{% set innerClass = serviceCards.innerClass %}
+{% set href = serviceCards.href %}
+{% set img = serviceCards.img %}
+{% set fakeImg = serviceCards.fakeImg %}
 {# ====== END VARIABLES ===== --}}
 
 
-    
+
     <div class="section section-services section-pad-md section-overup">
         <div class="container">
             <div class="content row">
@@ -27,10 +27,10 @@
                     @foreach ($serviceCardData as $i)
                         <div class="{{ $i["outerClass"] }}">
                             {{-- {# Service Card CONTENT #} --}}
-                            <div class="{{ $i["innerClass"] }}">
+                            <div class="{{ $i["innerClass"] }}" style="border-radius: 2px;box-shadow:0 10px 40px 0 rgba(0,0,0,.1);">
                                 <a href="{{ $i["href"] }}">
                                     <div class="{{ $i["photoClass"] }}">
-                                        <img src="{{ $i["fakeImg"] }}" alt="{{ $i["title"] }}" />
+                                        <img src="{{ $i["img"] }}" alt="{{ $i["title"] }}" />
                                         {{-- {# ^ CHANGE FOR PRODUCTION ^ #} --}}
                                     </div>
                                     <div class="{{ $i["contentClass"] }}">
@@ -51,8 +51,8 @@
         </div>
     </div>
     <!-- End service cards content -->
-    
-    <div class="section section-content section-pad no-pt">
+
+    {{-- <div class="section section-content section-pad no-pt">
         <!-- Text Below Service Cards -->
         <div class="container">
             <div class="content row">
@@ -65,6 +65,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- End Text below Service Cards -->
-    

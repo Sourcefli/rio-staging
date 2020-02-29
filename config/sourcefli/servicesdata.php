@@ -1,13 +1,13 @@
 <?php
 
-return array(
+return [
     "serviceList" => [
-        "headline" => "One place for all things retirement..",
+        "headline" => "One place for all options you may be looking for...",
         "short" => [
-            "Medicare Options",
-            "Final Expense Planning",
-            "Income Planning And Protection",
-            "Dental &amp; Vision Comparisons"
+            "Medicare Supplements & Advantage",
+            "Final expense coverage, regardless of your health",
+            "Income planning and strategies",
+            "Dental &amp; Vision comparisons"
         ],
         "full" => [
             "Medicare Enrollment",
@@ -16,25 +16,33 @@ return array(
             "Policy Reviews",
             "Risk Analysis",
             "Coverage Quotes"
+        ],
+        "description" => [
+            "Medicare Enrollment summary",
+            "Annual Review summary",
+            "Coverage Review summary",
+            "Policy Reviews summary",
+            "Risk Analysis summary",
+            "Coverage Quotes summary"
         ]
     ],
     "servicesRowOne" => [
         "wiseRetirement" => [
             "heading" => "Wise Retirement",
             "summary" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, nesciunt.",
-            "cardImg" => "http://placehold.it/368x244",
+            "cardImg" => "img/services/sm-investing-trend-chart-368x245.jpg",
             "readMoreLink" => "/wise-retirement"
         ],
         "protectedInvestments" => [
             "heading" => "Protected Investments",
             "summary" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quia?",
-            "cardImg" => "http://placehold.it/368x244",
+            "cardImg" => "img/services/sm-money-saving-parent.jpg",
             "readMoreLink" => "/protected-investments"
         ],
         "diversifyYourNestegg" => [
             "heading" => "Diversify Your Nest Egg",
             "summary" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, enim!",
-            "cardImg" => "http://placehold.it/368x244",
+            "cardImg" => "img/services/sm-golden-eggs-diversification.jpg",
             "readMoreLink" => "/diversify-your-nestegg"
         ]
     ],
@@ -42,20 +50,20 @@ return array(
         "expectTheUnexpected" => [
             "heading" => "Expect The Unexpected",
             "summary" => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, molestias.",
-            "cardImg" => "http://placehold.it/368x244",
+            "cardImg" => "img/services/sm-multiple-decisions.jpg",
             "readMoreLink" => "/expect-the-unexpected"
         ],
         "medicare360" => [
             "heading" => "Medicare 360",
             "summary" => "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, aspernatur!",
-            "cardImg" => "http://placehold.it/368x244",
+            "cardImg" => "img/services/sm-medicare-magnified.jpg",
             "readMoreLink" => "/medicare360"
         ],
         "burialPreperation" => [
-            "heading" => "Burial Planning and Preperation",
+            "heading" => "Burial Planning &amp; Preparation",
             "summary" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, repellendus.",
-            "cardImg" => "http://placehold.it/368x244",
+            "cardImg" => "img/services/sm-kid-against-glass-368x245.jpg",
             "readMoreLink" => "/burial-preperation"
         ]
     ]
-);
+];

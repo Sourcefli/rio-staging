@@ -11,6 +11,9 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.browserSync("http://rio-laravel.test/").options({
-    processCssUrls: false
-});
+mix.sass("resources/sass/app.scss", "public/css/admin.css")
+    .babel("resources/js/app.js", "public/js/admin.js")
+    .browserSync("http://rio-laravel.test/")
+    .options({
+        processCssUrls: false
+    });

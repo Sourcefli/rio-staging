@@ -5,8 +5,8 @@
             <div class="content row">
 
                 <div class="cta-sameline">
-                    <h3>Commercial Insurance / Personal Insurance</h3>
-                    <p>Don't wait until it's too late. Contact for all of your personal and commercial insurance.</p>
+                    <h3>Full Retirement Services</h3>
+                    <p>All options we provide are always available to you at no cost.</p>
                     <a class="btn btn-outline" href="{{ route('getAQuotePage') }}">Get A Quote</a>
                 </div>
 

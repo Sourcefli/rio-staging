@@ -2,13 +2,14 @@
     $hqData = config('sourcefli.companyData.hqData');
     $config = config('sourcefli.responsiveImagesData.ImgSizes');
     $footer = config('sourcefli.siteData.footer');
+    $links = config('sourcefli.siteData.footer.serviceLinks');
     $social = config('sourcefli.siteData');
+    $nav = config('sourcefli.siteData');
 @endphp
 
 <div class="footer-widget section-pad-md">
     <div class="container">
         <div class="row">
-
             <div class="widget-row row">
                 <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
                     <!-- Each Widget -->
@@ -16,12 +17,12 @@
                         <h5 class="wgs-title">Our Services</h5>
                         <div class="wgs-content">
                             <ul class="menu">
-                                <li><a href="#">Homeowner's insurance</a></li>
-                                <li><a href="#">Personal Insurance</a></li>
-                                <li><a href="#">Auto Insurance</a></li>
-                                <li><a href="#">Commercial Insurance</a></li>
-                                <li><a href="#">Life &amp; Health Insurance</a></li>
-                                <li><a href="#">Renter's Insurance</a></li>
+                                <li><a href="{!! $links["diversify"]["uri"] !!}">{!! $links["diversify"]["name"] !!}</a></li>
+                                <li><a href="{!! $links["burial"]["uri"] !!}">{!! $links["burial"]["name"] !!}</a></li>
+                                <li><a href="{!! $links["unexpected"]["uri"] !!}">{!! $links["unexpected"]["name"] !!}</a></li>
+                                <li><a href="{!! $links["medicare"]["uri"] !!}">{!! $links["medicare"]["name"] !!}</a></li>
+                                <li><a href="{!! $links["wise"]["uri"] !!}">{!! $links["wise"]["name"] !!}</a></li>
+                                <li><a href="{!! $links["investments"]["uri"] !!}">{!! $links["investments"]["name"] !!}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -33,12 +34,11 @@
                         <h5 class="wgs-title">Quick Links</h5>
                         <div class="wgs-content">
                             <ul class="menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="testimonial.html">Testimonial</a></li>
-                                <li><a href="services.html">Client Resources</a></li>
-                                <li><a href="news.html">Our Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                @foreach ($nav["nav"]["items"] as $navItem)
+                                    <li>
+                                        <a href="{{ $navItem["uri"] }}">{{ $navItem["title"] }}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -62,8 +62,8 @@
                     <div class="wgs wgs-footer">
                         <div class="wgs-content">
                             <div class="footer-logo">
-                                <img src="{{ $footer["img"]["srcLg"] }}" 
-                                    srcset="{{ $footer["img"]["srcsetLg"] }}" 
+                                <img src="{{ $footer["img"]["srcLg"] }}"
+                                    srcset="{{ $footer["img"]["srcsetLg"] }}"
                                     alt="{{ $hqData["fullName"] }}">
                             </div>
                             <ul class="contact-info">

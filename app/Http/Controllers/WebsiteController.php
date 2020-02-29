@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\StaticData\AboutPage;
+use App\StaticData\HomePage;
+use Appstract\Options\Option;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -14,20 +17,16 @@ class WebsiteController extends Controller
     public function getHomePage()
     {
 
-        // $setTitle = serviceCards.title %} 
-        // $setHtmlTitle = serviceCards.htmlTitle %} 
-        // $setSummary = serviceCards.summary %} 
-        // $setImgClass = serviceCards.photoClass %} 
-        // $setContentClass = serviceCards.contentClass %} 
-        // $setOuterClass = serviceCards.outerClass %} 
-        // $setInnerClass = serviceCards.innerClass %} 
-        // $setHref = serviceCards.href %} 
-        // $setImg = serviceCards.img %} 
-        // $setFakeImg = serviceCards.fakeImg %} 
-
+        //Set Home Page Static Data
+        HomePage::sectionOne();
+        Homepage::sectionTwo();
 
         $serviceCardData = config('sourcefli.siteData.serviceCards');
-        return view('home', compact('serviceCardData'));
+
+        return view('home', [
+            "serviceCardData" => $serviceCardData,
+        ]);
+
     }
 
     /*
@@ -36,6 +35,9 @@ class WebsiteController extends Controller
     */
     public function getAboutPage()
     {
+        AboutPage::bannerData();
+        AboutPage::bannerCtaData();
+        AboutPage::sectionOne();
         $serviceCardData = config('sourcefli.siteData.serviceCards');
         return view('about');
     }
@@ -81,7 +83,7 @@ class WebsiteController extends Controller
     */
     public function getBlogPage()
     {
-        return view('blog');
+        return view('blog-tmpl');
     }
 
     /*

@@ -5,10 +5,10 @@
         @if ( config('app.env') === 'production' )
             @include('partials/website/_async-tracking-master')
         @endif
-        
+
         {{-- MASTER Open Graph File for all pages  --}}
         {{-- @include('../../partials/website/schema.org/_master-schema') --}}
-        
+
         @if (config('app.env') === 'production')
             <script type="application/ld+json">
                 {
@@ -60,7 +60,7 @@
 
         {{-- Social Meta Injection --}}
         @yield('socialMeta')
-        
+
         {{-- TITLE Injection  --}}
         <title>{{ config('sourcefli.companyData.hqData.abbr') }} | @yield('title', 'American Senior Benefits')</title>
 
@@ -78,13 +78,20 @@
         {{-- <link rel="stylesheet" type="text/css" href="css/app.css" /> --}}
         <link rel="stylesheet" type="text/css" href="css/app.css" />
 
+        {{-- smooth scroll everywhere--}}
+        <style>
+            * {
+                scroll-behavior: smooth;
+            }
+        </style>
+
         {{-- EXTRA CSS Injection --}}
         @yield('extraCss')
     </head>
 
     {{-- Body Start --}}
     <body class="site-body style-v1">
-        <header class="site-header header-s1 is-sticky">
+        <header id="navbar-main" class="site-header header-s1 is-sticky is-transparent">
             {{-- Navbar Injection --}}
             @include('partials/website/_navbar')
 
@@ -93,11 +100,11 @@
         </header>
 
         @yield('belowHero')
-        
+
         @yield('content')
-        
+
         @yield('belowMain')
-        
+
         @yield('preFooter')
 
         @include('partials/website/_footer')
@@ -109,9 +116,10 @@
         <script src="js/gmaps.js"></script>
         <script src="js/script.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/admin.js"></script>
 
         @yield('extraJs')
-        
+
         {{-- SYNC TRACKING CODES if in PRODUCTION  --}}
         @if ( config('app.env') === 'production' )
             @include('partials/website/_sync-tracking-master')

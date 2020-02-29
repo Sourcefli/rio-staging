@@ -1,8 +1,8 @@
 
 
 @php
-    $nav = config('sourcefli.siteData');    
-    $quoteNav = config('sourcefli.siteData.nav.quote');    
+    $nav = config('sourcefli.siteData');
+    $quoteNav = config('sourcefli.siteData.nav.items.quote');
     $hqData = config('sourcefli.companyData.hqData');
     $config = config('sourcefli.responsiveImagesData.ImgSizes');
     $pages = config('sourcefli.siteData.nav.items');
@@ -17,9 +17,9 @@
             </div>
             <div class="top-aside top-right clearfix">
                 <ul class="social clearfix hidden-xs">
-                    <li><a href="{{ $nav["facebook"]["url"] }}" class="{{ $nav["facebook"]["icon"] }}"></a></li>
-                    <li><a href="{{ $nav["twitter"]["url"] }}" class="{{ $nav["twitter"]["icon"] }}"></a></li>
-                    <li><a href="{{ $nav["linkedIn"]["url"] }}" class="{{ $nav["linkedIn"]["icon"] }}"></a></li>
+                    <li><a href="{{ $nav["facebook"]["url"] }}" class="{{ $nav["facebook"]["icon"] }}" style="color:lightgrey;"></a></li>
+                    <li><a href="{{ $nav["twitter"]["url"] }}" class="{{ $nav["twitter"]["icon"] }}" style="color:lightgrey;"></a></li>
+                    <li><a href="{{ $nav["linkedIn"]["url"] }}" class="{{ $nav["linkedIn"]["icon"] }}" style="color:lightgrey;"></a></li>
                 </ul>
                 <ul class="top-contact clearfix">
                     <li class="t-phone t-phone1">

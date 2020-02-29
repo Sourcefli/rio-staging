@@ -23,15 +23,20 @@ return array(
                 "uri" => "/client-resources",
                 "url" => "http://retirementinsuranceoptions.com/client-resources"
             ],
-            "blog" => [
-                "title" => "Blog",
-                "uri" => "/blog",
-                "url" => "http://retirementinsuranceoptions.com/blog"
-            ],
+//            "blog" => [
+//                "title" => "Blog",
+//                "uri" => "/blog",
+//                "url" => "http://retirementinsuranceoptions.com/blog"
+//            ],
             "contact" => [
                 "title" => "Contact",
                 "uri" => "/contact",
                 "url" => "http://retirementinsuranceoptions.com/contact"
+            ],
+            "quote" => [
+                "title" => "Get A Quote",
+                "uri" => "/get-a-quote",
+                "url" => "/get-a-quote"
             ]
         ],
         "img" => [
@@ -41,11 +46,6 @@ return array(
             "srcsetMd" => "img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png 326w",
             "srcLg" => "img/logos/asbsw-cursive-512x191.png",
             "srcsetLg" => "img/logos/asbsw-cursive-512x191.png 456w"
-        ],
-        "quote" => [
-            "title" => "Get A Quote",
-            "uri" => "/get-a-quote",
-            "url" => "http://retirementinsuranceoptions.com/get-a-quote"
         ]
     ],
     "footer" => [
@@ -53,32 +53,32 @@ return array(
             "home" => [
                 "title" => "Home",
                 "uri" => "/",
-                "url" => "http://retirementinsuranceoptions.com/"
+                "url" => "/"
             ],
             "about" => [
                 "title" => "About Us",
                 "uri" => "/about",
-                "url" => "http://retirementinsuranceoptions.com/about"
+                "url" => "/about"
             ],
             "services" => [
                 "title" => "Retirement Services",
                 "uri" => "/services",
-                "url" => "http://retirementinsuranceoptions.com/services"
+                "url" => "/services"
             ],
             "clientResources" => [
                 "title" => "Client Resources",
                 "uri" => "/client-resources",
-                "url" => "http://retirementinsuranceoptions.com/client-resources"
+                "url" => "/client-resources"
             ],
             "blog" => [
                 "title" => "Blog",
                 "uri" => "/blog",
-                "url" => "http://retirementinsuranceoptions.com/blog"
+                "url" => "/blog"
             ],
             "contact" => [
                 "title" => "Contact",
                 "uri" => "/contact",
-                "url" => "http://retirementinsuranceoptions.com/contact"
+                "url" => "/contact"
             ]
         ],
         "img" => [
@@ -91,6 +91,32 @@ return array(
             "srcLg" => "img/logos/white-version/asbsw-white-cursive-512x191.png",
             "srcsetLg" => "img/logos/white-version/asbsw-white-cursive-512x191.png 456w",
             "sizesLg" => "(min-width: 769px) 456px"
+        ],
+        "serviceLinks" => [
+            "diversify" => [
+                "name" => "Diversifying Your Assets",
+                "uri" => "/diversify-your-nestegg",
+            ],
+            "burial" => [
+                "name" => "Preparing for Burial",
+                "uri" => "/burial-preparation"
+            ],
+            "unexpected" => [
+                "name" => "Plan for the Unexpected",
+                "uri" => "/expect-the-unexpected"
+            ],
+            "medicare" => [
+                "name" => "Full Medicare Services",
+                "uri" => "/medicare360"
+            ],
+            "wise" => [
+                "name" => "Retiring Wise",
+                "uri" => "/wise-retirement"
+            ],
+            "investments" => [
+                "name" => "Zero-risk Retirement",
+                "uri" => "/protected-investments"
+            ],
         ]
     ],
     "partials" => [
@@ -207,7 +233,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=medicare-services",
-            "img" => "img/services/",
+            "img" => "img/sections/opt-medicare-service-two.jpg",
             "fakeImg" => "image/photo-md-f.jpg"
         ],
         [
@@ -219,7 +245,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=final-expenses",
-            "img" => "img/services/",
+            "img" => "img/sections/opt-burial-protection.jpg",
             "fakeImg" => "image/photo-md-f.jpg"
         ],
         [
@@ -231,7 +257,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=income-protection",
-            "img" => "img/services/",
+            "img" => "img/sections/opt-asset-protection-two.png",
             "fakeImg" => "image/photo-md-f.jpg"
         ],
         [
@@ -243,7 +269,7 @@ return array(
             "photoClass" => "fbox-photo",
             "contentClass" => "fbox-content",
             "href" => "/service-details?title=dental-vision",
-            "img" => "img/services/",
+            "img" => "img/sections/opt-dentist-service.png",
             "fakeImg" => "image/photo-md-f.jpg"
         ]
     ],

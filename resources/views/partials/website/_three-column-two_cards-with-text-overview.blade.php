@@ -31,12 +31,12 @@
                     <div class="feature boxed">
                         <a href="#">
                             <div class="fbox-photo">
-                                <img src="{{ option('home_cardOneImg') }}" alt="{{ option('home_cardOneTitle') }}">
+                                <img src="{{ option('home_section1_colOneImg') }}" alt="{{ option('home_section1_colOneTitle') }}">
                             </div>
                             <div class="fbox-over">
-                                <h3 class="title">{{ option('home_cardOneTitle') }}</h3>
+                                <h3 class="title">{{ option('home_section1_colOneTitle') }}</h3>
                                 <div class="fbox-content">
-                                    <p> {{ option('home_cardOneSummary') }} </p>
+                                    <p> {{ option('home_section1_colOneSummary') }} </p>
                                 </div>
 
                             </div>
@@ -49,12 +49,12 @@
                     <div class="feature boxed">
                         <a href="#">
                             <div class="fbox-photo">
-                                <img src="{{ option('home_cardTwoImg') }}" alt="{{ option('home_cardTwoTitle') }}">
+                                <img src="{{ option('home_section1_colTwoImg') }}" alt="{{ option('home_section1_colTwoTitle') }}">
                             </div>
                             <div class="fbox-over">
-                                <h3 class="title text-center">{{ option('home_cardTwoTitle') }}</h3>
-                                <div class="fbox-content text-center">
-                                    <p>{{ option('home_cardTwoSummary') }}</p>
+                                <h3 class="title">{{ option('home_section1_colTwoTitle') }}</h3>
+                                <div class="fbox-content">
+                                    <p>{{ option('home_section1_colTwoSummary') }}</p>
                                 </div>
                             </div>
                         </a>
@@ -66,12 +66,12 @@
                     <div class="feature boxed">
                         <a href="#">
                             <div class="fbox-photo">
-                                <img src="{{ option('home_cardThreeImg') }}" alt="{{ option('home_cardThreeTitle') }}">
+                                <img src="{{ option('home_section1_colThreeImg') }}" alt="{{ option('home_section1_colThreeTitle') }}">
                             </div>
                             <div class="fbox-over">
-                                <h3 class="title text-center">{{ option('home_cardThreeTitle') }}</h3>
-                                <div class="fbox-content text-center">
-                                    <p>{{ option('home_cardThreeSummary') }}</p>
+                                <h3 class="title">{{ option('home_section1_colThreeTitle') }}</h3>
+                                <div class="fbox-content">
+                                    <p>{{ option('home_section1_colThreeSummary') }}</p>
                                 </div>
                             </div>
                         </a>

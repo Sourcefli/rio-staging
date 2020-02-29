@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\StaticData\AboutPage;
 use App\StaticData\HomePage;
 use Appstract\Options\Option;
 use Illuminate\Http\Request;
@@ -17,8 +18,8 @@ class WebsiteController extends Controller
     {
 
         //Set Home Page Static Data
-        HomePage::threeColumnSectionOne();
-        Homepage::threeColumnSectionTwo();
+        HomePage::sectionOne();
+        Homepage::sectionTwo();
 
         $serviceCardData = config('sourcefli.siteData.serviceCards');
 
@@ -34,6 +35,8 @@ class WebsiteController extends Controller
     */
     public function getAboutPage()
     {
+        AboutPage::bannerData();
+        AboutPage::bannerCtaData();
         $serviceCardData = config('sourcefli.siteData.serviceCards');
         return view('about');
     }

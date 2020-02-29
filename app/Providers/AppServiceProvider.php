@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Carrier;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        $carriers = Carrier::get();
+        View::share('carriers', $carriers);
     }
 }

@@ -2,12 +2,12 @@
 
 return [
     "serviceList" => [
-        "headline" => "One place for all things retirement..",
+        "headline" => "One place for all options you may be looking for...",
         "short" => [
-            "Medicare Options",
-            "Final Expense Planning",
-            "Income Planning And Protection",
-            "Dental &amp; Vision Comparisons"
+            "Medicare Supplements & Advantage",
+            "Final expense coverage, regardless of your health",
+            "Income planning and strategies",
+            "Dental &amp; Vision comparisons"
         ],
         "full" => [
             "Medicare Enrollment",

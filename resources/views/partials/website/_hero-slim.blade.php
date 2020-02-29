@@ -39,9 +39,8 @@
         <div class="container">
             <div class="content row">
                 <div class="banner-text">
-                    <h1 class="page-title">Individual &amp; Family <br>
-                    Health Insurance</h1>
-                    <p class="lead">Health insurance plans that fit you and your family.</p>
+                    <h1 class="page-title">{{ option('about_banner_heading') }}<br> /* ?? */</h1>
+                    <p class="lead">{{ option('about_banner_subheading') }}</p>
                 </div>
                 <div class="banner-sider">
                     <div class="boxed boxed-w">

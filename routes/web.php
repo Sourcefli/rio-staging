@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Storage;
 
+Route::get('/imgs', function () {
+    return \App\OptionsQuery::getImages();
+});
+
 Route::get('/', 'WebsiteController@getHomePage');
 Route::get('/about', 'WebsiteController@getAboutPage')->name('aboutPage');
 Route::get('/services', 'WebsiteController@getServicesPage')->name('servicesPage');

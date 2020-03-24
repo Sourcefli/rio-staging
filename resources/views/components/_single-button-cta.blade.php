@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="imagebg bg-image-loaded" style="background-image: url(../img/city/vegas-flyover-1506x768.jpeg);">
+    <div class="imagebg bg-image-loaded" style="background-image: url(../img/city/vegas-flyover-1506x768.jpeg); opacity: 0.4;">
         <img src="../img/city/vegas-flyover-1506x768.jpeg" alt="">
     </div>
 </div>

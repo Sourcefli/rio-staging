@@ -15,14 +15,14 @@
                 <div class="col-lg-3 col-sm-6 res-s-bttm">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["management"]["qualifications"] }}
+                            {{ option("mgmt_qualifications") }}
                         </h6>
-                        <h5>{{ $teamData["management"]["fullName"] }}</h5>
+                        <h5>{{ option("mgmt_fullName") }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["management"]["role"] }}</small>
+                            <small class="team-phone">{{ option("mgmt_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["management"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["management"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("mgmt_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("mgmt_first") }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -30,14 +30,14 @@
                 <div class="col-lg-3 col-sm-6 res-s-bttm">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["rEdwards"]["qualifications"] }}
+                            {{ option("richardE_qualifications") }}
                         </h6>
-                        <h5>{{ $teamData["rEdwards"]["fullName"] }}</h5>
+                        <h5>{{ option("richardE_fullName") }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["rEdwards"]["role"] }}</small>
+                            <small class="team-phone">{{ option("richardE_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rEdwards"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rEdwards"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("richardE_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("richardE_first") }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -46,14 +46,14 @@
                 <div class="col-lg-3 col-sm-6 res-s-bttm">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["rSchlemmer"]["qualifications"] }}
+                            {{ option('richS_qualifications') }}
                         </h6>
-                        <h5>{{ $teamData["rSchlemmer"]["fullName"] }}</h5>
+                        <h5>{{ option('richS_fullName') }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["rSchlemmer"]["role"] }}</small>
+                            <small class="team-phone">{{ option("richS_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rSchlemmer"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rSchlemmer"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("richS_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("richS_first") }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -61,14 +61,14 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["sBantz"]["qualifications"] }}
+                            {{ option("shawnB_qualifications") }}
                         </h6>
-                        <h5>{{ $teamData["sBantz"]["fullName"] }}</h5>
+                        <h5>{{ option("shawnB_fullName") }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["sBantz"]["role"] }}</small>
+                            <small class="team-phone">{{ option("shawnB_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["sBantz"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["sBantz"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("shawnB_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("shawnB_first") }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -79,14 +79,14 @@
                 <div class="col-lg-3 col-sm-6 res-s-bttm">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["rAtkins"]["qualifications"] }}
+                            {{ option("russA_qualifications") }}
                         </h6>
-                        <h5>{{ $teamData["rAtkins"]["fullName"] }}</h5>
+                        <h5>{{ option("russA_fullName") }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["rAtkins"]["role"] }}</small>
+                            <small class="team-phone">{{ option("russA_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rAtkins"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rAtkins"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("russA_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("russA_first") }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -94,14 +94,14 @@
                 <div class="col-lg-3 col-sm-6 res-s-bttm">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["sLange"]["qualifications"] }}
+                            {{ option("shawnL_qualifications") }}
                         </h6>
-                        <h5>{{ $teamData["sLange"]["fullName"] }}</h5>
+                        <h5>{{ option("shawnL_fullName") }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["sLange"]["role"] }}</small>
+                            <small class="team-phone">{{ option("shawnL_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["sLange"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["sLange"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("shawnL_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("shawnL_first") }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -110,14 +110,14 @@
                 <div class="col-lg-3 col-sm-6 res-s-bttm">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["rFink"]["qualifications"] }}
+                            {{ option("richF_qualifications") }}
                         </h6>
-                        <h5>{{ $teamData["rFink"]["fullName"] }}</h5>
+                        <h5>{{ option("richF_fullName") }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["rFink"]["role"] }}</small>
+                            <small class="team-phone">{{ option("richF_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["rFink"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["rFink"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("richF_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("richF_first") }} An Email</a>
                             </span>
                         </p>
                     </div>
@@ -125,14 +125,14 @@
                 <div class="col-lg-3 col-sm-6 col-xs-12">
                     <div class="txt-entry bg-white pd-x3 round">
                         <h6 class="heading-sm ucap color-primary">
-                            {{ $teamData["mCrain"]["qualifications"] }}
+                            {{ option("monicaC_qualifications") }}
                         </h6>
-                        <h5>{{ $teamData["mCrain"]["fullName"] }}</h5>
+                        <h5>{{ option("monicaC_fullName") }}</h5>
                         <p>
-                            <small class="team-phone">{{ $teamData["mCrain"]["role"] }}</small>
+                            <small class="team-phone">{{ option("monicaC_role") }}</small>
                             <br>
                             <span class="color-primary">
-                                <a href="mailto:{{ $teamData["mCrain"]["email"] }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ $teamData["mCrain"]["first"] }} An Email</a>
+                                <a href="mailto:{{ option("monicaC_email") }}" target="_blank"><i class="fa fa-send-o"></i> Send {{ option("monicaC_first") }} An Email</a>
                             </span>
                         </p>
                     </div>

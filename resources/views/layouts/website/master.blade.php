@@ -91,7 +91,7 @@
 
     {{-- Body Start --}}
     <body class="site-body style-v1">
-        <header id="navbar-main" class="site-header header-s1 is-sticky is-transparent">
+        <header id="navbar-main" class="site-header header-s1 is-sticky">
             {{-- Navbar Injection --}}
             @include('partials/website/_navbar')
 

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Services;
 use App\StaticData\AboutPage;
+use App\StaticData\CompanyData;
 use App\StaticData\HomePage;
 use Appstract\Options\Option;
 use Illuminate\Http\Request;
@@ -20,6 +22,8 @@ class WebsiteController extends Controller
         //Set Home Page Static Data
         HomePage::sectionOne();
         Homepage::sectionTwo();
+        CompanyData::setCompanyData();
+
 
         $serviceCardData = config('sourcefli.siteData.serviceCards');
 
@@ -57,15 +61,12 @@ class WebsiteController extends Controller
         $headingTwo = "Risk Free Retirement Strategies";
         $subheadingTwo = "Achieving a relaxing and comfortable retirement can be an art - and for some, a nail-bitting rollercoaster. This is generally from bad advice or the misinformation that's advertised so often. Talk face-to-face with someone who's accountable to what they say to you and avoid these pitfalls with your nestegg.";
 
-        $servicesRowOne = config('sourcefli.servicesdata.servicesRowOne');
-        $servicesRowTwo = config('sourcefli.servicesdata.servicesRowTwo');
+        $servicesRowOne = Services::where('row_num', 1)->get();
+        $servicesRowTwo = Services::where('row_num', 2)->get();
 
-
-        return view('services', compact(
-            [
+        return view('services', compact([
                 'servicesRowOne', 'servicesRowTwo'
-            ]
-        ));
+            ]));
     }
 
     /*
@@ -74,6 +75,7 @@ class WebsiteController extends Controller
     */
     public function getClientResourcesPage()
     {
+
         return view('client-resources');
     }
 
@@ -92,6 +94,7 @@ class WebsiteController extends Controller
     */
     public function getContactPage()
     {
+
         return view('contact');
     }
 

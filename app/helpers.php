@@ -13,3 +13,75 @@ if (! function_exists('carbon')) {
     }
 }
 
+
+function getHeroImg($path) {
+    switch($path) {
+        case "about":
+            return "img/heros/lg-about-our-retirement-services.jpeg";
+            break;
+        case "services":
+            return "img/heros/lg-legacy-on-the-wind.png";
+            break;
+        case "client-resources":
+            return "img/heros/lg-caregiver-pushing-wheelchair-through-the-meadows-1920x780.jpg";
+            break;
+        case "faqs":
+            return "img/heros/lg-customer-service-department-1168x520.jpg";
+            break;
+        case "contact":
+            return "img/heros/lg-family-looking-up-1919x659.jpg";
+            break;
+        default:
+            return "img/heros/lg-financial-well-being-with-american-senior-benefits.png";
+    }
+}
+
+function getPageHeading($path) {
+    switch($path) {
+        case "about":
+            return option('about_banner_heading');
+            break;
+        case "services":
+            return option('services_banner_heading');
+            break;
+        case "client-resources":
+            return option('client_resources_banner_heading');
+            break;
+        case "blog":
+            return option('blog_banner_heading');
+            break;
+        case "faqs":
+            return option('faqs_banner_heading');
+            break;
+        case "contact":
+            return option('contact_banner_heading');
+            break;
+        default:
+            return option('error_banner_heading');
+    }
+}
+
+function getPageSubheading($path) {
+    switch($path) {
+        case "about":
+            return option('about_banner_subheading');
+            break;
+        case "services":
+            return option('services_banner_subheading');
+            break;
+        case "client-resources":
+            return option('client_resources_banner_subheading');
+            break;
+        case "blog":
+            return option('blog_banner_subheading');
+            break;
+        case "faqs":
+            return option('faqs_banner_subheading');
+            break;
+        case "contact":
+            return option('contact_banner_subheading');
+            break;
+        default:
+            return option('error_banner_subheading');
+    }
+}

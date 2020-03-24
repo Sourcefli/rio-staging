@@ -9,8 +9,8 @@ class AboutPage
     {
 
         option([
-            "about_banner_heading" => "",
-            "about_banner_subheading" => "",
+            "about_banner_heading" => "A “People First” philosophy",
+            "about_banner_subheading" => "At American Senior Benefits we are dedicated to serving those in need of insurance, especially seniors. We are proudly independent, answering only to our customers.",
         ]);
 
     }

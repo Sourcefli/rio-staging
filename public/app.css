@@ -15460,7 +15460,7 @@ div[class*=wide-]+div[class*=row-column]:not([class*=mg]):not([class*=mt-]) {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     z-index: 0;
-    opacity: 0;
+    opacity: 0.5;
     transition: opacity 0.4s;
 }
 
@@ -15562,7 +15562,7 @@ div[class*=wide-]+div[class*=row-column]:not([class*=mg]):not([class*=mt-]) {
 }
 
 .has-bg.dark-filter:after {
-    opacity: 0.75;
+    opacity: 0.5;
 }
 
 .has-bg.darker-filter:after {
@@ -19496,7 +19496,7 @@ form label.error {
    ========================================================================== */
 
 .footer-widget {
-    background: #2a2d33;
+    background: #011b4f;
     color: #fff;
     font-size: 14px;
     line-height: 1.75;
@@ -22905,7 +22905,7 @@ div[class*=col-] .team-member+.team-member {
 
 
 /* ==========================================================================
-    18.0 - Version Wise Css 
+    18.0 - Version Wise Css
    ========================================================================== */
 
 

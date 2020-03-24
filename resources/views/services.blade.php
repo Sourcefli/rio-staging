@@ -26,20 +26,18 @@
                 <!-- Top Row of Service Cards -->
                 <div class="row row-feature row-column mt-x5">
                     @foreach ($servicesRowOne as $service)
-                        {{-- @foreach ($service as $data) --}}
-                        {{-- {{ dd($service) }} --}}
                             <div class="col-md-4 col-sm-6">
                                 <!-- feature box -->
                                 <div class="feature boxed feature-s6">
-                                    <a href="{!! $service["readMoreLink"] !!}">
+                                    <a href="{!! $service->read_more_link !!}">
                                         <div class="fbox-photo">
-                                            <img src="{!! $service["cardImg"] !!}" alt="{!! $service["heading"] !!}">
+                                            <img src="{!! $service->card_img_url !!}" alt="{!! $service->title !!}">
                                         </div>
                                     </a>
                                     <div class="fbox-content">
-                                        <h3>{!! $service["heading"] !!}</h3>
-                                        <p>{!! $service["summary"] !!}</p>
-                                        <p><a href="{!! $service["readMoreLink"] !!}" class="btn-link link-arrow-sm">Read More</a></p>
+                                        <h4>{!! $service->title !!}</h4>
+                                        <p>{!! $service->summary !!}</p>
+                                        <p><a href="{!! $service->read_more_link !!}" class="btn-link link-arrow-sm">Read More</a></p>
                                     </div>
                                 </div>
                                 <!-- End Feature box -->
@@ -48,20 +46,19 @@
                 <!-- Top Row  #end -->
 
                 <!-- Bottom Row  -->
-				{{-- <div class="row row-feature row-column">--> --}}
                     @foreach ($servicesRowTwo as $service)
                         <div class="col-md-4 col-sm-6">
                             <!-- featured box -->
                             <div class="feature boxed feature-s6">
-                                <a href="{!! $service["readMoreLink"] !!}">
+                                <a href="{!! $service->read_more_link !!}">
                                     <div class="fbox-photo" style="max-height: 210px;">
-                                        <img src="{{ $service["cardImg"] }}" alt="{!! $service["heading"] !!}">
+                                        <img src="{{ $service->card_img_url }}" alt="{!! $service->title !!}">
                                     </div>
                                 </a>
                                 <div class="fbox-content">
-                                    <h3>{!! $service["heading"] !!}</h3>
-                                    <p>{!! $service["summary"] !!}</p>
-                                    <p><a href="{!! $service["readMoreLink"] !!}" class="btn-link link-arrow-sm">Read More</a></p>
+                                    <h3>{!! $service->title !!}</h3>
+                                    <p>{!! $service->summary !!}</p>
+                                    <p><a href="{!! $service->read_more_link !!}" class="btn-link link-arrow-sm">Read More</a></p>
                                 </div>
                             </div>
                             <!-- End Feature box -->

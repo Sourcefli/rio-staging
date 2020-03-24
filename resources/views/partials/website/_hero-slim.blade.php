@@ -1,46 +1,11 @@
-@php
-
-    $imgSizes = config('sourcefli.responsiveImagesData.ImgSizes');
-
-    //Dynamic Data for each page
-    switch (Request::path()) {
-        case "about":
-            $heroImgSources = config('sourcefli.responsiveImagesData.pages.heroImg.about');
-            $heroCopy = config('sourcefli.responsiveImagesData.pages.heroCopy.about');
-            break;
-        case "services":
-            $heroImgSources = config('sourcefli.responsiveImagesData.pages.heroImg.services');
-            $heroCopy = config('sourcefli.responsiveImagesData.pages.heroCopy.services');
-            break;
-        case "client-resources":
-            $heroImgSources = config('sourcefli.responsiveImagesData.pages.heroImg.clientResources');
-            $heroCopy = config('sourcefli.responsiveImagesData.pages.heroCopy.clientResources');
-            break;
-        case "blog":
-            $heroImgSources = config('sourcefli.responsiveImagesData.pages.heroImg.blog');
-            $heroCopy = config('sourcefli.responsiveImagesData.pages.heroCopy.blog');
-            break;
-        case "faqs":
-            $heroImgSources = config('sourcefli.responsiveImagesData.pages.heroImg.faqs');
-            $heroCopy = config('sourcefli.responsiveImagesData.pages.heroCopy.faqs');
-            break;
-        case "contact":
-            $heroImgSources = config('sourcefli.responsiveImagesData.pages.heroImg.contact');
-            $heroCopy = config('sourcefli.responsiveImagesData.pages.heroCopy.contact');
-            break;
-        default:
-            $heroImgSources = config('sourcefli.responsiveImagesData.pages.heroImg.fallback');
-            $heroCopy = config('sourcefli.responsiveImagesData.pages.heroCopy.fallback');
-    }
-@endphp
-
 <div class="banner banner-static has-bg light-filter">
     <div class="banner-cpn">
         <div class="container">
             <div class="content row">
                 <div class="banner-text">
-                    <h1 class="page-title">{{ option('about_banner_heading') }}<br> /* ?? */</h1>
-                    <p class="lead">{{ option('about_banner_subheading') }}</p>
+                    {{-- Serve Heading and Subheading based on which age the user is on--}}
+                    <h2 class="page-title">{{ getPageHeading(Request::path()) }}<br></h2>
+                    <p class="lead">{{ getPageSubheading(Request::path()) }}</p>
                 </div>
                 <div class="banner-sider">
                     <div class="boxed boxed-w">
@@ -52,12 +17,10 @@
             </div>
         </div>
     </div>
-    <div class="banner-bg imagebg" id="{{ (Request::path() === 'services') ? 'services-hero' : '' }}">
+    <div class="banner-bg imagebg" id="{{ (Request::path() === 'services') ? 'services-hero' : '' }}" style="background-image:url( {{ getHeroImg(Request::path()) }} );">
             <img class=""
-            alt="{{ trim(View::getSection('title')) }}"
-            src="{{ $heroImgSources["xl"] }}"
-            {{-- style="background: center; background-repeat: no-repeat; background-position: -20% 40%;  --}}
-            srcset="{{ $heroImgSources["sm"] }}, {{ $heroImgSources["md"] }}, {{ $heroImgSources["lg"] }}"
-            sizes="{{ $imgSizes["imgSizesSm"] }}, {{ $imgSizes["imgSizesMd"] }}, {{ $imgSizes["imgSizesLg"] }}"/>
+                alt="{{ trim(View::getSection('title')) }}"
+                src="{{ getHeroImg(Request::path()) }}"
+            />
     </div>
 </div>

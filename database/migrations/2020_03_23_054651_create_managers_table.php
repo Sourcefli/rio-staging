@@ -23,7 +23,7 @@ class CreateManagersTable extends Migration
             $table->string('company_role')->nullable();
             $table->string('company_title');
             $table->string('facebook_url')->nullable();
-            $table->string('linkedIn_url')->nullable();
+            $table->string('linkedin_url')->nullable();
             $table->string('qualifications')->nullable();
             $table->string('sm_image_url')->nullable();
             $table->string('md_image_url')->nullable();

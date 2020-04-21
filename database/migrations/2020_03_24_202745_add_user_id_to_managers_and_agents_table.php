@@ -13,17 +13,23 @@ class AddUserIdToManagersAndAgentsTable extends Migration
      */
     public function up()
     {
-//        Schema::table('agents', function (Blueprint $table) {
-//            $table->unsignedBigInteger('user_id')->nullable();
-//
-//            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-//        });
+       Schema::table('agents', function (Blueprint $table) {
+           $table->unsignedBigInteger('user_id')->nullable();
 
-        Schema::table('managers', function (Blueprint $table) {
-            $table->unsignedBigInteger('manager_id')->nullable();
+           $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+       });
 
-            $table->foreign('manager_id')->references('id')->on('managers')->onDelete('cascade');
+       Schema::table('managers', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id')->nullable();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
+
+        // Schema::table('managers', function (Blueprint $table) {
+        //     $table->unsignedBigInteger('manager_id')->nullable();
+
+        //     $table->foreign('manager_id')->references('id')->on('managers')->onDelete('cascade');
+        // });
     }
 
     /**

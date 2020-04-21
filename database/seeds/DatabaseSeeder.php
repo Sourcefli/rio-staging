@@ -19,12 +19,12 @@ class DatabaseSeeder extends Seeder
              OfficesDataSeeder::class,
              TeamDataSeeder::class,
              CarrierSeeder::class,
+             UsersDataSeeder::class,
              AgentsDataSeeder::class,
              ServicesDataSeeder::class,
              ManagersDataSeeder::class,
             AgentTeamDataSeeder::class,
-            AgentAndManagerUserIdSeeder::class,
-            UsersDataSeeder::class
+            AgentAndManagerUserIdSeeder::class
 
          ]);
     }

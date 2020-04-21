@@ -11,6 +11,9 @@ class ServicesDataSeeder extends Seeder
      */
     public function run()
     {
+
+        Schema::disableForeignKeyConstraints();
+
         DB::table('services')->insert([
             [
                 "title" => "Wise Retirement",
@@ -55,5 +58,7 @@ class ServicesDataSeeder extends Seeder
                 "row_num" => 2
             ]
         ]);
+
+        Schema::enableForeignKeyConstraints();
     }
 }

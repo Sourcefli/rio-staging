@@ -12,8 +12,10 @@ class OfficesDataSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('offices')->where('id', 1)->update([
-//            'id' => 1,
+        Schema::disableForeignKeyConstraints();
+
+        DB::table('offices')->insert([
+            'id' => 1,
             'name' => 'Las Vegas',
             'street_one' => '6029 S Fort Apache Rd',
             'street_two' => 'Suite 130',
@@ -38,8 +40,8 @@ class OfficesDataSeeder extends Seeder
             'longitude' => '-115.2995027',
             'latitude' => '36.079172'
         ]);
-        DB::table('offices')->where('id', 2)->update([
-//            'id' => 2,
+        DB::table('offices')->insert([
+           'id' => 2,
             'name' => 'Sacramento',
             'street_one' => '1100 S Melody Ln',
             'street_two' => 'Suite 144',
@@ -64,8 +66,8 @@ class OfficesDataSeeder extends Seeder
             'longitude' => '-121.2938361',
             'latitude' => '38.7252926'
         ]);
-        DB::table('offices')->where('id', 3)->update([
-//                'id' => 3,
+        DB::table('offices')->insert([
+            'id' => 3,
             'name' => 'San Diego',
             'street_one' => '5752 Oberlin Dr.',
             'street_two' => 'Suite 201',
@@ -90,5 +92,7 @@ class OfficesDataSeeder extends Seeder
             'longitude' => '-117.1973378',
             'latitude' => '32.8933181'
         ]);
+
+        Schema::enableForeignKeyConstraints();
     }
 }

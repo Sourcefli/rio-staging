@@ -11,6 +11,8 @@ class ManagersDataSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
+
         DB::table('managers')->insert([
             [
                 "first_name" => "Don",
@@ -55,5 +57,7 @@ class ManagersDataSeeder extends Seeder
                 "office_id" => 1
             ]
         ]);
+
+        Schema::enableForeignKeyConstraints();
     }
 }

@@ -11,6 +11,8 @@ class TeamDataSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
+        
 
         DB::table('teams')->insert([
             [
@@ -50,5 +52,7 @@ class TeamDataSeeder extends Seeder
                 'office_id' => 3
             ]
         ]);
+
+        Schema::enableForeignKeyConstraints();
     }
 }

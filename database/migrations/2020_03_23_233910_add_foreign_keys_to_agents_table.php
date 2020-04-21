@@ -15,9 +15,11 @@ class AddForeignKeysToAgentsTable extends Migration
     {
         Schema::table('agents', function (Blueprint $table) {
             $table->unsignedBigInteger('team_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('office_id')->nullable();
             $table->foreign('team_id')->references('id')->on('teams');
             $table->foreign('office_id')->references('id')->on('offices');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

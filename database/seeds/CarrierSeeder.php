@@ -12,6 +12,8 @@ class CarrierSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
+
         DB::table('carriers')->insert([
             [
                 "name" => "Aetna",
@@ -78,6 +80,8 @@ class CarrierSeeder extends Seeder
                 "homePageUrl" => "https://www.royalneighbors.org/"
             ]
         ]);
+
+        Schema::enableForeignKeyConstraints();
 
     }
 }

@@ -11,6 +11,9 @@ class AgentAndManagerUserIdSeeder extends Seeder
      */
     public function run()
     {
+
+        Schema::disableForeignKeyConstraints();
+
         /*
          *
          * Update MANAGERS table with user_id
@@ -96,5 +99,7 @@ class AgentAndManagerUserIdSeeder extends Seeder
             ['id' => 7],
             ['user_id' => 9]
         );
+
+        Schema::enableForeignKeyConstraints();
     }
 }

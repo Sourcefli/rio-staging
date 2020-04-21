@@ -20,7 +20,7 @@ class CreateCarriersTable extends Migration
             $table->string('generalSupportPhone')->nullable();
             $table->string('customerSupportPhone')->nullable();
             $table->string('supportUrl');
-            $table->string('homepageUrl');
+            $table->string('homePageUrl');
             $table->timestamps();
         });
     }

@@ -12,22 +12,22 @@ class Agent extends Model
     ];
 
     public function team() {
-        return $this->belongsTo('App\Team');
+        return $this->belongsTo(Team::class);
     }
 
     public function managers() {
-        return $this->belongsToMany('App\Manager');
+        return $this->belongsToMany(Manager::class);
     }
 
     public function services() {
-        return $this->hasMany('App\Service');
+        return $this->hasMany(Service::class);
     }
 
     public function office() {
-        return $this->belongsTo('App\Office');
+        return $this->belongsTo(Office::class);
     }
 
     public function user() {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo(User::class);
     }
 }

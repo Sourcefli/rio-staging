@@ -13,11 +13,11 @@ class CreateAllPivotTables extends Migration
      */
     public function up()
     {
-        Schema::table('managers', function (Blueprint $table) {
-            $table->dropForeign('managers_office_id_foreign');
-            $table->dropForeign('managers_team_id_foreign');
-            $table->dropColumn(['team_id', 'office_id']);
-        });
+//        Schema::table('managers', function (Blueprint $table) {
+//            $table->dropForeign('managers_office_id_foreign');
+//            $table->dropForeign('managers_team_id_foreign');
+//            $table->dropColumn(['team_id', 'office_id']);
+//        });
 
         Schema::create('manager_office', function (Blueprint $table) {
             $table->bigIncrements('id');

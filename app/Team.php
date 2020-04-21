@@ -14,16 +14,22 @@ class Team extends Model
         'updated_at'
     ];
 
+    public function users() {
+        return $this->belongsToMany('App\User', 'team_user');
+    }
+
     public function agents() {
-        return $this->hasMany(Agent::class);
+        return $this->belongsToMany('App\Agent', 'agent_team');
     }
 
+    //Add Managers to (agent) Team data... e.g. manager_id of 1 with team_id of 4
     public function managers() {
-        return $this->hasMany(Manager::class);
+        return $this->belongsToMany('App\Manager', 'manager_team');
     }
 
-    public function teams() {
-        return $this->hasMany(Office::class);
+    //Add 'service_team' table to DB, then seed
+    public function services() {
+        return $this->belongsToMany('App\Service', 'service_team');
     }
 
 //    public function members() {

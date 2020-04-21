@@ -14,22 +14,27 @@ class Office extends Model
         'updated_at'
     ];
 
+    //ok
     public function agents() {
-        return $this->hasMany(Agent::class);
+        return $this->hasMany('App\Agent');
     }
 
+    //ok
     public function managers() {
-        return $this->hasMany(Manager::class);
+        return $this->belongsToMany('App\Manager', 'manager_office');
     }
 
+    //ok
     public function teams() {
-        return $this->belongsTo(Team::class);
+        return $this->hasMany('App\Team');
     }
 
+    // add 'belongsToMany' with a 'office_service' join table
     public function services() {
-        return $this->hasMany(Service::class);
+        return $this->hasMany('App\Service', 'id');
     }
 
+    // add 'belongsToMany' with a 'office_user' join table
     public function users() {
         return $this->hasMany(User::class);
     }

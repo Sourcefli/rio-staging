@@ -12,18 +12,18 @@ class Manager extends Model
     ];
 
     public function agents() {
-        return $this->hasMany(Agent::class);
+        return $this->belongsToMany(Agent::class, 'agent_manager');
     }
 
     public function teams() {
-        return $this->hasMany(Team::class);
+        return $this->belongsToMany(Team::class, 'manager_team');
     }
 
     public function offices() {
-        return $this->belongsToMany(Office::class);
+        return $this->belongsToMany('App\Office', 'manager_office');
     }
 
     public function user() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo('App\User');
     }
 }

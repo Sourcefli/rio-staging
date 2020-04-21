@@ -61,8 +61,8 @@ class WebsiteController extends Controller
         $headingTwo = "Risk Free Retirement Strategies";
         $subheadingTwo = "Achieving a relaxing and comfortable retirement can be an art - and for some, a nail-bitting rollercoaster. This is generally from bad advice or the misinformation that's advertised so often. Talk face-to-face with someone who's accountable to what they say to you and avoid these pitfalls with your nestegg.";
 
-        $servicesRowOne = Services::where('row_num', 1)->get();
-        $servicesRowTwo = Services::where('row_num', 2)->get();
+        $servicesRowOne = Service::where('row_num', 1)->get();
+        $servicesRowTwo = Service::where('row_num', 2)->get();
 
         return view('services', compact([
                 'servicesRowOne', 'servicesRowTwo'

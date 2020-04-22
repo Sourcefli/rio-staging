@@ -39,10 +39,5 @@ class Office extends Model
         return $this->hasMany(User::class);
     }
 
-    public function csZip() {
-        $hq = $this->where('id', 1)->get();
-        return "{$hq->city}, {$hq->state} {$hq->zip}";
-    }
-
 
 }

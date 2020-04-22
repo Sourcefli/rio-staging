@@ -21,9 +21,21 @@ class CreateOfficesTable extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('zip', '6');
-            $table->string('sm_image_url')->nullable();
-            $table->string('md_image_url')->nullable();
-            $table->string('lg_image_url')->nullable();
+            $table->string('sm_image_url', '50')->nullable();
+            $table->string('md_image_url', '50')->nullable();
+            $table->string('lg_image_url', '50')->nullable();
+            $table->string('facebook_url', '50')->nullable();
+            $table->string('facebook_username', '50')->nullable();
+            $table->string('linkedin_url', '50')->nullable();
+            $table->string('linkedin_username', '50')->nullable();
+            $table->string('twitter_url', '50')->nullable();
+            $table->string('twitter_username', '50')->nullable();
+            $table->string('slack_url', '50')->nullable();
+            $table->json('slack_chatrooms');
+            $table->string('whatsapp_url', '50')->nullable();
+            $table->string('whatsapp_username', '50')->nullable();
+            $table->string('whatsapp_agent_chatroom', '50')->nullable();
+            $table->string('whatsapp_prospect_chatroom', '50')->nullable();
             $table->timestamps();
         });
     }

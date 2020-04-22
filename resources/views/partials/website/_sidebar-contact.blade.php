@@ -3,6 +3,7 @@
     $companyData = config('sourcefli.companyData.hqData');
 @endphp
 <div class="contact-details col-md-4 col-md-offset-1">
+
     <ul class="contact-list">
             <li>
                 <h3>Contact Information</h3>
@@ -10,7 +11,7 @@
             <li>
                 <strong>{{ option('asb_fullName') }}</strong><br>
                 {{ $hqData->street_one }} {{  $hqData->street_two }}<br>
-                {{  $hqData->csZip }}
+                {{  $hqData->city }}, {{  $hqData->state }} {{  $hqData->zip }}
             </li>
             <li><strong class="color-primary">Toll Free</strong><br>
                 {{ $hqData->toll_free_phone }}

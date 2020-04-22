@@ -1,6 +1,6 @@
 <?php
 
-return array(
+return [
     "nav" => [
         "items" => [
             "home" => [
@@ -383,4 +383,4 @@ return array(
         "meetOurTeam" => "",
         "meetOurTeamParagraph" => ""
     ]
-);
+];

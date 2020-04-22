@@ -67,7 +67,7 @@
             </button>
             <!-- Q-Button for Mobile -->
             <div class="quote-btn">
-                <a class="btn" href="{{ $pages["contact"]["url"] }}"><span>Get A Quote</span></a>
+                <a class="btn" href="{{ route('getAQuotePage') }}"><span>Get A Quote</span></a>
             </div>
         </div>
         <!-- #MainNav -->

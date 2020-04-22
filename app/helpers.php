@@ -5,6 +5,8 @@
  */
 
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 if (! function_exists('carbon')) {
     function carbon($parseString = null, $tz = null)
@@ -83,5 +85,24 @@ function getPageSubheading($path) {
             break;
         default:
             return option('error_banner_subheading');
+    }
+}
+
+function createSlug($title) {
+    return Str::slug($title);
+}
+
+function createReadMoreLink($title) {
+    return '/' .Str::slug($title);
+}
+
+function calculateRowNumber() {
+    $currentHighRowNum = DB::table('services')->pluck('row_num')->max();
+    $totalInRowNum = DB::table('services')->where('row_num', $currentHighRowNum)->count();
+    
+    if ($totalInRowNum === 3) {
+        return $currentHighRowNum + 1;
+    } else {
+        return $currentHighRowNum;
     }
 }

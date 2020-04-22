@@ -41,7 +41,8 @@ class SidebarComposer
                 DB::raw("CONCAT(offices.days_of_operation,'\<br\>',offices.hours_of_operation) AS days_and_hours")
             )
             ->first();
-//        dd($hqData);
+
+    //    dd($hqData);
         $view->with('hqData', $hqData);
     }
 }

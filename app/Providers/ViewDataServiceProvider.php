@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Carrier;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,13 +25,18 @@ class ViewDataServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        //Shared with all views
-        $carriers = Carrier::get();
-        View::share('carriers', $carriers);
-
         //Shared with specific views
         View::composer(
             'contact', 'App\Http\View\Composers\SidebarComposer'
+        );
+        View::composer(
+            'contact', 'App\Http\View\Composers\AgentDataComposer'
+        );
+        View::composer(
+            '*', 'App\Http\View\Composers\FooterComposer'
+        );
+        View::composer(
+            '*', 'App\Http\View\Composers\CarrierDataComposer'
         );
     }
 }

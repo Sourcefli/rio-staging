@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicesTable extends Migration
+class CreateNavitemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
+        Schema::create('navitems', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title', '50')->unique();
-            $table->string('summary', '150');
-            $table->string('card_img_url', '50');
-            $table->string('read_more_link', '100');
-            $table->string('slug', '50');
-            $table->unsignedBigInteger('row_num');
+            $table->string('url', '75')->nullable();
+            $table->string('uri', '75')->unique();
+            $table->enum('category', ['menu', 'service', 'blog', 'staff', 'location', 'carrier', 'product', 'other'])->default('other');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('navitems');
     }
 }

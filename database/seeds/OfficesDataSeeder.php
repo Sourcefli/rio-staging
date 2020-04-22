@@ -12,8 +12,32 @@ class OfficesDataSeeder extends Seeder
      */
     public function run()
     {
+        /**
+         * Prepare data for JSON column type
+         * 
+         */
+        $slackChatrooms = [
+            'everybody' => 'asbsw-everybody',
+            'logos' => 'asbsw-logos',
+            'marketing-media' => 'asbsw-marketing-media',
+            'management-team' => 'asbsw-mgmt-team',
+            'fb-ads-fe' => 'fb-ads-final-expense',
+            'fb-ads-medicare' => 'fb-ads-medicare',
+            'community' => 'asbsw-community-chat'
+        ];
+        $slackroomsAsJson = json_encode($slackChatrooms);
+
+
+        /**
+         * Disable FK Constraints
+         */
         Schema::disableForeignKeyConstraints();
 
+
+
+        /**
+         * SAVE TO DATABASE
+         */
         DB::table('offices')->insert([
             'id' => 1,
             'name' => 'Las Vegas',
@@ -38,7 +62,18 @@ class OfficesDataSeeder extends Seeder
             'login_url' => 'https://login.retirementinsuranceoptions.com',
             'office_directions' => 'To be determined',
             'longitude' => '-115.2995027',
-            'latitude' => '36.079172'
+            'latitude' => '36.079172',
+            'facebook_url' => 'https://www.facebook.com/AmericanSeniorBenefitsSW/',
+            'facebook_username' => '@AmericanSeniorBenefitsSW',
+            'linkedin_url' => '',
+            'linkedin_username' => '',
+            'twitter_url' => '',
+            'twitter_username' => '',
+            'slack_url' => 'https://asbsw.slack.com/',
+            'slack_chatrooms' => $slackroomsAsJson,
+            'whatsapp_url' => '',
+            'whatsapp_agent_chatroom' => '',
+            'whatsapp_prospect_chatroom' => ''
         ]);
         DB::table('offices')->insert([
            'id' => 2,
@@ -64,7 +99,18 @@ class OfficesDataSeeder extends Seeder
             'login_url' => 'https://login.retirementinsuranceoptions.com',
             'office_directions' => 'To be determined',
             'longitude' => '-121.2938361',
-            'latitude' => '38.7252926'
+            'latitude' => '38.7252926',
+            'facebook_url' => 'https://www.facebook.com/AmericanSeniorBenefitsSW/',
+            'facebook_username' => '@AmericanSeniorBenefitsSW',
+            'linkedin_url' => '',
+            'linkedin_username' => '',
+            'twitter_url' => '',
+            'twitter_username' => '',
+            'slack_url' => 'https://asbsw.slack.com/',
+            'slack_chatrooms' => $slackroomsAsJson,
+            'whatsapp_url' => '',
+            'whatsapp_agent_chatroom' => '',
+            'whatsapp_prospect_chatroom' => ''
         ]);
         DB::table('offices')->insert([
             'id' => 3,
@@ -90,7 +136,18 @@ class OfficesDataSeeder extends Seeder
             'login_url' => 'https://login.retirementinsuranceoptions.com',
             'office_directions' => 'To be determined',
             'longitude' => '-117.1973378',
-            'latitude' => '32.8933181'
+            'latitude' => '32.8933181',
+            'facebook_url' => 'https://www.facebook.com/AmericanSeniorBenefitsSW/',
+            'facebook_username' => '@AmericanSeniorBenefitsSW',
+            'linkedin_url' => '',
+            'linkedin_username' => '',
+            'twitter_url' => '',
+            'twitter_username' => '',
+            'slack_url' => 'https://asbsw.slack.com/',
+            'slack_chatrooms' => $slackroomsAsJson,
+            'whatsapp_url' => '',
+            'whatsapp_agent_chatroom' => '',
+            'whatsapp_prospect_chatroom' => ''
         ]);
 
         Schema::enableForeignKeyConstraints();

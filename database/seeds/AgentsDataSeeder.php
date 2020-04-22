@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
+
 class AgentsDataSeeder extends Seeder
 {
     /**

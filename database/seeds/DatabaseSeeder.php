@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
              ServicesDataSeeder::class,
              ManagersDataSeeder::class,
             AgentTeamDataSeeder::class,
-            AgentAndManagerUserIdSeeder::class
+            AgentAndManagerUserIdSeeder::class,
+            NavItemsSeeder::class
 
          ]);
     }

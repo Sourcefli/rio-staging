@@ -1,10 +1,11 @@
 @php
-    $hqData = config('sourcefli.companyData.hqData');
+    <!-- $hqData = config('sourcefli.companyData.hqData');
     $config = config('sourcefli.responsiveImagesData.ImgSizes');
-    $footer = config('sourcefli.siteData.footer');
     $links = config('sourcefli.siteData.footer.serviceLinks');
     $social = config('sourcefli.siteData');
-    $nav = config('sourcefli.siteData');
+    $nav = config('sourcefli.siteData'); -->
+    
+    $footer = config('sourcefli.siteData.footer');
 @endphp
 
 <div class="footer-widget section-pad-md">
@@ -16,13 +17,10 @@
                     <div class="wgs wgs-footer wgs-menu">
                         <h5 class="wgs-title">Our Services</h5>
                         <div class="wgs-content">
-                            <ul class="menu">
-                                <li><a href="{!! $links["diversify"]["uri"] !!}">{!! $links["diversify"]["name"] !!}</a></li>
-                                <li><a href="{!! $links["burial"]["uri"] !!}">{!! $links["burial"]["name"] !!}</a></li>
-                                <li><a href="{!! $links["unexpected"]["uri"] !!}">{!! $links["unexpected"]["name"] !!}</a></li>
-                                <li><a href="{!! $links["medicare"]["uri"] !!}">{!! $links["medicare"]["name"] !!}</a></li>
-                                <li><a href="{!! $links["wise"]["uri"] !!}">{!! $links["wise"]["name"] !!}</a></li>
-                                <li><a href="{!! $links["investments"]["uri"] !!}">{!! $links["investments"]["name"] !!}</a></li>
+                            <ul>
+                            @foreach($serviceLinks as $serviceLink)
+                                <li><a href="{{ $serviceLink->uri }}">{{ $serviceLink->title }}</a></li>
+                            @endforeach
                             </ul>
                         </div>
                     </div>
@@ -34,9 +32,9 @@
                         <h5 class="wgs-title">Quick Links</h5>
                         <div class="wgs-content">
                             <ul class="menu">
-                                @foreach ($nav["nav"]["items"] as $navItem)
+                                @foreach ($menuLinks as $menuLink)
                                     <li>
-                                        <a href="{{ $navItem["uri"] }}">{{ $navItem["title"] }}</a>
+                                        <a href="{{ $menuLink->uri }}">{{ $menuLink->title }}</a>
                                     </li>
                                 @endforeach
                             </ul>
@@ -50,8 +48,9 @@
                         <h5 class="wgs-title">Proudly Serving</h5>
                         <div class="wgs-content">
                             <ul>
-                                <li>{{ $hqData["serviceAreas"]["nv"] }}</li>
-                                <li>{{ $hqData["serviceAreas"]["sac"] }}</li>
+                                <li>{{ option('lv_nv') }}</li>
+                                <li>{{ option('sac_ca') }}</li>
+                                <li>{{ option('sd_ca') }}</li>
                             </ul>
                         </div>
                     </div>
@@ -66,18 +65,20 @@
                                     srcset="{{ $footer["img"]["srcsetLg"] }}"
                                     alt="{{ $hqData["fullName"] }}">
                             </div>
-                            <ul class="contact-info">
-                                <li><span>Toll Free</span>: {{ $hqData["tollFree"] }}</li>
-                                <li><span>Phone</span>: {{ $hqData["phone"] }}</li>
-                                <li><span>Fax</span>: {{ $hqData["fax"] }}</li>
-                                <li>{{ $hqData["streetOne"] }} {{ $hqData["streetTwo"] }}<br>
-                                    {{ $hqData["cszip"] }}</li>
-                            </ul>
-                            <ul class="social social-v2">
-                                <li><a href="{{ $social["facebook"]["url"] }}"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
-                                <li><a href="{{ $social["twitter"]["url"] }}"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
-                                <li><a href="{{ $social["linkedIn"]["url"] }}"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
-                            </ul>
+                            @foreach($hqData as $hq)
+                                <ul class="contact-info">
+                                    <li><span>Toll Free</span>: {{ $hq['toll_free_phone'] }}</li>
+                                    <li><span>Phone</span>: {{ $hq['office_phone'] }}</li>
+                                    <li><span>Fax</span>: {{ $hq['office_fax'] }}</li>
+                                    <li>{{ $hq['street_one'] }} {{ $hq['street_two'] }}<br>
+                                        {{ $hq['zip'] }}</li>
+                                </ul>
+                                <ul class="social social-v2">
+                                    <li><a href="{{ $hq->facebook_url }}"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
+                                    <li><a href="{{ $hq->twitter_url }}"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
+                                    <li><a href="{{ $hq->linkedin_url }}"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
+                                </ul>
+                            @endforeach
                         </div>
                     </div>
                     <!-- End Widget -->

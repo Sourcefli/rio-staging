@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Services;
+use App\Service;
 use App\StaticData\AboutPage;
 use App\StaticData\CompanyData;
 use App\StaticData\HomePage;

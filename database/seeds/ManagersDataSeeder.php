@@ -28,7 +28,9 @@ class ManagersDataSeeder extends Seeder
                 "qualifications" => "Management, Agent Resources",
                 "team_id" => 4,
                 "office_id" => 1
-            ],
+            ]
+        ]);
+        DB::table('managers')->insert([
             [
                 "first_name" => "None",
                 "last_name" => "Available",
@@ -42,7 +44,9 @@ class ManagersDataSeeder extends Seeder
                 "qualifications" => "Management, Customer Service, Agent Resources",
                 "team_id" => 4,
                 "office_id" => 1
-            ],
+            ]
+        ]);
+        DB::table('managers')->insert([
             [
                 "first_name" => "Stephen",
                 "last_name" => "Elliott",
@@ -57,7 +61,10 @@ class ManagersDataSeeder extends Seeder
                 "qualifications" => "Management, Customer Service, Agent Resources",
                 "team_id" => 4,
                 "office_id" => 1
-            ],
+            ]
+        ]);
+
+        DB::table('managers')->insert([
             [
                 "first_name" => "Ricky",
                 "last_name" => "Rogalski",

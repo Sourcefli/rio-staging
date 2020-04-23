@@ -1,12 +1,3 @@
-@php
-    <!-- $hqData = config('sourcefli.companyData.hqData');
-    $config = config('sourcefli.responsiveImagesData.ImgSizes');
-    $links = config('sourcefli.siteData.footer.serviceLinks');
-    $social = config('sourcefli.siteData');
-    $nav = config('sourcefli.siteData'); -->
-    
-    $footer = config('sourcefli.siteData.footer');
-@endphp
 
 <div class="footer-widget section-pad-md">
     <div class="container">
@@ -48,9 +39,9 @@
                         <h5 class="wgs-title">Proudly Serving</h5>
                         <div class="wgs-content">
                             <ul>
-                                <li>{{ option('lv_nv') }}</li>
-                                <li>{{ option('sac_ca') }}</li>
-                                <li>{{ option('sd_ca') }}</li>
+                                @foreach($locations as $location)
+                                    <li>{{ $location->city }}, {{ $location->state_abbr }}</li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
@@ -61,24 +52,22 @@
                     <div class="wgs wgs-footer">
                         <div class="wgs-content">
                             <div class="footer-logo">
-                                <img src="{{ $footer["img"]["srcLg"] }}"
-                                    srcset="{{ $footer["img"]["srcsetLg"] }}"
-                                    alt="{{ $hqData["fullName"] }}">
+                                <img src="{{ $logoSrcData['src'] }}"
+                                    srcset="{{ $logoSrcData['srcset'] }}"
+                                    alt="{{ $hqData->first_name }} {{ $hqData->last_name }}">
                             </div>
-                            @foreach($hqData as $hq)
-                                <ul class="contact-info">
-                                    <li><span>Toll Free</span>: {{ $hq['toll_free_phone'] }}</li>
-                                    <li><span>Phone</span>: {{ $hq['office_phone'] }}</li>
-                                    <li><span>Fax</span>: {{ $hq['office_fax'] }}</li>
-                                    <li>{{ $hq['street_one'] }} {{ $hq['street_two'] }}<br>
-                                        {{ $hq['zip'] }}</li>
-                                </ul>
-                                <ul class="social social-v2">
-                                    <li><a href="{{ $hq->facebook_url }}"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
-                                    <li><a href="{{ $hq->twitter_url }}"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
-                                    <li><a href="{{ $hq->linkedin_url }}"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
-                                </ul>
-                            @endforeach
+                            <ul class="contact-info">
+                                <li><span>Toll Free</span>: {{ $hqData->toll_free_phone }}</li>
+                                <li><span>Phone</span>: {{ $hqData->office_phone }}</li>
+                                <li><span>Fax</span>: {{ $hqData->office_fax }}</li>
+                                <li>{{ $hqData->street_one }} {{ $hqData->street_two }}<br>
+                                    {{ $hqData->zip }}</li>
+                            </ul>
+                            <ul class="social social-v2">
+                                <li><a href="{{ $hqData->facebook_url }}"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
+                                <li><a href="{{ $hqData->twitter_url }}"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
+                                <li><a href="{{ $hqData->linkedin_url }}"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
+                            </ul>
                         </div>
                     </div>
                     <!-- End Widget -->

@@ -37,23 +37,6 @@ class AgentAndManagerUserIdSeeder extends Seeder
             ['user_id' => 10]
         );
 
-        //Add Ricky
-        DB::table('managers')->insert([
-            [
-                "first_name" => "Ricky",
-                "last_name" => "Rogalski",
-                "email" => "rroga21@gmail.com",
-                "phone" => "1 (619) 301-9363",
-                "bio" => "Rick R Bio...",
-                "company_role" => "Branch Sales Manager",
-                "company_title" => "BSM",
-                "facebook_url" => "https://facebook.com/",
-                "linkedin_url" => "https://linkedin.com/",
-                "qualifications" => "Management, Agent Resources",
-                "user_id" => 11
-            ]
-        ]);
-
         /*
          *
          * Update AGENTS table with user_id

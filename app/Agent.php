@@ -12,7 +12,7 @@ class Agent extends Model
     ];
 
     public function team() {
-        return $this->belongsTo(Team::class);
+        return $this->belongsTo(Team::class, 'team_id');
     }
 
     public function managers() {
@@ -24,10 +24,10 @@ class Agent extends Model
     }
 
     public function office() {
-        return $this->belongsTo(Office::class);
+        return $this->belongsTo(Office::class, 'office_id');
     }
 
     public function user() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'user_id');
     }
 }

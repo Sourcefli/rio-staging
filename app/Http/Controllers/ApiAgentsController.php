@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Service;
+use App\Agent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class ApiServicesController extends Controller
+class ApiAgentsController extends Controller
 {
     /**
      * ======================================================================
@@ -16,9 +16,7 @@ class ApiServicesController extends Controller
      */
     public function index()
     {
-        $services = Service::get();
-
-        return $services;
+        return Agent::get();
     }
 
     /**
@@ -30,20 +28,41 @@ class ApiServicesController extends Controller
      */
     public function store(Request $request)
     {
-        $newService = new Service();
+        $newUser = $request->user()->create([
+            'name' => $request->name ?: "none set",
+            'email' => $request->email ?: "none set",
+            'password' => bcrypt($request->password) ?: bcrypt("password"),
+            'api_token' => Str::random(40)
+        ]);
 
-        $newService['title'] = $request->input('title', 'A Title Wasnt Entered...');
-        $newService['summary'] = $request->input('summary', 'A Summary Wasnt Entered...');
-        $newService['card_img_url'] = $request->input('card_img_url', 'A card_img_url Wasnt Entered...');
-        $newService['slug'] = createSlug($request->input('title', 'no title set'));
-        $newService['read_more_link'] = createReadMoreLink($request->input('title', 'no title set ' .Str::random(10)));
-        $newService['row_num'] = calculateRowNumber();
-        $newService->save();
+        // !! FINISH AGENT->Create API Method, then move onto to the other methods below !!!
+
+        $newAgent = new Agent();
+
+        $newAgent["first_name"] = $request->first_name ?: "not set";
+        $newAgent["last_name"] = $request->last_name ?: "not set";
+        $newAgent["asb_id"] = $request->asb_id ?: null;
+        $newAgent["email"] = $request->email ?: "not set";
+        $newAgent["phone"] = $request->phone ?: "not set";
+        $newAgent["bio"] = $request->bio ?: "not set";
+        $newAgent["started_on"] = $request->started_on ?: "not set";
+        $newAgent["company_role"] = $request->company_role ?: "not set";
+        $newAgent["company_title"] = $request->company_title ?: "not set";
+        $newAgent["facebook_url"] = $request->facebook_url ?: "not set";
+        $newAgent["linkedin_url"] = $request->linkedin_url ?: "not set";
+        $newAgent["qualifications"] = $request->qualifications ?: "not set";
+        $newAgent["sm_image_url"] = $request->sm_image_url ?: "not set";
+        $newAgent["md_image_url"] = $request->md_image_url ?: "not set";
+        $newAgent["lg_image_url"] = $request->lg_image_url ?: "not set";
+        $newAgent["team_id"] = $request->team_id ?: 4;
+        $newAgent["office_id"] = $request->office_id ?: 1;
+        $newAgent["user_id"] = $request->user_id ?: "not set";
+        $newAgent->save();
 
         return response([
             'status' => 201,
-            'message' => 'New service created',
-            'data' => $newService
+            'message' => 'New agent created',
+            'data' => $newAgent
         ]);
 
     }
@@ -57,7 +76,7 @@ class ApiServicesController extends Controller
      * @param  string  $service
      * @return \Illuminate\Http\Response
      */
-    public function show(Service $service_slug)
+    public function show(Agent $agentName)
     {
         return $service_slug;
     }

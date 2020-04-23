@@ -17,17 +17,18 @@ class CreateManagersTable extends Migration
             $table->bigIncrements('id');
             $table->string('first_name');
             $table->string('last_name');
+            $table->unsignedSmallInteger('asb_id')->nullable(true);
             $table->string('email')->unique();
             $table->string('phone', '14')->unique();
-            $table->longText('bio')->nullable();
-            $table->string('company_role')->nullable();
+            $table->longText('bio')->nullable(true);
+            $table->string('company_role')->nullable(true);
             $table->string('company_title');
-            $table->string('facebook_url')->nullable();
-            $table->string('linkedin_url')->nullable();
-            $table->string('qualifications')->nullable();
-            $table->string('sm_image_url')->nullable();
-            $table->string('md_image_url')->nullable();
-            $table->string('lg_image_url')->nullable();
+            $table->string('facebook_url')->nullable(true);
+            $table->string('linkedin_url')->nullable(true);
+            $table->string('qualifications')->nullable(true);
+            $table->string('sm_image_url')->nullable(true);
+            $table->string('md_image_url')->nullable(true);
+            $table->string('lg_image_url')->nullable(true);
             $table->timestamps();
         });
     }

@@ -20,6 +20,7 @@ class CreateOfficesTable extends Migration
             $table->string('street_two');
             $table->string('city');
             $table->string('state');
+            $table->string('state_abbr');
             $table->string('zip', '6');
             $table->string('sm_image_url', '50')->nullable();
             $table->string('md_image_url', '50')->nullable();

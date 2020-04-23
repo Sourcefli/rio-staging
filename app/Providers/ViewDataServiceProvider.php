@@ -30,7 +30,7 @@ class ViewDataServiceProvider extends ServiceProvider
             'contact', 'App\Http\View\Composers\SidebarComposer'
         );
         View::composer(
-            'contact', 'App\Http\View\Composers\AgentDataComposer'
+            ['contact', 'get-a-quote'], 'App\Http\View\Composers\AgentDataComposer'
         );
         View::composer(
             '*', 'App\Http\View\Composers\FooterComposer'

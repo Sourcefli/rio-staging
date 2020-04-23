@@ -6,6 +6,31 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
+
+    public function srcSetString() {
+        $srcSm = $this->small_src;
+        $srcMd = $this->medium_src;
+        $srcLg = $this->large_src;
+        $srcXl = $this->xlarge_src;
+        $srcSizeSm = $this->small_srcsetsize;
+        $srcSizeMd = $this->medium_srcsetsize;
+        $srcSizeLg = $this->large_srcsetsize;
+        $srcSizeXl = $this->xlarge_srcsetsize;
+
+        $srcSetSm = $srcSm. " " .$srcSizeSm;
+        $srcSetMd = $srcMd. " " .$srcSizeMd;
+        $srcSetLg = $srcLg. " " .$srcSizeLg;
+        $srcSetXl = $srcXl. " " .$srcSizeXl;
+
+        return [
+            'sm' => $srcSetSm,
+            'md' => $srcSetMd,
+            'lg' => $srcSetLg,
+            'xl' => $srcSetXl
+        ];
+
+    }
+
     protected $guarded = [];
 
     protected $attributes = [

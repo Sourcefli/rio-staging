@@ -14,7 +14,7 @@ class OfficesDataSeeder extends Seeder
     {
         /**
          * Prepare data for JSON column type
-         * 
+         *
          */
         $slackChatrooms = [
             'everybody' => 'asbsw-everybody',
@@ -45,6 +45,7 @@ class OfficesDataSeeder extends Seeder
             'street_two' => 'Suite 130',
             'city' => 'Las Vegas',
             'state' => 'Nevada',
+            'state_abbr' => 'NV',
             'zip' => '89148',
             'sm_image_url' => 'https://retirementinsuranceoptions.com',
             'md_image_url' => 'https://retirementinsuranceoptions.com',
@@ -82,6 +83,7 @@ class OfficesDataSeeder extends Seeder
             'street_two' => 'Suite 144',
             'city' => 'Roseville',
             'state' => 'California',
+            'state_abbr' => 'CA',
             'zip' => '95678',
             'sm_image_url' => 'https://retirementinsuranceoptions.com',
             'md_image_url' => 'https://retirementinsuranceoptions.com',
@@ -119,6 +121,7 @@ class OfficesDataSeeder extends Seeder
             'street_two' => 'Suite 201',
             'city' => 'San Diego',
             'state' => 'California',
+            'state_abbr' => 'CA',
             'zip' => '92121',
             'sm_image_url' => 'https://retirementinsuranceoptions.com',
             'md_image_url' => 'https://retirementinsuranceoptions.com',

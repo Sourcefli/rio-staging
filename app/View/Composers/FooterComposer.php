@@ -2,6 +2,7 @@
 
 namespace App\Http\View\Composers;
 
+use App\Image;
 use App\NavItem;
 use App\Office;
 use Illuminate\Support\Facades\DB;
@@ -15,7 +16,14 @@ class FooterComposer
      * @var Office
      */
     protected $office;
-    
+
+    /**
+     * The image class.
+     *
+     * @var Image
+     */
+    protected $image;
+
     /**
      * The services class.
      *
@@ -26,14 +34,15 @@ class FooterComposer
     /**
      * Create a new profile composer.
      *
-     * @param  App\Office  $office
-     * @param  App\NavItem  $navItem
-     * @return void
+     * @param Image $image
+     * @param NavItem $navItem
+     * @param Office $office
      */
-    public function __construct(Office $office, NavItem $navItem)
+    public function __construct(Image $image, NavItem $navItem, Office $office)
     {
-        $this->office = $office;
+        $this->image = $image;
         $this->navItem = $navItem;
+        $this->office = $office;
     }
 
     /**
@@ -43,15 +52,34 @@ class FooterComposer
      * @return void
      */
     public function compose(View $view)
-    {   
+    {
+        //Logo Src Data
+        $logo = Image::find(40);
+        $logoSrcSetSize = $logo->srcSetString();
+        $lg = $logoSrcSetSize['lg'];
+        $logoSrcData = [
+            'src' => $logo->large_src,
+            'srcset' => $lg
+        ];
+
+        //Menu Links Data
         $menuLinks = NavItem::where('category', 'menu')->get();
+
+        //Services Links Data
         $serviceLinks = NavItem::where('category', 'service')->get();
-        $hqData = Office::where('name', 'Las Vegas')->first();
+
+        //HQ Contact Data
+        $hqData = Office::find(1);
+
+        //Locations Data
+        $locations = Office::get();
 
         $view->with([
             'menuLinks' => $menuLinks,
             'serviceLinks' => $serviceLinks,
-            'hqData' => $hqData
+            'hqData' => $hqData,
+            'logoSrcData' => $logoSrcData,
+            'locations' => $locations
         ]);
     }
 }

@@ -40,7 +40,6 @@ class ManagersDataSeeder extends Seeder
                 "facebook_url" => "https://facebook.com/",
                 "linkedin_url" => "https://linkedin.com/",
                 "qualifications" => "Management, Customer Service, Agent Resources",
-                "user_id" => 2,
                 "team_id" => 4,
                 "office_id" => 1
             ],
@@ -56,7 +55,6 @@ class ManagersDataSeeder extends Seeder
                 "facebook_url" => "https://facebook.com/",
                 "linkedin_url" => "https://linkedin.com/",
                 "qualifications" => "Management, Customer Service, Agent Resources",
-                "user_id" => 10,
                 "team_id" => 4,
                 "office_id" => 1
             ],
@@ -72,7 +70,6 @@ class ManagersDataSeeder extends Seeder
                 "facebook_url" => "https://facebook.com/",
                 "linkedin_url" => "https://linkedin.com/",
                 "qualifications" => "Management, Agent Resources",
-                "user_id" => 11,
                 "team_id" => 3,
                 "office_id" => 3
             ]

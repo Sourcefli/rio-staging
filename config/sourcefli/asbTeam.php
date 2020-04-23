@@ -29,14 +29,14 @@ return [
         "linkedInUrl" => "",
         "qualifications" => "Management, Agent Resources"
     ],
-    "jLawson" => [
-        "fullName" => "Jennifer Lawson",
-        "first" => "Jennifer",
-        "last" => "Lawson",
+    "admin" => [
+        "fullName" => "Regional Administrator",
+        "first" => "Regional",
+        "last" => "Administrator",
         "email" => "admin@retirementinsuranceoptions.com",
         "phone" => "1 (702) 529-4410",
-        "bio" => "Jennifer Lawson Bio...",
-        "startedOn" => "11-02-2019",
+        "bio" => "",
+        "startedOn" => "",
         "role" => "Regional Administrator",
         "title" => "Admin",
         "facebookUrl" => "",

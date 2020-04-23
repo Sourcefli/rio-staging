@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
              // !! Run these seed rounds independent of each other !!
 
              //Round 1 Seeds
-            //  WebsiteDataSeeder::class,
+             //WebsiteDataSeeder::class,
              OfficesDataSeeder::class,
              TeamDataSeeder::class,
              CarrierSeeder::class,
@@ -23,9 +23,10 @@ class DatabaseSeeder extends Seeder
              AgentsDataSeeder::class,
              ServicesDataSeeder::class,
              ManagersDataSeeder::class,
-            AgentTeamDataSeeder::class,
-            AgentAndManagerUserIdSeeder::class,
-            NavItemsSeeder::class
+             AgentTeamDataSeeder::class,
+             AgentAndManagerUserIdSeeder::class,
+             NavItemsSeeder::class,
+             ImageDataSeeder::class
 
          ]);
     }

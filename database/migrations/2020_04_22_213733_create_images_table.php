@@ -15,23 +15,27 @@ class CreateImagesTable extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title', '50');
-            $table->string('default_src', '80')->unique();
-            $table->string('default_srcset', '80')->default('(min-width: 769px) 456px');
+            $table->string('title');
 
-            $table->string('small_src', '80')->nullable();
-            $table->string('small_srcset', '80')->default('(max-width: 560px) 212px');
+            $table->string('default_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('default_srcsetsize')->default('(min-width: 769px) 456px');
 
-            $table->string('medium_src', '80')->nullable();
-            $table->string('medium_srcset', '80')->default('(max-width: 768px) 326px');
+            $table->string('small_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('small_srcsetsize')->default('(max-width: 560px) 212px');
 
-            $table->string('large_src', '80')->nullable();
-            $table->string('large_srcset', '80')->default('(min-width: 769px) 456px');
+            $table->string('medium_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('medium_srcsetsize')->default('(max-width: 768px) 326px');
 
-            $table->text('alt_text');
+            $table->string('large_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('large_srcsetsize')->default('(min-width: 769px) 456px');
+
+            $table->string('xlarge_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('xlarge_srcsetsize')->default('(min-width: 769px) 456px');
+
+            $table->text('alt_text')->nullable();
             $table->text('description')->nullable();
-            $table->text('image_copy')->nullable();
-            $table->enum('category', ['menu', 'service', 'blog', 'staff', 'location', 'carrier', 'product', 'other'])->default('other');
+            $table->text('banner_text')->nullable();
+            $table->enum('category', ['hero_images', 'webpage_images', 'favicon_images', 'carrier_images', 'product_images', 'services_images', 'staff_images', 'office_images', 'logo_images', 'city_images'])->default('webpage_images');
             $table->timestamps();
         });
     }

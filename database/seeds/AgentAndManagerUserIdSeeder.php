@@ -83,6 +83,18 @@ class AgentAndManagerUserIdSeeder extends Seeder
             ['user_id' => 9]
         );
 
+        //Tina
+        DB::table('agents')->updateOrInsert(
+            ['id' => 8],
+            ['user_id' => 13]
+        );
+
+        //Anitna
+        DB::table('agents')->updateOrInsert(
+            ['id' => 9],
+            ['user_id' => 14]
+        );
+
         Schema::enableForeignKeyConstraints();
     }
 }

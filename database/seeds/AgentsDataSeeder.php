@@ -141,8 +141,7 @@ class AgentsDataSeeder extends Seeder
                 "linkedin_url" => "https://linkedin.com/",
                 "qualifications" => "Life, Medicare, Income Protection",
                 "team_id" => 4,
-                "office_id" => 1,
-                "user_id" => 13
+                "office_id" => 1
             ],
             [
                 "first_name" => "Anita",
@@ -158,8 +157,7 @@ class AgentsDataSeeder extends Seeder
                 "linkedin_url" => "https://linkedin.com/",
                 "qualifications" => "Life, Medicare, Income Protection",
                 "team_id" => 4,
-                "office_id" => 1,
-                "user_id" => 14
+                "office_id" => 1
             ],
 
         ]);

@@ -100,6 +100,20 @@ class UsersDataSeeder extends Seeder
                 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', //'password'
                 'api_token' => Str::random(60)
             ],
+            [
+                'id' => 13,
+                'name' => 'Tina Dubowy',
+                'email' => 'tinadubowy@gmail.com',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', //'password'
+                'api_token' => Str::random(60)
+            ],
+            [
+                'id' => 14,
+                'name' => 'Anita Warsche',
+                'email' => 'ANITA991245@gmail.com',
+                'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', //'password'
+                'api_token' => Str::random(60)
+            ],
         ]);
 
         Schema::enableForeignKeyConstraints();

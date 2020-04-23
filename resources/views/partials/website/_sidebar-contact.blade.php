@@ -23,7 +23,8 @@
                 <a href="mailto:{{ $hqData->office_email }}">{{ $hqData->office_email }}</a>
             </li>
             <li><strong class="color-primary">Hours Of Operation</strong><br>
-                {!! $hqData->days_and_hours !!}
+                {!! $hqData->days_of_operation !!}<br>
+                {!! $hqData->hours_of_operation !!}
             </li>
             <li>
                 <a href="#contact-our-team" class="btn-link link-arrow-sm">Contact Your Agent</a>

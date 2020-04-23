@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+//use App\Carrier;
 use App\Service;
 use App\StaticData\AboutPage;
 use App\StaticData\CompanyData;
@@ -75,8 +76,12 @@ class WebsiteController extends Controller
     */
     public function getClientResourcesPage()
     {
-
         return view('client-resources');
+//        $carriers = Carrier::get();
+
+//        return view('client-resources', [
+//            'carriers' => $carriers
+//        ]);
     }
 
     /*

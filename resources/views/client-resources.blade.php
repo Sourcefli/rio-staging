@@ -1,10 +1,8 @@
+{{--Available VARs:--}}
+{{--$carriers--}}
+{{--Data Source: CarrierDataComposer (not being passed from controller)--}}
+
 @extends('layouts.website.master')
-
-
-@php
-    $imageData = config("sourcefli.responsiveImagesData");
-    $carrierData = config("sourcefli.carrierData");
-@endphp
 
 @section('title')
     Client Resources
@@ -13,11 +11,6 @@
 @section('hero')
     @include('partials/website/_hero-slim')
 @endsection
-
-{{-- TODOS --}}
-{{-- [  ] CHANGE THE HERO IMAGE FOR Client Resources Page (And other secondary pages...about us and home pages are already done) --}}
-{{-- [  ] READY TO RENDER CARRIER LOGOS --}}
-
 
 @section('content')
 <div class="section section-contents section-pad">

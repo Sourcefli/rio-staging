@@ -4,6 +4,7 @@
  *  Custom Laravel Helpers
  */
 
+use App\WebpageData;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -41,10 +42,14 @@ function getHeroImg($path) {
 function getPageHeading($path) {
     switch($path) {
         case "about":
-            return option('about_banner_heading');
+            return WebpageData::where('pagename', 'about')
+                                    ->where('type', 'bannerData')
+                                    ->get();
             break;
         case "services":
-            return option('services_banner_heading');
+            return WebpageData::where('pagename', 'services')
+                                ->where('type', 'bannerData')
+                                ->get();
             break;
         case "client-resources":
             return option('client_resources_banner_heading');
@@ -99,7 +104,7 @@ function createReadMoreLink($title) {
 function calculateRowNumber() {
     $currentHighRowNum = DB::table('services')->pluck('row_num')->max();
     $totalInRowNum = DB::table('services')->where('row_num', $currentHighRowNum)->count();
-    
+
     if ($totalInRowNum === 3) {
         return $currentHighRowNum + 1;
     } else {

@@ -3,8 +3,8 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" packagePrefix="Tests\" />
-      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/appstract/laravel-options" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/aws/aws-sdk-php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/barryvdh/laravel-ide-helper" />
@@ -35,7 +35,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/justinrainbow/json-schema" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/framework" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/telescope" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/ui" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/league/commonmark" />
@@ -46,7 +45,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/malhal/laravel-geographical" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/monolog/monolog" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/moontoast/math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/mtdowling/jmespath.php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/nesbot/carbon" />
@@ -61,8 +59,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpoption/phpoption" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpseclib/bcmath_compat" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpseclib/phpseclib" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-file-iterator" />

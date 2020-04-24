@@ -174,7 +174,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\CanvasServiceProvider::class,
-        App\Providers\TelescopeServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\ViewDataServiceProvider::class,
 

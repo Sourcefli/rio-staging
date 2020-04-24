@@ -26,8 +26,9 @@ class DatabaseSeeder extends Seeder
              AgentTeamDataSeeder::class,
              AgentAndManagerUserIdSeeder::class,
              NavItemsSeeder::class,
-             ImageDataSeeder::class
-
+             ImageDataSeeder::class,
+             WebpageDataSeeder::class,
+             SiteCardsSeeder::class
          ]);
     }
 }

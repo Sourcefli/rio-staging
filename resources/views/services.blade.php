@@ -1,7 +1,5 @@
 @extends('layouts.website.master')
 
-
-
 @section('title')
     ASB Southwest Services
 @endsection
@@ -20,12 +18,12 @@
             <div class="content row">
 
                 <div class="wide-sm center">
-                    <h2>Our Insurance Services</h2>
-                    <p class="lead">Services Description</p>
+                    <h2>{{ $data["pageHeading"]->heading }}</h2>
+                    <p class="lead">{{ $data["pageHeading"]->body }}</p>
                 </div>
                 <!-- Top Row of Service Cards -->
                 <div class="row row-feature row-column mt-x5">
-                    @foreach ($servicesRowOne as $service)
+                    @foreach ($data["servicesRowOne"] as $service)
                             <div class="col-md-4 col-sm-6">
                                 <!-- feature box -->
                                 <div class="feature boxed feature-s6">
@@ -46,7 +44,7 @@
                 <!-- Top Row  #end -->
 
                 <!-- Bottom Row  -->
-                    @foreach ($servicesRowTwo as $service)
+                    @foreach ($data["servicesRowTwo"] as $service)
                         <div class="col-md-4 col-sm-6">
                             <!-- featured box -->
                             <div class="feature boxed feature-s6">

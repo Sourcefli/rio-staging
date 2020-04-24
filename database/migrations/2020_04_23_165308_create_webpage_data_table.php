@@ -18,8 +18,11 @@ class CreateWebpageDataTable extends Migration
             $table->string('pagename');
             $table->string('category');
             $table->string('classes')->nullable(true);
+            $table->string('html_id')->nullable(true);
             $table->string('heading')->nullable(true);
-            $table->string('subheading')->nullable(true);
+            $table->text('subheading')->nullable(true);
+            $table->string('href')->nullable(true);
+            $table->string('href_text')->nullable(true);
             $table->string('type');
             $table->text('body')->nullable(true);
             $table->timestamps();

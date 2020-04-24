@@ -1,16 +1,5 @@
 @extends('layouts.website.sidebar')
 
- {{-- SIDEBAR LAYOUT BLOCK SECTIONS
-[ ] {{ asyncTracking }}
-[ ] {{  Title }}
-[ ] {{ extraCss }}
-[ ] {{  hero }}
-[ ] {{  content }}
-[ ] {{  sidebar }}
-[ ] {{ belowMain }}
-[ ] {{ preFooter }}
-[ ] {{ extraJs  ---}}
-
 @php
     $pageData = config("sourcefli.siteData.aboutPageData")
 @endphp
@@ -28,29 +17,30 @@
 
 
 @section('content')
-
-
     <div class="col-md-8">
-
-        <h1 class="heading-lead">{{ option('about_section1_heading') }}</h1>
-
+        <h1 class="heading-lead">{{ $sectionOneHeading->heading }}</h1>
         <br>
-
-        <h4><strong>{{ option('about_section1_paragraph1_title') }}</strong></h4>
-        <p>{{ option('about_section1_paragraph1_paragraph') }}</p>
-
-        <h4><strong>Informed.</strong></h4>
-        <p>tempor incididunt ut labore et dolore magna eiusmod tempor dunt ut labore et dolore mane eiusmod tempor incididunt ut magna aliqua.</p>
-
-        <h4><strong>Eager To Help.</strong></h4>
-        <p>dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-
+        <h4>
+            <strong>{{ $sectionOneHeading->subheading }}</strong>
+        </h4>
+        @foreach($sectionOneContent as $sectionOne)
+            @if($loop->iteration === 'last')
+                <hr>
+                <h2>{{ $sectionOne->heading }}</h2>
+                <p>{{ $sectionOne->body }}</p>
+                <p><a href="{{ route('contactPage') }}#contact-our-team" class="btn-link link-arrow-sm">Click here to learn more</a></p>
+            @else
+                <h4>{{ $sectionOne->heading }}</h4>
+                <p>{{ $sectionOne->body }}</p>
+            @endif
+        @endforeach
         <hr>
-
-        <h2>Meet our Team</h2>
-        <p>Our team is our greatest asset and we continue to invest more and more time to train and provide them with as many resources as possible</p>
-        <p><a href="/contact#contact-our-team" class="btn-link link-arrow-sm">Click here to know them</a></p>
-
+        @foreach($sectionTwoContent as $sectionTwo)
+            <h2>{{ $sectionTwo->heading }}</h2>
+            <p>{{ $sectionTwo->body }}</p>
+            <p><a href="{{ $sectionTwo->href }}" class="btn-link link-arrow-sm">{{ $sectionTwo->href_text }}</a></p>
+            <hr>
+        @endforeach
     </div>
 @endsection
 

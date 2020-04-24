@@ -10,7 +10,7 @@ class ContactPage
 
         option([
             "contact_banner_heading" => "A “People First” philosophy",
-            "contact_banner_subheading" => "At American Senior Benefits we are dedicated to serving those in need of insurance, especially seniors. We are proudly independent, answering only to our customers.",
+            "contact_banner_subheading" => "",
         ]);
 
     }

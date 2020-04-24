@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 //use App\Carrier;
 use App\Service;
-use App\StaticData\AboutPage;
+use App\WebpageData;
+use App\SiteCard;
 use App\StaticData\CompanyData;
 use App\StaticData\HomePage;
 use Appstract\Options\Option;
@@ -19,18 +20,29 @@ class WebsiteController extends Controller
     */
     public function getHomePage()
     {
+        $sectionTwoListItems = [
+            "Medicare Supplements & Advantage",
+            "Final expense coverage for any health conditions",
+            "Income planning and strategies",
+            "Short or long term care protection",
+            "Dental &amp; Vision comparisons",
+        ];
+        $slidesData = WebpageData::where('category', 'homeSlider')->get();
+        $sectionOneCards = SiteCard::where('pages', 'home')
+                                    ->where('section_number', 'one')
+                                    ->get()
+                                    ->toArray();
+        $sectionTwoCards = SiteCard::where('pages', 'home')
+                                    ->where('section_number', 'two')
+                                    ->get()
+                                    ->toArray();
 
-        //Set Home Page Static Data
-        HomePage::sectionOne();
-        Homepage::sectionTwo();
-        CompanyData::setCompanyData();
-
-
-        $serviceCardData = config('sourcefli.siteData.serviceCards');
-
-        return view('home', [
-            "serviceCardData" => $serviceCardData,
-        ]);
+        return view('home', compact([
+            'slidesData',
+            'sectionOneCards',
+            'sectionTwoCards',
+            'sectionTwoListItems'
+        ]));
 
     }
 
@@ -40,11 +52,21 @@ class WebsiteController extends Controller
     */
     public function getAboutPage()
     {
-        AboutPage::bannerData();
-        AboutPage::bannerCtaData();
-        AboutPage::sectionOne();
-        $serviceCardData = config('sourcefli.siteData.serviceCards');
-        return view('about');
+        $pageData = WebpageData::where('pagename', 'about')->get();
+        $bannerData = $pageData->where('category', 'banner')->first();
+        $bannerCtaData = $pageData->where('category', 'callToAction')->first();
+        $sectionOneHeading = $pageData->where('category', 'sectionHeading')->first();
+        $sectionOneContent = WebpageData::where('pagename', 'about')->where('category', 'sectionOneContent')->get();
+        $sectionTwoContent = WebpageData::where('pagename', 'about')->where('category', 'sectionTwoContent')->get();
+
+        return view('about', compact([
+            'pageData',
+            'bannerData',
+            'bannerCtaData',
+            'sectionOneHeading',
+            'sectionOneContent',
+            'sectionTwoContent'
+        ]));
     }
 
     /*
@@ -53,21 +75,18 @@ class WebsiteController extends Controller
     */
     public function getServicesPage()
     {
-
-        //FROM HERO - for other use...
-        $headingOne = "Full Medicare Services";
-        $subheadingOne = "Whether Medicare Advantage, Supplements, Special Needs, or anything in between... our friendly team is licensed, experienced, and well-equipped to handle any Medicare-related topic you'd like to throw at them!";
-
-        //FROM HERO - for other use...
-        $headingTwo = "Risk Free Retirement Strategies";
-        $subheadingTwo = "Achieving a relaxing and comfortable retirement can be an art - and for some, a nail-bitting rollercoaster. This is generally from bad advice or the misinformation that's advertised so often. Talk face-to-face with someone who's accountable to what they say to you and avoid these pitfalls with your nestegg.";
+        $pageData = WebpageData::where('pagename', 'services')->get();
+        $headingContent = $pageData->where('category', 'sectionContent')->first();
 
         $servicesRowOne = Service::where('row_num', 1)->get();
         $servicesRowTwo = Service::where('row_num', 2)->get();
 
-        return view('services', compact([
-                'servicesRowOne', 'servicesRowTwo'
-            ]));
+        $data = [
+            'heading' => $headingContent,
+            'servicesRowOne' => $servicesRowOne,
+            'servicesRowTwo' => $servicesRowTwo
+        ];
+        return view('services', ['data' => $data]);
     }
 
     /*
@@ -76,12 +95,8 @@ class WebsiteController extends Controller
     */
     public function getClientResourcesPage()
     {
+        //Contains $carriers VAR from CompanyDataComposer
         return view('client-resources');
-//        $carriers = Carrier::get();
-
-//        return view('client-resources', [
-//            'carriers' => $carriers
-//        ]);
     }
 
     /*

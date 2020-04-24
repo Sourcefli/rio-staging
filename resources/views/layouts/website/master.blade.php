@@ -76,6 +76,7 @@
         <meta name="theme-color" content="#ffffff" />
         <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
         {{-- <link rel="stylesheet" type="text/css" href="css/app.css" /> --}}
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
         <link rel="stylesheet" type="text/css" href="css/app.css" />
 
         {{-- smooth scroll everywhere--}}

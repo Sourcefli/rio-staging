@@ -53,8 +53,11 @@ class WebsiteController extends Controller
     public function getAboutPage()
     {
         $pageData = WebpageData::where('pagename', 'about')->get();
+
+        //To be Included with all pages but the HOME page
         $bannerData = $pageData->where('category', 'banner')->first();
         $bannerCtaData = $pageData->where('category', 'callToAction')->first();
+
         $sectionOneHeading = $pageData->where('category', 'sectionHeading')->first();
         $sectionOneContent = WebpageData::where('pagename', 'about')->where('category', 'sectionOneContent')->get();
         $sectionTwoContent = WebpageData::where('pagename', 'about')->where('category', 'sectionTwoContent')->get();
@@ -75,18 +78,34 @@ class WebsiteController extends Controller
     */
     public function getServicesPage()
     {
+
         $pageData = WebpageData::where('pagename', 'services')->get();
+
+        //To be Included with all pages but the HOME page
+        $bannerData = $pageData->where('category', 'banner')->first();
+        $bannerCtaData = $pageData->where('category', 'callToAction')->first();
+
         $headingContent = $pageData->where('category', 'sectionContent')->first();
 
         $servicesRowOne = Service::where('row_num', 1)->get();
         $servicesRowTwo = Service::where('row_num', 2)->get();
 
-        $data = [
-            'heading' => $headingContent,
-            'servicesRowOne' => $servicesRowOne,
-            'servicesRowTwo' => $servicesRowTwo
-        ];
-        return view('services', ['data' => $data]);
+//        $data = [
+//            'pageData',
+//            'bannerData',
+//            'bannerCtaData',
+//            'heading' => $headingContent,
+//            'servicesRowOne' => $servicesRowOne,
+//            'servicesRowTwo' => $servicesRowTwo
+//        ];
+        return view('services', compact([
+            'pageData',
+            'bannerData',
+            'bannerCtaData',
+            'headingContent',
+            'servicesRowOne',
+            'servicesRowTwo'
+        ]));
     }
 
     /*
@@ -95,8 +114,18 @@ class WebsiteController extends Controller
     */
     public function getClientResourcesPage()
     {
-        //Contains $carriers VAR from CompanyDataComposer
-        return view('client-resources');
+        $pageData = WebpageData::where('pagename', 'clientResources')->get();
+
+        //To be Included with all pages but the HOME page
+        $bannerData = $pageData->where('category', 'banner')->first();
+        $bannerCtaData = $pageData->where('category', 'callToAction')->first();
+
+
+        return view('client-resources', compact([
+            'pageData',
+            'bannerData',
+            'bannerCtaData',
+        ]));
     }
 
     /*
@@ -114,8 +143,17 @@ class WebsiteController extends Controller
     */
     public function getContactPage()
     {
+        $pageData = WebpageData::where('pagename', 'contact')->get();
 
-        return view('contact');
+        //To be Included with all pages but the HOME page
+        $bannerData = $pageData->where('category', 'banner')->first();
+        $bannerCtaData = $pageData->where('category', 'callToAction')->first();
+
+        return view('contact', compact([
+            'pageData',
+            'bannerData',
+            'bannerCtaData',
+        ]));
     }
 
     /*

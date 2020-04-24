@@ -17,8 +17,8 @@
             <div class="content row">
                 <div class="banner-text">
                     {{-- Serve Heading and Subheading based on which age the user is on--}}
-                    <h2 class="page-title">{{ $bannerData->heading }}<br></h2>
-                    <p class="lead">{{ $bannerData->subheading }}</p>
+                    <h2 class="page-title">{!! $bannerData->heading !!}<br></h2>
+                    <p class="lead">{!! $bannerData->subheading !!}</p>
                 </div>
                 <div class="banner-sider">
                     <div class="boxed boxed-w">

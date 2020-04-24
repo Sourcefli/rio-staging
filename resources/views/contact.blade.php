@@ -21,7 +21,7 @@
 
 @section('content')
 <div class="drop-message col-md-7 res-m-bttm">
-    <h3>Complete the form below too get in touch with us or <a href="{{ $qouteNav["uri"] }} ">request a quote.</a> </h3>
+    <h3>Complete the form below too get in touch with us or <a href="{{ route('getAQuotePage') }} ">request a quote.</a> </h3>
     <form id="quote-contact-request" class="form-quote" action="form/quote-request.php" method="post">
         <div class="form-group row">
             <div class="form-field col-md-6 form-m-bttm">
@@ -56,40 +56,40 @@
                 <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[1] }}">
                     <span>{{ $selections[1] }}</span>
                 </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[2] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[2] }}">
                     <span>{{ $selections[2] }}</span>
                 </li>
             </ul>
             <ul class="form-field clearfix">
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[3] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[3] }}">
                     <span>{{ $selections[3] }}</span>
                 </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[4] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[4] }}">
                     <span>{{ $selections[4] }}</span>
                 </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[5] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[5] }}">
                     <span>{{ $selections[5] }}</span>
                 </li>
             </ul>
             <ul class="form-field clearfix">
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[6] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[6] }}">
                     <span>{{ $selections[6] }}</span>
                 </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[7] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[7] }}">
                     <span>{{ $selections[7] }}</span>
                 </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[8] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[8] }}">
                     <span>{{ $selections[8] }}</span>
                 </li>
             </ul>
             <ul class="form-field clearfix">
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[9] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[9] }}">
                     <span>{{ $selections[9] }}</span>
                 </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[10] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[10] }}">
                     <span>{{ $selections[10] }}</span>
                 </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[11] }}"> 
+                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[11] }}">
                     <span>{{ $selections[11] }}</span>
                 </li>
             </ul>
@@ -133,7 +133,7 @@
 @endsection
 
 @section('sidebar')
-    @include('partials/website/_sidebar-contact')    
+    @include('partials/website/_sidebar-contact')
 @endsection
 
 @section('belowMain')
@@ -141,5 +141,5 @@
 @endsection
 
 @section('preFooter')
-    @include('components/_blue-bg-cta')    
+    @include('components/_blue-bg-cta')
 @endsection

@@ -1,6 +1,6 @@
 {{--Available VARs:--}}
-{{--$carriers--}}
-{{--Data Source: CarrierDataComposer (not being passed from controller)--}}
+{{-- $carriers => Source: CarrierDataComposer --}}
+{{-- pageData, bannerData, bannerCtaData => WebsiteController --}}
 
 @extends('layouts.website.master')
 

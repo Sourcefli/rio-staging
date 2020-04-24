@@ -8,7 +8,7 @@ Route::get('/imgs', function () {
 
 
 
-Route::get('/', 'WebsiteController@getHomePage');
+Route::get('/', 'WebsiteController@getHomePage')->name('homePage');
 Route::get('/about', 'WebsiteController@getAboutPage')->name('aboutPage');
 Route::get('/services', 'WebsiteController@getServicesPage')->name('servicesPage');
 Route::get('/client-resources', 'WebsiteController@getClientResourcesPage')->name('clientResourcesPage');

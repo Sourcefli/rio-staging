@@ -138,7 +138,7 @@ class WebpageDataSeeder extends Seeder
                 "category" => 'sectionTwoContent',
                 "type" => 'headingAndParagraph',
                 "heading" => "Meet Our Team",
-                "body" => "We attract this level of quality professionals in part due to our hybrid approach – agents enjoy the training and support of a dedicated company with the breadth of products available to independent agents.",
+                "body" => "We attract the highest level of quality professionals in part due to our hybrid approach – agents enjoy the training and support of a dedicated company with the breadth of products available to independent agents.",
                 "href" => "/contact#contact-our-team",
                 "href_text" => "More Details",
             ],
@@ -234,6 +234,7 @@ class WebpageDataSeeder extends Seeder
             ]
         ]);
 
+
         DB::table('webpage_data')->insert([
             [
                 "pagename" => 'contact',
@@ -262,6 +263,20 @@ class WebpageDataSeeder extends Seeder
                 "body" => "Each member of our team undergoes a thorough training process when they get started! They also have the chance to ride-along with the most experienced members of our team. This isn't always the case with other brokers so we make sure to take extra care in making all new members feel welcome and that they're being taken care of when they come on board. We also maintain weekly trainings that help to cover the wide variety of topics throughout our industry. There's a lot to learn and a lot to teach! We really love whenever we get our team together, we have a lot of fun and we all help each other to understand the more complicated topics whenever they come up!",
             ]
         ]);
+
+        /**
+         * SIDEBAR-Main data
+         */
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'sidebar_main',
+                "category" => 'owner_statement',
+                "heading" => "An Open Letter To Our Website Visitors",
+                "body" => "I've enjoyed 26 years of successful experience in the Insurance industry, and 16 of those years in a management capacity, including the last 11 years in a Branch and/or Regional Manager role. This experience has provided me the opportunity to assist countless clients with the peace of mind that comes with knowing that they and their families are protected. In addition, my experience and management skills have helped to build many successful careers based on the same integrity and client focus vital to the quality service that every client deserves. I am married to my wonderful wife Barbie, and I have four grown Sons, and TEN wonderful grandchildren.",
+                "type" => 'sidebarData',
+            ]
+        ]);
+
 
     } // END run function
 }

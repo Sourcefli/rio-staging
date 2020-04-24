@@ -1,6 +1,8 @@
-@php
-    $nav = config('sourcefli.siteData.nav.items')
-@endphp
+{{--Available VARs--}}
+{{--'managerStatement' => Source: SidebarComposer --}}
+{{--'hqData' => Source: SidebarComposer --}}
+{{--'links' => Source: FooterComposer --}}
+{{--'carriers' => Source: CarrierDataComposer --}}
 
 <div class="col-md-4">
     <div class="sidebar-right">
@@ -9,34 +11,32 @@
             <div class="wgs-content">
                 <ul class="list list-grouped">
                     <li class="list-heading">
-                        <span>About Retirement Insurance Options</span>
+                        <span>Quick Navigation</span>
                         <ul>
-                            <li><a href="{{ $nav["services"]["url"] }}">Overview</a></li>
-                            <li class="current"><a href="{{ $nav["about"]["url"] }}">About Company</a></li>
-                            <li><a href="{{ $nav["about"]["url"] }}">Meet our Team</a></li>
+                            <li class="@if(Request::path() === 'home') {{ "current" }} @endif"><a href="{{ route('homePage') }}">Overview</a></li>
+                            <li class="@if(request()->path() === 'about') {{ "current" }} @endif"><a href="{{ route('aboutPage') }}">About American Senior Benefits</a></li>
+                            <li class="@if(Request::path() === 'services') {{ "current" }} @endif"><a href="{{ route('servicesPage') }}">View Our Services</a></li>
+                            <li class="@if(Request::path() === 'get-a-quote') {{ "current" }} @endif"><a href="{{ route('getAQuotePage') }}">Get Quotes</a></li>
+                            <li class="@if(Request::path() === 'contact') {{ "current" }} @endif"><a href="{{ route('contactPage') }}#contact-our-team">Get In Touch</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{ $nav["about"]["url"] }}"><span>Testimonials</span></a></li>
-                    <li><a href="{{ $nav["contact"]["uri"] }}"><span>Frequently Ask Questions</span></a></li>
                 </ul>
             </div>
         </div>
 
         <div class="wgs-box boxed boxed-flat">
             <div class="wgs-content">
-                <h3>An Open Letter To Our Website Visitors</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis susc.</p>
-                <h6><strong>Joseph Williams</strong><br>Owner &amp; CEO</h6>
+                <h5>{{ $managerStatement->heading }}</h5>
+                <p><em>{{ $managerStatement->body }}</em></p>
+                <h6><strong>- Don Havens</strong><br>Owner &amp; RSM <br> American Senior Benefits - Southwest Region</h6>
             </div>
         </div>
 
         <div class="wgs-box boxed boxed-flat">
             <div class="wgs-content">
-                <h5>Report a Claim</h5>
-                <p>A team of insurance professionals who are there when you need them, Just call them.</p>
-                <p><a href="claims.html" class="btn-link link-arrow-sm">Claim Info</a></p>
+                <h5>Request Assistance With Your Benefits</h5>
+                <p>Our team of experienced insurance professionals are here when you need them, call or reach out anytime.</p><br><small><em>No-contact</em> options are available</small>
+                <p><a href="{{ route('contactPage') }}" class="btn-link link-arrow-sm">Request A Call</a></p>
             </div>
         </div>
 

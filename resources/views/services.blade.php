@@ -18,12 +18,12 @@
             <div class="content row">
 
                 <div class="wide-sm center">
-                    <h2>{{ $data["pageHeading"]->heading }}</h2>
-                    <p class="lead">{{ $data["pageHeading"]->body }}</p>
+                    <h2>{{ $headingContent->heading }}</h2>
+                    <p class="lead">{{ $headingContent->body }}</p>
                 </div>
                 <!-- Top Row of Service Cards -->
                 <div class="row row-feature row-column mt-x5">
-                    @foreach ($data["servicesRowOne"] as $service)
+                    @foreach ($servicesRowOne as $service)
                             <div class="col-md-4 col-sm-6">
                                 <!-- feature box -->
                                 <div class="feature boxed feature-s6">
@@ -44,7 +44,7 @@
                 <!-- Top Row  #end -->
 
                 <!-- Bottom Row  -->
-                    @foreach ($data["servicesRowTwo"] as $service)
+                    @foreach ($servicesRowTwo as $service)
                         <div class="col-md-4 col-sm-6">
                             <!-- featured box -->
                             <div class="feature boxed feature-s6">
@@ -66,8 +66,8 @@
                 <!-- Learn More Excerpt -->
                 <div class="gaps size-lg"></div>
                 <div class="wide-md center">
-                    <p class="lead">To learn more, <a href="/contact">get in touch</a>. We're here for you — and your peace of mind.</p>
-                    <p>Have a quick question? Fire up <a href="faqs.html">a chat with us</a>.</p>
+                    <p class="lead">To learn more, <a href="{{ route('contactPage') }}">get in touch</a>. We're here at anytime for your peace of mind.</p>
+                    <p>Have a quick question? Fire up <a href="{{ $hqData->facebook_url }}">a chat with us on Facebook</a>.</p>
                 </div>
 
 

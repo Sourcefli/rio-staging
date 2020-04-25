@@ -27,6 +27,9 @@
         <div class="wgs-box boxed boxed-flat">
             <div class="wgs-content">
                 <h5>{{ $managerStatement->heading }}</h5>
+                <div class="fbox-photo">
+                    <img src="/img/asb_staff/don-havens.jpg" alt="Don Havens Photo" style="margin: 10px; height: 120px; border-radius: 50%; text-align: center;">
+                </div>
                 <p><em>{{ $managerStatement->body }}</em></p>
                 <h6><strong>- Don Havens</strong><br>Owner &amp; RSM <br> American Senior Benefits - Southwest Region</h6>
             </div>

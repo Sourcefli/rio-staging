@@ -8,6 +8,7 @@
     $bestTime = config("sourcefli.formData.contact.bestTime");
     $selections = config("sourcefli.formData.quotes.selections");
     $referredBy = config("sourcefli.formData.quotes.referredBy");
+    $acuityApptUrl = 'https://asbsouthwest.as.me/?appointmentType=category:American%20Senior%20Benefits%20Southwest';
 @endphp
 
 @section('title')
@@ -15,17 +16,19 @@
 @endsection
 
 @section('hero')
-    @include('partials/website/_hero-slim')    
+    @include('partials/website/_hero-slim')
 @endsection
 
 
 @section('content')
     <div class="quote-list col-md-7 res-m-bttm-lg">
         <p class="lead">
-            Please contact us with questions or to set-up an appointment by filling out the form below or <a href="{{ $navData["contact"]["uri"] }}">reach out to us anytime</a>.
+            Please <a href="{{ route('contactPage') }}">contact us</a> with questions or to set-up an appointment to speak with one of our agents by <a href="{{ $acuityApptUrl }}" target="_blank">clicking here</a>.
         </p>
         <span class="gaps size-xs"></span>
         <div class="quote-group">
+
+            {{-- !! FIX FORM HANDLING !! --}}
             <form id="quote-contact-request" class="form-quote" action="form/quote-request.php" method="POST">
                 @csrf
                 <div class="form-group row">
@@ -52,52 +55,32 @@
                         <input name="quote-request-citystate" type="text" placeholder="City, State, Zip" class="form-control">
                     </div>
                 </div>
-                <h4>Type Of Product You Interested</h4>
+                <h4>Topic(s) of Interest</h4>
                 <div class="form-group row">
-                    <ul class="form-field clearfix">
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[0] }}">
-                            <span>{{ $selections[0] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[1] }}">
-                            <span>{{ $selections[1] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[2] }}"> 
-                            <span>{{ $selections[2] }}</span>
-                        </li>
-                    </ul>
-                    <ul class="form-field clearfix">
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[3] }}"> 
-                            <span>{{ $selections[3] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[4] }}"> 
-                            <span>{{ $selections[4] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[5] }}"> 
-                            <span>{{ $selections[5] }}</span>
-                        </li>
-                    </ul>
-                    <ul class="form-field clearfix">
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[6] }}"> 
-                            <span>{{ $selections[6] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[7] }}"> 
-                            <span>{{ $selections[7] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[8] }}"> 
-                            <span>{{ $selections[8] }}</span>
-                        </li>
-                    </ul>
-                    <ul class="form-field clearfix">
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[9] }}"> 
-                            <span>{{ $selections[9] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[10] }}"> 
-                            <span>{{ $selections[10] }}</span>
-                        </li>
-                        <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[11] }}"> 
-                            <span>{{ $selections[11] }}</span>
-                        </li>
-                    </ul>
+                    <div class="form-group row">
+                        @foreach($selections as $selection)
+                            <?php
+                            $i = $loop->iteration;
+                            $oddLoop = $i % 3;
+                            if($oddLoop === 1) {
+                                echo '<ul class=\'form-field clearfix\'>';
+                            }
+                            ?>
+
+                            <li class="col-sm-4">
+                                <input type="checkbox" name="quote-request-interest[]" value="{{ $selection }}">
+                                <span>{{ $selection }}</span>
+                            </li>
+
+                            <?php
+                            $oddLoop = $i % 3;
+                            if($oddLoop === 0) {
+                                echo '</ul>';
+                            }
+                            $i++;
+                            ?>
+                        @endforeach
+                    </div>
                 </div>
                 <div class="form-group row">
                     <div class="form-field col-md-6">
@@ -113,15 +96,10 @@
                         <p>Hear About Us</p>
                         <select name="quote-request-hear">
                             <option value="">Please select</option>
-                            <option value="{{ $referredBy[0] }}">{{ $referredBy[0] }}</option>
-                            <option value="{{ $referredBy[1] }}">{{ $referredBy[1] }}</option>
-                            <option value="{{ $referredBy[2] }}">{{ $referredBy[2] }}</option>
-                            <option value="{{ $referredBy[3] }}">{{ $referredBy[3] }}</option>
-                            <option value="{{ $referredBy[4] }}">{{ $referredBy[4] }}</option>
-                            <option value="{{ $referredBy[5] }}">{{ $referredBy[5] }}</option>
-                            <option value="{{ $referredBy[6] }}">{{ $referredBy[6] }}</option>
-                            <option value="{{ $referredBy[7] }}">{{ $referredBy[7] }}</option>
-                            <option value="{{ $referredBy[8] }}">{{ $referredBy[8] }}</option>
+                            {{-- 8 loops --}}
+                            @foreach($referredBy as $item)
+                                <option value="{{ $item }}">{{ $item }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -139,13 +117,13 @@
 @endsection
 
 @section('sidebar')
-    @include('partials/website/_sidebar-contact')    
+    @include('partials/website/_sidebar-contact')
 @endsection
 
 @section('belowMain')
     @include('components/_carriers-we-represent')
     @include('partials/website/_team-contact-details') {{-- =====>> **Doesn't include Edwards --}}
-    {{-- @include('partials/website/_team-v2-details') =====>> Needs Responsiveness --}} 
+    {{-- @include('partials/website/_team-v2-details') =====>> Needs Responsiveness --}}
 @endsection
 
 @section('preFooter')

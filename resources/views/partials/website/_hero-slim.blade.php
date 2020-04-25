@@ -20,20 +20,24 @@
                     <h2 class="page-title">{!! $bannerData->heading !!}<br></h2>
                     <p class="lead">{!! $bannerData->subheading !!}</p>
                 </div>
+
+                {{-- Small CTA Div within the hero banner on each page --}}
                 <div class="banner-sider">
                     <div class="boxed boxed-w">
-                        <p>{{ $bannerCtaData['body'] }}</p>
-                        <a href="{{ route('getAQuotePage') }}" class="btn-link link-arrow">Get A Quote</a>
+                        <p>{{ $bannerCtaData->body }}</p>
+                        <a href="{{ route('getAQuotePage') }}" class="btn-link link-arrow">{{ $bannerCtaData->href_text }}</a>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <div class="banner-bg imagebg" id="{{ (Request::path() === 'services') ? 'services-hero' : '' }}" style="background-image:url( {{ getHeroImg(Request::path()) }} );">
+
+
+    <div class="banner-bg imagebg" id="{{ $bannerData->html_id }}" style="background-image:url( {{ $bannerData->image->default_src }} );">
             <img class=""
-                alt="{{ trim(View::getSection('title')) }}"
-                src="{{ getHeroImg(Request::path()) }}"
+                alt="{{ $bannerCtaData }}"
+                src="{{ $bannerData->image->default_src }}"
             />
     </div>
 </div>

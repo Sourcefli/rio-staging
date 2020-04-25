@@ -79,6 +79,7 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'about',
                 "category" => 'banner',
+                "html_id" => 'about-hero',
                 "heading" => 'A “People First” philosophy',
                 "subheading" => "At American Senior Benefits we are dedicated to serving those in need of insurance, especially seniors. We are proudly independent, answering only to our customers.",
                 "type" => 'bannerData',
@@ -90,6 +91,7 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'about',
                 "category" => 'callToAction',
+                "href_text" => 'Get Started',
                 "body" => 'Affordable and effective solutions that span the entirety of the retirement industry.',
                 "type" => 'bannerCallToAction',
             ]
@@ -169,6 +171,7 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'services',
                 "category" => 'banner',
+                "html_id" => 'services-hero',
                 "heading" => "Full Medicare Services",
                 "subheading" => "Whether Medicare Advantage, Supplements, Special Needs, or anything in between... our friendly team is licensed, experienced, and well-equipped to handle any Medicare-related topic you'd like to throw at them!",
                 "type" => 'bannerData',
@@ -179,6 +182,7 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'services',
                 "category" => 'callToAction',
+                "href_text" => 'Get Started',
                 "body" => 'Take advantage of over 150 different contracts we have with different carriers throughout the country...',
                 "type" => 'bannerCallToAction',
             ]
@@ -202,6 +206,7 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'clientResources',
                 "category" => 'banner',
+                "html_id" => 'client-resources-hero',
                 "heading" => "Commonly Requested Resources",
                 "subheading" => "For a full list of available carriers, and their contact information, please email us at info@retirementinsuranceoptions.com",
                 "type" => 'bannerData',
@@ -216,7 +221,7 @@ class WebpageDataSeeder extends Seeder
                 "category" => 'callToAction',
                 "classes" => 'btn-link link-arrow',
                 "body" => 'Get a quick quote or reach out for more information regarding any of the carriers or services you see listed throughout our site.',
-                "href" => '<\a href="{{ route("getAQuotePage") }}">Get Started<\/a>',
+                "href_text" => 'Get Started',
                 "type" => 'bannerCallToAction',
             ]
 
@@ -230,8 +235,9 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'contact',
                 "category" => 'banner',
-                "heading" => "A “People First” philosophy",
-                "subheading" => "TBD",
+                "html_id" => 'contact-hero',
+                "heading" => "We'd Love To Hear From You!",
+                "subheading" => "Every time we help a customer make a decision that’s right for them, it makes them – & our organization – stronger.",
                 "type" => 'bannerData',
                 "image_id" => 5,
             ]
@@ -240,10 +246,10 @@ class WebpageDataSeeder extends Seeder
 
         DB::table('webpage_data')->insert([
             [
-                "pagename" => 'contact',
+                "pagename"   => 'contact',
                 "category" => 'callToAction',
                 "body" => "Get multiple quotes and shop a multitiude of products, all within one request",
-                "href" => '<\a href="{{ route("getAQuotePage") }}">Try It Out<\/a>',
+                "href_text" => 'Try It Out',
                 "type" => 'bannerCallToAction',
             ]
         ]);
@@ -274,8 +280,19 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'quote',
                 "category" => 'banner',
+                "html_id" => 'quote-hero',
                 "type" => 'bannerData',
                 "image_id" => 6,
+            ]
+        ]);
+
+        DB::table('webpage_data')->insert([
+            [
+                "pagename"   => 'quote',
+                "category" => 'callToAction',
+                "body" => "Have questions? Feel free to reach out to our team.",
+                "href_text" => 'Get In Touch',
+                "type" => 'bannerCallToAction',
             ]
         ]);
 

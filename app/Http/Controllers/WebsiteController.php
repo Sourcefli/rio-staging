@@ -162,13 +162,16 @@ class WebsiteController extends Controller
     */
     public function getGetAQuotePage()
     {
-        $pageData = WebpageData::where('pagename', 'contact')->get();
+        $pageData = WebpageData::where('pagename', 'quote')->get();
 
         //To be Included with all pages but the HOME page
         $bannerData = $pageData->where('category', 'banner')->first();
         $bannerCtaData = $pageData->where('category', 'callToAction')->first();
 
-        return view('get-a-quote');
+        return view('get-a-quote', compact([
+            'bannerData',
+            'bannerCtaData',
+        ]));
     }
 
     /*

@@ -27,10 +27,13 @@ class ViewDataServiceProvider extends ServiceProvider
 
         //Shared with specific views
         View::composer(
-            '*', 'App\Http\View\Composers\SidebarComposer'
+            ['contact', 'get-a-quote'], 'App\Http\View\Composers\AgentDataComposer'
         );
         View::composer(
-            ['contact', 'get-a-quote'], 'App\Http\View\Composers\AgentDataComposer'
+            ['contact', 'get-a-quote'], 'App\Http\View\Composers\TeamDetailsComposer'
+        );
+        View::composer(
+            '*', 'App\Http\View\Composers\SidebarComposer'
         );
         View::composer(
             '*', 'App\Http\View\Composers\FooterComposer'

@@ -140,5 +140,97 @@ class SiteCardsSeeder extends Seeder
                 "href_text" => "Learn More About Our Services",
             ]
         ]);
+
+
+        /**
+         * Meet Our Team Cards
+         */
+        DB::table('site_cards')->insert([
+            //
+            [
+                "title" => "Rich Schlemmer",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_one",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Shawn Bantz",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_one",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Russ Atkins",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_one",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Shawn Lange",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_one",
+                "outer_div_classes" => "col-lg-3 col-sm-6 col-xs-12",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Rich Finkelstein",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_two",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Monica Crain",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_two",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Richard Edwards",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_two",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Tina Dubowy",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_two",
+                "outer_div_classes" => "col-lg-3 col-sm-6 col-xs-12",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Anita Warsche",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_three",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Don Havens",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_three",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Ricky Rogalski",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_three",
+                "outer_div_classes" => "col-lg-3 col-sm-6 res-s-bttm",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ],
+            [
+                "title" => "Stephen Elliott",
+                "pages" => "team_contact_partial",
+                "section_number" => "row_three",
+                "outer_div_classes" => "col-lg-3 col-sm-6 col-xs-12",
+                "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ]
+        ]);
     }
 }

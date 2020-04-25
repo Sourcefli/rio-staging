@@ -6,8 +6,36 @@ use Illuminate\Database\Eloquent\Model;
 
 class Image extends Model
 {
+    /** ================================================================================
+     *      LARAVEL KEYWORD TRAITS
+     *  ================================================================================
+     *
+     *
+     */
     protected $guarded = [];
 
+
+
+
+    /** ================================================================================
+     *      ELOQUENT RELATIONSHIPS
+     *  ================================================================================
+     *
+     *
+     */
+    public function pageData() {
+        return $this->belongsTo('App\WebpageData');
+    }
+
+
+
+
+    /** ================================================================================
+     *      CLASS METHODS
+     *  ================================================================================
+     *
+     *
+     */
     public function srcSetString() {
         $srcSm = $this->small_src;
         $srcMd = $this->medium_src;
@@ -32,7 +60,6 @@ class Image extends Model
 
     }
 
-    protected $guarded = [];
 
     protected $attributes = [
         'alt_text' => 'American Senior Benefits Southwest',

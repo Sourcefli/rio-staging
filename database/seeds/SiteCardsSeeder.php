@@ -11,6 +11,9 @@ class SiteCardsSeeder extends Seeder
      */
     public function run()
     {
+
+        Schema::disableForeignKeyConstraints();
+
         DB::table('site_cards')->insert([
             [
                 "title" => "One-Stop Medicare Shop",
@@ -232,5 +235,7 @@ class SiteCardsSeeder extends Seeder
                 "inner_div_classes" => "txt-entry bg-white pd-x3 round",
             ]
         ]);
+
+        Schema::enableForeignKeyConstraints();
     }
 }

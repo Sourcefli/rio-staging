@@ -26,4 +26,8 @@ class Manager extends Model
     public function user() {
         return $this->belongsTo('App\User');
     }
+
+    public function trelloAccount() {
+        return $this->hasOneThrough('App\TrelloAccount', 'App\User');
+    }
 }

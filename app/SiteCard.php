@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class SiteCard extends Model
 {
-    //
+    protected $guarded = [];
 }

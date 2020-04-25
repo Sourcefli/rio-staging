@@ -49,50 +49,28 @@
         </div>
         <h4>Topic Of Interest</h4>
         <div class="form-group row">
-            <ul class="form-field clearfix">
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[0] }}">
-                    <span>{{ $selections[0] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[1] }}">
-                    <span>{{ $selections[1] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[2] }}">
-                    <span>{{ $selections[2] }}</span>
-                </li>
-            </ul>
-            <ul class="form-field clearfix">
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[3] }}">
-                    <span>{{ $selections[3] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[4] }}">
-                    <span>{{ $selections[4] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[5] }}">
-                    <span>{{ $selections[5] }}</span>
-                </li>
-            </ul>
-            <ul class="form-field clearfix">
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[6] }}">
-                    <span>{{ $selections[6] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[7] }}">
-                    <span>{{ $selections[7] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[8] }}">
-                    <span>{{ $selections[8] }}</span>
-                </li>
-            </ul>
-            <ul class="form-field clearfix">
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[9] }}">
-                    <span>{{ $selections[9] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[10] }}">
-                    <span>{{ $selections[10] }}</span>
-                </li>
-                <li class="col-sm-4"><input type="checkbox" name="quote-request-interest[]" value="{{ $selections[11] }}">
-                    <span>{{ $selections[11] }}</span>
-                </li>
-            </ul>
+            @foreach($selections as $selection)
+                <?php
+                    $i = $loop->iteration;
+                    $oddLoop = $i % 3;
+                    if($oddLoop === 1) {
+                        echo '<ul class=\'form-field clearfix\'>';
+                    }
+                ?>
+
+                    <li class="col-sm-4">
+                        <input type="checkbox" name="quote-request-interest[]" value="{{ $selection }}">
+                        <span>{{ $selection }}</span>
+                    </li>
+
+                <?php
+                    $oddLoop = $i % 3;
+                    if($oddLoop === 0) {
+                        echo '</ul>';
+                    }
+                    $i++;
+                ?>
+            @endforeach
         </div>
         <div class="form-group row">
             <div class="form-field col-md-6">
@@ -108,15 +86,10 @@
                 <p>Hear About Us</p>
                 <select name="quote-request-hear">
                     <option value="">Please select</option>
-                    <option value="{{ $referredBy[0] }}">{{ $referredBy[0] }}</option>
-                    <option value="{{ $referredBy[1] }}">{{ $referredBy[1] }}</option>
-                    <option value="{{ $referredBy[2] }}">{{ $referredBy[2] }}</option>
-                    <option value="{{ $referredBy[3] }}">{{ $referredBy[3] }}</option>
-                    <option value="{{ $referredBy[4] }}">{{ $referredBy[4] }}</option>
-                    <option value="{{ $referredBy[5] }}">{{ $referredBy[5] }}</option>
-                    <option value="{{ $referredBy[6] }}">{{ $referredBy[6] }}</option>
-                    <option value="{{ $referredBy[7] }}">{{ $referredBy[7] }}</option>
-                    <option value="{{ $referredBy[8] }}">{{ $referredBy[8] }}</option>
+                    {{-- 8 loops --}}
+                    @foreach($referredBy as $item)
+                        <option value="{{ $item }}">{{ $item }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>

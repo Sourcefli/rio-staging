@@ -16,6 +16,7 @@ class WebpageDataSeeder extends Seeder
         //$headingTwo = "Risk Free Retirement Strategies";
         //$subheadingTwo = "Achieving a relaxing and comfortable retirement can be an art - and for some, a nail-bitting rollercoaster. This is generally from bad advice or the misinformation that's advertised so often. Talk face-to-face with someone who's accountable to what they say to you and avoid these pitfalls with your nestegg.";
 
+        Schema::disableForeignKeyConstraints();
 
         /**
          * HOME PAGE data
@@ -81,7 +82,7 @@ class WebpageDataSeeder extends Seeder
                 "heading" => 'A “People First” philosophy',
                 "subheading" => "At American Senior Benefits we are dedicated to serving those in need of insurance, especially seniors. We are proudly independent, answering only to our customers.",
                 "type" => 'bannerData',
-                "body" => ''
+                "image_id" => 1,
             ]
         ]);
 
@@ -100,7 +101,6 @@ class WebpageDataSeeder extends Seeder
                 "category" => 'sectionHeading',
                 "heading" => "The ASB Southwest Approach",
                 "type" => 'heading',
-                "body" => '',
             ]
         ]);
         DB::table('webpage_data')->insert([
@@ -172,6 +172,7 @@ class WebpageDataSeeder extends Seeder
                 "heading" => "Full Medicare Services",
                 "subheading" => "Whether Medicare Advantage, Supplements, Special Needs, or anything in between... our friendly team is licensed, experienced, and well-equipped to handle any Medicare-related topic you'd like to throw at them!",
                 "type" => 'bannerData',
+                "image_id" => 2,
             ]
         ]);
         DB::table('webpage_data')->insert([
@@ -188,7 +189,7 @@ class WebpageDataSeeder extends Seeder
                 "pagename" => 'services',
                 "category" => 'sectionContent',
                 "heading" => "Covering all retirement needs",
-                "body" => "It is important for any agent representing American Senior Benefits to have at their fingertips solutions from the largest and most respected companies in the industry. In fact, some products are only available through us — such as a scholarship program that helps families defer the rising cost of higher education while simultaneously caring for their own financial needs.",
+                "body" => "It is important for any agent representing American Senior Benefits to have solutions at their fingertips from the largest and most respected companies in the industry. In fact, some products are only available through us — such as a scholarship program that helps families defer the rising cost of higher education while simultaneously caring for their own financial needs.",
                 "type" => 'headingAndParagraph',
             ]
         ]);
@@ -201,9 +202,10 @@ class WebpageDataSeeder extends Seeder
             [
                 "pagename" => 'clientResources',
                 "category" => 'banner',
-                "heading" => "Commonly requested resources",
-                "subheading" => "If you don't see the information you're looking for, please don't hesitate to <\a href='{{ route('contactPage') }}'>reach out to us anytime.<\/a>",
+                "heading" => "Commonly Requested Resources",
+                "subheading" => "For a full list of available carriers, and their contact information, please email us at info@retirementinsuranceoptions.com",
                 "type" => 'bannerData',
+                "image_id" => 4,
             ]
         ]);
 
@@ -231,6 +233,7 @@ class WebpageDataSeeder extends Seeder
                 "heading" => "A “People First” philosophy",
                 "subheading" => "TBD",
                 "type" => 'bannerData',
+                "image_id" => 5,
             ]
         ]);
 
@@ -265,6 +268,18 @@ class WebpageDataSeeder extends Seeder
         ]);
 
         /**
+         * QUOTES page data
+         */
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'quote',
+                "category" => 'banner',
+                "type" => 'bannerData',
+                "image_id" => 6,
+            ]
+        ]);
+
+        /**
          * SIDEBAR-Main data
          */
         DB::table('webpage_data')->insert([
@@ -277,6 +292,6 @@ class WebpageDataSeeder extends Seeder
             ]
         ]);
 
-
+        Schema::enableForeignKeyConstraints();
     } // END run function
 }

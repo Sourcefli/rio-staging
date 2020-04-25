@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Prospect extends Model
 {
-    public function households() {
-        return $this->hasMany('App\Household');
+    protected $guarded = [];
+
+    public function household() {
+        return $this->belongsTo('App\Household');
     }
 
     public function contacts() {

@@ -30,4 +30,8 @@ class Agent extends Model
     public function user() {
         return $this->belongsTo(User::class,'user_id');
     }
+
+    public function trelloAccount() {
+        return $this->hasOneThrough('App\TrelloAccount', 'App\User');
+    }
 }

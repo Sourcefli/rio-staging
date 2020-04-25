@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Household extends Model
 {
+    protected $guarded = [];
+
     public function prospects() {
         return $this->belongsTo('App\Prospect');
     }

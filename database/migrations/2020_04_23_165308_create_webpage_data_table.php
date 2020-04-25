@@ -27,6 +27,8 @@ class CreateWebpageDataTable extends Migration
             $table->text('body')->nullable(true);
             $table->timestamps();
         });
+
+
     }
 
     /**

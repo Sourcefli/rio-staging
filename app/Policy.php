@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Policy extends Model
 {
+    protected $guarded = [];
+
     public function prospect() {
         return $this->belongsTo('App\Prospect');
     }

@@ -35,7 +35,7 @@ class CreateImagesTable extends Migration
             $table->text('alt_text')->nullable();
             $table->text('description')->nullable();
             $table->text('banner_text')->nullable();
-            $table->enum('category', ['hero_images', 'webpage_images', 'favicon_images', 'carrier_images', 'product_images', 'services_images', 'staff_images', 'office_images', 'logo_images', 'city_images'])->default('webpage_images');
+            $table->enum('category', ['hero_images', 'webpage_images', 'favicon_images', 'carrier_images', 'product_images', 'services_images', 'staff_images', 'office_images', 'logo_images', 'city_images', 'services_hero_images'])->default('webpage_images');
             $table->timestamps();
         });
     }

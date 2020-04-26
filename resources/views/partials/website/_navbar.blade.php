@@ -1,14 +1,5 @@
 
 
-@php
-    $nav = config('sourcefli.siteData');
-    $quoteNav = config('sourcefli.siteData.nav.items.quote');
-    $hqData = config('sourcefli.companyData.hqData');
-    $config = config('sourcefli.responsiveImagesData.ImgSizes');
-    $pages = config('sourcefli.siteData.nav.items');
-    $img = config('sourcefli.siteData.nav.img');
-@endphp
-
 <div class="topbar">
     <div class="container">
         <div class="row">
@@ -17,19 +8,17 @@
             </div>
             <div class="top-aside top-right clearfix">
                 <ul class="social clearfix hidden-xs">
-                    <li><a href="{{ $nav["facebook"]["url"] }}" class="{{ $nav["facebook"]["icon"] }}" style="color:lightgrey;"></a></li>
-                    <li><a href="{{ $nav["twitter"]["url"] }}" class="{{ $nav["twitter"]["icon"] }}" style="color:lightgrey;"></a></li>
-                    <li><a href="{{ $nav["linkedIn"]["url"] }}" class="{{ $nav["linkedIn"]["icon"] }}" style="color:lightgrey;"></a></li>
+                    <li><a href="{{ $hqData->facebook_url }}" class="{{ $hqData->facebook_icon }}" style="color:lightgrey;"></a></li>
+                    <li><a href="{{ $hqData->twitter_url }}" class="{{ $hqData->twitter_icon }}" style="color:lightgrey;"></a></li>
+                    <li><a href="{{ $hqData->linkedin_url }}" class="{{ $hqData->linkedin_icon }}" style="color:lightgrey;"></a></li>
                 </ul>
                 <ul class="top-contact clearfix">
                     <li class="t-phone t-phone1">
                         <em class="fa fa-phone" aria-hidden="true"></em>
-                        <span
-                            ><a href="tel:{{ $hqData["phone"] }}">{{ $hqData["phone"] }}</a></span
-                        >
+                        <span><a href="tel:{{ $hqData->office_phone }}">{{ $hqData->office_phone }}</a></span>
                     </li>
                     <li class="quote-btn">
-                        <a href="{{ $quoteNav["uri"] }}" class="btn">Get A Quote</a>
+                        <a href="{{ route('getAQuotePage') }}" class="btn">Get A Quote</a>
                     </li>
                 </ul>
             </div>
@@ -44,12 +33,11 @@
         <a class="navbar-brand" href="/">
             <img
                 class="logo logo-dark"
-                alt="{{ $hqData["fullName"] }}"
-                src="{{ $img["srcSm"] }}"
-                srcset="{{ $img["srcsetSm"] }}, {{ $img["srcsetMd"] }}, {{ $img["srcsetLg"] }}"
-                sizes="{{ $config["imgSizesSm"] }}, {{ $config["imgSizesMd"] }}, {{ $config["imgSizesLg"] }}"
+                alt="American Senior Benefits Southwest Logo"
+                src="{{ $headerLogo->default_src }}"
+                srcset="{{ $headerLogo->small_srcsetsize}}, {{ $headerLogo->medium_srcsetsize }}, {{ $headerLogo->large_srcsetsize }}"
+                sizes="(max-width: 560px) 212px, (max-width: 768px) 326px, (min-width: 769px) 456px"
             />
-            <!-- <img class="logo logo-light" alt="" src="image/logo_white.png" srcset="image/logo_white2x.png 2x"> -->
         </a>
         <!-- #end Logo -->
         <div class="navbar-header">
@@ -73,9 +61,13 @@
         <!-- #MainNav -->
         <nav class="navbar-collapse collapse" id="mainnav">
             <ul class="nav navbar-nav">
-                @foreach ($nav["nav"]["items"] as $navItem)
+                @foreach ($links as $navItem)
                     <li>
-                        <a href="{{ env('APP_URL') }}{{ $navItem["uri"] }}">{{ $navItem["title"] }}</a>
+                        @if ($navItem->title === 'Careers')
+                            <a href="{{ $navItem->uri }}" target="_blank">{{ $navItem->title }}</a>
+                        @else
+                            <a href="{{ env('APP_URL') }}{{ $navItem->uri }}">{{ $navItem->title }}</a>
+                        @endif
                     </li>
                 @endforeach
             </ul>

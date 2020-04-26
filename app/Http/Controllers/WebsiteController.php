@@ -20,7 +20,7 @@ class WebsiteController extends Controller
     */
     public function getHomePage()
     {
-        $sectionTwoListItems = [
+        $sectionOneListItems = [
             "Medicare Supplements & Advantage",
             "Final expense coverage for any health conditions",
             "Income planning and strategies",
@@ -28,11 +28,8 @@ class WebsiteController extends Controller
             "Dental &amp; Vision comparisons",
         ];
         $slidesData = WebpageData::where('category', 'homeSlider')->get();
+
         $sectionOneCards = SiteCard::where('pages', 'home')
-                                    ->where('section_number', 'one')
-                                    ->get()
-                                    ->toArray();
-        $sectionTwoCards = SiteCard::where('pages', 'home')
                                     ->where('section_number', 'two')
                                     ->get()
                                     ->toArray();
@@ -40,8 +37,7 @@ class WebsiteController extends Controller
         return view('home', compact([
             'slidesData',
             'sectionOneCards',
-            'sectionTwoCards',
-            'sectionTwoListItems'
+            'sectionOneListItems'
         ]));
 
     }
@@ -87,24 +83,30 @@ class WebsiteController extends Controller
 
         $headingContent = $pageData->where('category', 'sectionContent')->first();
 
-        $servicesRowOne = Service::where('row_num', 1)->get();
-        $servicesRowTwo = Service::where('row_num', 2)->get();
+        // OLD Version - Cards with link
+//        $servicesRowOne = Service::where('row_num', 1)->get();
+//        $servicesRowTwo = Service::where('row_num', 2)->get();
 
-//        $data = [
-//            'pageData',
-//            'bannerData',
-//            'bannerCtaData',
-//            'heading' => $headingContent,
-//            'servicesRowOne' => $servicesRowOne,
-//            'servicesRowTwo' => $servicesRowTwo
-//        ];
+        //New Version - Cards with image background and text overwrite
+        $rowOneCards = SiteCard::where('pages', 'services')
+            ->where('section_number', 'row_one')
+            ->get()
+            ->toArray();
+
+        $rowTwoCards = SiteCard::where('pages', 'services')
+            ->where('section_number', 'row_two')
+            ->get()
+            ->toArray();
+
         return view('services', compact([
             'pageData',
             'bannerData',
             'bannerCtaData',
             'headingContent',
-            'servicesRowOne',
-            'servicesRowTwo'
+//            'servicesRowOne',
+//            'servicesRowTwo',
+            'rowOneCards',
+            'rowTwoCards'
         ]));
     }
 
@@ -183,59 +185,4 @@ class WebsiteController extends Controller
         return view('privacy');
     }
 
-    //===== Service Detail Routes ======
-
-    /*
-    *
-    *   /GET => Wise Retirement Page
-    */
-    public function getWiseRetirementPage()
-    {
-        return view('services.wise-retirement');
-    }
-
-    /*
-    *
-    *   /GET => Protected Investments Page
-    */
-    public function getProtectedInvestmentsPage()
-    {
-        return view('services.protected-investments');
-    }
-
-    /*
-    *
-    *   /GET => Diversify Your Nestegg Page
-    */
-    public function getDiversifyYourNesteggPage()
-    {
-        return view('services.diversify-your-nestegg');
-    }
-
-    /*
-    *
-    *   /GET => Expect The Unexpected Page
-    */
-    public function getExpectTheUnexpectedPage()
-    {
-        return view('services.expect-the-unexpected');
-    }
-
-    /*
-    *
-    *   /GET => Medicare360 Page
-    */
-    public function getMedicare360Page()
-    {
-        return view('services.medicare360');
-    }
-
-    /*
-    *
-    *   /GET => Burial Preperation Page
-    */
-    public function getBurialPreperationPage()
-    {
-        return view('services.burial-preperation');
-    }
 }

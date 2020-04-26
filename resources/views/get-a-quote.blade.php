@@ -55,7 +55,7 @@
                         <input name="quote-request-citystate" type="text" placeholder="City, State, Zip" class="form-control">
                     </div>
                 </div>
-                <h4>Topic(s) of Interest</h4>
+                <h5>Topics of Interest<small> (select all that apply)</small></h5>
                 <div class="form-group row">
                     <div class="form-group row">
                         @foreach($selections as $selection)

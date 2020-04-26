@@ -28,12 +28,16 @@ Route::get('/sitemap', 'ƒ@getSitemapPage')->name('sitemapPage');
 //});
 
 // Service Details Routes
-Route::get('/wise-retirement', 'WebsiteController@getWiseRetirementPage')->name('wiseRetirementDetail');
-Route::get('/protected-investments', 'WebsiteController@getProtectedInvestmentsPage')->name('protectedInvestmentsDetail');
-Route::get('/diversify-your-nestegg', 'WebsiteController@getDiversifyYourNesteggPage')->name('diversifyYourNesteggDetail');
-Route::get('/expect-the-unexpected', 'WebsiteController@getExpectTheUnexpectedPage')->name('expectTheUnexpectedDetail');
-Route::get('/medicare360', 'WebsiteController@getMedicare360Page')->name('medicare360Detail');
-Route::get('/burial-preperation', 'WebsiteController@getBurialPreperationPage')->name('burialPreperationDetail');
+Route::get('/annuity-services', 'ServicePagesController@getAnnuityServicesPage')->name('annuity-services');
+Route::get('/extended-care-services', 'ServicePagesController@getExtendedCareServicesPage')->name('extended-care-services');
+Route::get('/life-insurance-services', 'ServicePagesController@getLifeInsuranceServicesPage')->name('life-insurance-services');
+Route::get('/medicare-services', 'ServicePagesController@getMedicareServicesPage')->name('medicare-services');
+Route::get('/retirement-planning-services', 'ServicePagesController@getRetirementPlanningServicesPage')->name('retirement-planning-services');
+Route::get('/specialized-healthcare-services', 'ServicePagesController@getSpecializedHealthcareServicesPage')->name('specialized-healthcare-services');
+
+//Form Handlers
+Route::post('/contact-form-submission', 'FormSubmissionsController@contact')->name('contact-form-handler');
+Route::post('/quote-form-submission', 'FormSubmissionsController@quote')->name('quote-form-handler');
 
 Auth::routes();
 

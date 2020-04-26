@@ -2,8 +2,7 @@
 {{--$siteCards--}}
 {{--Source: Controller--}}
 
-
-<div class="section section-service section-pad bdr-top">
+<div class="section section-service">
     <div class="container">
         <div class="content row">
             <div class="wide-md center">
@@ -11,19 +10,19 @@
             </div>
             <!-- Feature Row  -->
             <div class="row row-feature row-column feature-s5">
-                @for($i = 0; $i < count($sectionOneCards); $i++)
+                @for($i = 0; $i < count($rowOneCards); $i++)
                     @if ($i % 2 === 0)
                         <div class="col-sm-4 col-xs-12 even">
                             <!-- Feature box -->
-                            <div class="{{ $sectionOneCards[$i]["outer_div_classes"] }}">
-                                <a href="{{ $sectionOneCards[$i]["href"] }}">
-                                    <div class="{{ $sectionOneCards[$i]["image_div_classes"] }}">
-                                        <img src="{{ $sectionOneCards[$i]["image_src"] }}" alt="{{ $sectionOneCards[$i]["title"] }}">
+                            <div class="{{ $rowOneCards[$i]["outer_div_classes"] }}">
+                                <a href="{{ $rowOneCards[$i]["href"] }}">
+                                    <div class="{{ $rowOneCards[$i]["image_div_classes"] }}">
+                                        <img src="{{ $rowOneCards[$i]["image_src"] }}" alt="{{ $rowOneCards[$i]["title"] }}">
                                     </div>
-                                    <div class="{{ $sectionOneCards[$i]["inner_div_classes"] }}">
-                                        <h3 class="title">{{ $sectionOneCards[$i]["title"] }}</h3>
-                                        <div class="{{ $sectionOneCards[$i]["body_div_classes"] }}">
-                                            <p> {{ $sectionOneCards[$i]["html_body"] }} </p>
+                                    <div class="{{ $rowOneCards[$i]["inner_div_classes"] }}">
+                                        <h3 class="title">{{ $rowOneCards[$i]["title"] }}</h3>
+                                        <div class="{{ $rowOneCards[$i]["body_div_classes"] }}">
+                                            <p> {!! $rowOneCards[$i]["html_body"] !!} </p>
                                         </div>
                                     </div>
                                 </a>
@@ -33,15 +32,15 @@
                     @else
                         <div class="col-sm-4 col-xs-12 odd">
                             <!-- Feature box -->
-                            <div class="{{ $sectionOneCards[$i]["outer_div_classes"] }}">
-                                <a href="{{ $sectionOneCards[$i]["href"] }}">
-                                    <div class="{{ $sectionOneCards[$i]["image_div_classes"] }}">
-                                        <img src="{{ $sectionOneCards[$i]["image_src"] }}" alt="{{ $sectionOneCards[$i]["title"] }}">
+                            <div class="{{ $rowOneCards[$i]["outer_div_classes"] }}">
+                                <a href="{{ $rowOneCards[$i]["href"] }}">
+                                    <div class="{{ $rowOneCards[$i]["image_div_classes"] }}">
+                                        <img src="{{ $rowOneCards[$i]["image_src"] }}" alt="{{ $rowOneCards[$i]["title"] }}">
                                     </div>
-                                    <div class="{{ $sectionOneCards[$i]["inner_div_classes"] }}">
-                                        <h3 class="title">{{ $sectionOneCards[$i]["title"] }}</h3>
-                                        <div class="{{ $sectionOneCards[$i]["body_div_classes"] }}">
-                                            <p> {{ $sectionOneCards[$i]["html_body"] }} </p>
+                                    <div class="{{ $rowOneCards[$i]["inner_div_classes"] }}">
+                                        <h3 class="title">{{ $rowOneCards[$i]["title"] }}</h3>
+                                        <div class="{{ $rowOneCards[$i]["body_div_classes"] }}">
+                                            <p> {!! $rowOneCards[$i]["html_body"] !!} </p>
                                         </div>
                                     </div>
                                 </a>
@@ -53,9 +52,60 @@
             </div>
             <!-- Feature Row  #end -->
         </div>
+
+        <div class="content row">
+            <div class="wide-md center">
+                <h6 class="color-primary"></h6>
+            </div>
+            <!-- Feature Row  -->
+            <div class="row row-feature row-column feature-s5">
+                @for($i = 0; $i < count($rowTwoCards); $i++)
+                    @if ($i % 2 === 0)
+                        <div class="col-sm-4 col-xs-12 even">
+                            <!-- Feature box -->
+                            <div class="{{ $rowTwoCards[$i]["outer_div_classes"] }}">
+                                <a href="{{ $rowTwoCards[$i]["href"] }}">
+                                    <div class="{{ $rowTwoCards[$i]["image_div_classes"] }}">
+                                        <img src="{{ $rowTwoCards[$i]["image_src"] }}" alt="{{ $rowTwoCards[$i]["title"] }}">
+                                    </div>
+                                    <div class="{{ $rowTwoCards[$i]["inner_div_classes"] }}">
+                                        <h3 class="title">{{ $rowTwoCards[$i]["title"] }}</h3>
+                                        <div class="{{ $rowTwoCards[$i]["body_div_classes"] }}">
+                                            <p> {!! $rowTwoCards[$i]["html_body"] !!} </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- End Feature box -->
+                        </div>
+                    @else
+                        <div class="col-sm-4 col-xs-12 odd">
+                            <!-- Feature box -->
+                            <div class="{{ $rowTwoCards[$i]["outer_div_classes"] }}">
+                                <a href="{{ $rowTwoCards[$i]["href"] }}">
+                                    <div class="{{ $rowTwoCards[$i]["image_div_classes"] }}">
+                                        <img src="{{ $rowTwoCards[$i]["image_src"] }}" alt="{{ $rowTwoCards[$i]["title"] }}">
+                                    </div>
+                                    <div class="{{ $rowTwoCards[$i]["inner_div_classes"] }}">
+                                        <h3 class="title">{{ $rowTwoCards[$i]["title"] }}</h3>
+                                        <div class="{{ $rowTwoCards[$i]["body_div_classes"] }}">
+                                            <p> {!! $rowTwoCards[$i]["html_body"] !!} </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- End Feature box -->
+                        </div>
+                    @endif
+                @endfor
+            </div>
+            <!-- Feature Row  #end -->
+        </div>
     </div>
 </div>
 <!-- End Content -->
+
+{{--!! THE OLD VERSION !!--}}
 {{--                <div class="col-sm-4 col-xs-12 even">--}}
 {{--                    <!-- Feature box -->--}}
 {{--                    <div class="feature boxed">--}}

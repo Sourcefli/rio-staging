@@ -5,6 +5,7 @@ namespace App\Http\View\Composers;
 use App\Image;
 use App\NavItem;
 use App\Office;
+use App\SiteCard;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -25,11 +26,18 @@ class FooterComposer
     protected $image;
 
     /**
-     * The services class.
+     * The navItem class.
      *
      * @var NavItem
      */
     protected $navItem;
+
+    /**
+     * The siteCard class.
+     *
+     * @var SiteCard
+     */
+    protected $siteCard;
 
     /**
      * Create a new profile composer.
@@ -37,12 +45,14 @@ class FooterComposer
      * @param Image $image
      * @param NavItem $navItem
      * @param Office $office
+     * @param SiteCard $siteCard
      */
-    public function __construct(Image $image, NavItem $navItem, Office $office)
+    public function __construct(Image $image, NavItem $navItem, Office $office, SiteCard $siteCard)
     {
         $this->image = $image;
         $this->navItem = $navItem;
         $this->office = $office;
+        $this->siteCard = $siteCard;
     }
 
     /**
@@ -66,7 +76,7 @@ class FooterComposer
         $menuLinks = NavItem::where('category', 'menu')->get();
 
         //Services Links Data
-        $serviceLinks = NavItem::where('category', 'service')->get();
+        $serviceLinks = SiteCard::where('pages', 'service')->get();
 
         //HQ Contact Data
         $hqData = Office::find(1);

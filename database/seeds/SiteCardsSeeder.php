@@ -69,45 +69,9 @@ class SiteCardsSeeder extends Seeder
             ]
         ]);
 
-        DB::table('site_cards')->insert([
-            // Row one cards on Home Page
-            [
-                "title" => "Planning and Advice",
-                "pages" => "home",
-                "section_number" => "one",
-                "html_body" => "Extensive options and carriers so you can choose what works for you",
-                "body_div_classes" => "fbox-content",
-                "outer_div_classes" => "feature boxed",
-                "inner_div_classes" => "fbox-over",
-                "image_src" => "img/sections/opt-asset-protection-two.png",
-                "image_div_classes" => "fbox-photo",
-            ],
-            [
-                "title" => "Products & Benefits",
-                "pages" => "home",
-                "section_number" => "one",
-                "html_body" => "Get answers face-to-face, from someone you know and trust",
-                "body_div_classes" => "fbox-content",
-                "outer_div_classes" => "feature boxed",
-                "inner_div_classes" => "fbox-over",
-                "image_src" => "img/sections/opt-medicare-card.jpg",
-                "image_div_classes" => "fbox-photo",
-            ],
-            [
-                "title" => "Tools & Advice",
-                "pages" => "home",
-                "section_number" => "one",
-                "html_body" => "Powerful calculations, decades of experience, and a full a support team",
-                "body_div_classes" => "fbox-content",
-                "outer_div_classes" => "feature boxed",
-                "inner_div_classes" => "fbox-over",
-                "image_src" => "img/sections/opt-retirement-planning-two.jpg",
-                "image_div_classes" => "fbox-photo",
-            ]
-        ]);
 
         DB::table('site_cards')->insert([
-            // Row two cards on Home Page
+            // Row one cards on Home Page
            [
                "title" => "The Best Rates You'll Find",
                "pages" => "home",
@@ -233,6 +197,85 @@ class SiteCardsSeeder extends Seeder
                 "section_number" => "row_three",
                 "outer_div_classes" => "col-lg-3 col-sm-6 col-xs-12",
                 "inner_div_classes" => "txt-entry bg-white pd-x3 round",
+            ]
+        ]);
+
+        /**
+         * SERVICES Page - 2 rows, 6 cards
+         */
+        DB::table('site_cards')->insert([
+            // Row one cards on Home Page
+            [
+                "title" => "Annuities",
+                "pages" => "service_details",
+                "section_number" => "row_one",
+                "html_body" => "Steady, safe streams of income that can’t be outlived",
+                "body_div_classes" => "fbox-content",
+                "outer_div_classes" => "feature boxed",
+                "inner_div_classes" => "fbox-over",
+                "image_src" => "img/sections/opt-asset-protection-two.png",
+                "image_div_classes" => "fbox-photo",
+                "href" => "/annuity-services"
+            ],
+            [
+                "title" => "Medicare 360",
+                "pages" => "service_details",
+                "section_number" => "row_one",
+                "html_body" => "Extensive Medicare Supplement/Advantage options, including part D",
+                "body_div_classes" => "fbox-content",
+                "outer_div_classes" => "feature boxed",
+                "inner_div_classes" => "fbox-over",
+                "image_src" => "img/sections/opt-medicare-card.jpg",
+                "image_div_classes" => "fbox-photo",
+                "href" => "/medicare-services"
+            ],
+            [
+                "title" => "Retirement Planning",
+                "pages" => "service_details",
+                "section_number" => "row_one",
+                "html_body" => "We create strategies that are manageable, realistic, and beneficial. Built to stand the test of time.",
+                "body_div_classes" => "fbox-content",
+                "outer_div_classes" => "feature boxed",
+                "inner_div_classes" => "fbox-over",
+                "image_src" => "img/sections/opt-retirement-planning-two.jpg",
+                "image_div_classes" => "fbox-photo",
+                "href" => "/retirement-planning-services"
+            ],
+            [
+                "title" => "Final Expense & Life",
+                "pages" => "service_details",
+                "section_number" => "row_two",
+                "html_body" => "All final expense and life insurance options, including <em>whole life</em>, <em>Term</em>, <em>Universal Life</em>, and <em>Graded Benefits plans</em>",
+                "body_div_classes" => "fbox-content",
+                "outer_div_classes" => "feature boxed",
+                "inner_div_classes" => "fbox-over",
+                "image_src" => "img/services/sm-kid-against-glass-368x245.jpg",
+                "image_div_classes" => "fbox-photo",
+                "href" => "/life-insurance-services"
+            ],
+            [
+                "title" => "Extended Care",
+                "pages" => "service_details",
+                "section_number" => "row_two",
+                "html_body" => "Our wide ranging options for extended care benefits allow you to plan and help to mitigate the rising costs of in-home or facility-based care",
+                "body_div_classes" => "fbox-content",
+                "outer_div_classes" => "feature boxed",
+                "inner_div_classes" => "fbox-over",
+                "image_src" => "img/sections/opt-medicare-service-two.jpg",
+                "image_div_classes" => "fbox-photo",
+                "href" => "/extended-care-services"
+            ],
+            [
+                "title" => "Specialized Healthcare",
+                "pages" => "service_details",
+                "section_number" => "row_two",
+                "html_body" => "Begin planning for any gaps in coverage with <em>dental</em>, <em>vision</em>, <em>critical illness</em>, <em>disabiliy</em>, and many more benefits to choose from...",
+                "body_div_classes" => "fbox-content",
+                "outer_div_classes" => "feature boxed",
+                "inner_div_classes" => "fbox-over",
+                "image_src" => "img/sections/senior-services-healthcare.jpg",
+                "image_div_classes" => "fbox-photo",
+                "href" => "/specialized-healthcare-services"
             ]
         ]);
 

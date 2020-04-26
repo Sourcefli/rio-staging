@@ -2,11 +2,17 @@
   <dictionary name="guest1">
     <words>
       <w>aetna</w>
+      <w>chatroom</w>
+      <w>chatrooms</w>
       <w>cigna</w>
       <w>healthcare</w>
       <w>humana</w>
+      <w>linkedin</w>
+      <w>pagename</w>
       <w>sourcefli</w>
       <w>transamerica</w>
+      <w>webpage</w>
+      <w>whatsapp</w>
     </words>
   </dictionary>
 </component>

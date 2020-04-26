@@ -3,6 +3,7 @@
 namespace App\Http\View\Composers;
 
 use App\Office;
+use App\SiteCard;
 use App\WebpageData;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
@@ -17,6 +18,13 @@ class SidebarComposer
     protected $office;
 
     /**
+     * The SiteCard class.
+     *
+     * @var SiteCard
+     */
+    protected $siteCard;
+
+    /**
      * The webpageData class.
      *
      * @var WebpageData
@@ -27,12 +35,14 @@ class SidebarComposer
      * Create a new profile composer.
      *
      * @param  Office  $office
+     * @param  SiteCard  $siteCard
      * @param  WebpageData  $webpageData
      * @return void
      */
-    public function __construct(Office $office, WebpageData $webpageData)
+    public function __construct(Office $office,SiteCard $siteCard, WebpageData $webpageData)
     {
         $this->office = $office;
+        $this->siteCard = $siteCard;
         $this->webpageData = $webpageData;
     }
 
@@ -54,12 +64,13 @@ class SidebarComposer
             )
             ->first();
 
-        $data = [
-            'hqData' => $hqData,
-            'sidebarData' => $managerStatement
-        ];
+        $serviceDetailsSidebarData = SiteCard::where('pages', 'service_details')->get(['title', 'href']);
 
-//        dd($sidebarData);
-        $view->with(compact(['hqData', 'managerStatement']));
+
+        $view->with(compact([
+            'hqData',
+            'managerStatement',
+            'serviceDetailsSidebarData'
+        ]));
     }
 }

@@ -1,15 +1,6 @@
 @extends('layouts/website/sidebar')
 
-{{-- # SIDEBAR LAYOUT BLOCK SECTIONS }
-[ ] { asyncTracking }
-[x] { Title }
-[ ] { extraCss }
-[x] { hero }
-[x] { content }
-[x] { sidebar }
-[x] { belowMain }
-[x] { preFooter }
-[ ] { extraJs #--}}
+
 
 @php
     $contactPhone = config('sourcefli.companyData.hqData.tollFree');

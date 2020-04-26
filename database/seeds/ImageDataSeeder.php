@@ -11,6 +11,7 @@ class ImageDataSeeder extends Seeder
      */
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
 
         /*
         * HERO IMAGES
@@ -18,16 +19,9 @@ class ImageDataSeeder extends Seeder
         */
         DB::table('images')->insert([
 
-            //CATEGORY OPTIONS...
-            //'hero_images', 'webpage_images',
-            //'favicon_images', 'carrier_images',
-            // 'product_images', 'staff_images',
-            // 'office_images', 'other'
-            //  default => 'webpage_images'
-
 
             [
-//                 WORKS OK
+                 //WORKS OK
 
                 'title' => 'about',
                 'default_src' => 'img/heros/md-about-our-retirement-services.jpeg',
@@ -421,5 +415,27 @@ class ImageDataSeeder extends Seeder
                 'category' => 'city_images',
             ]
         ]);
+
+        /**
+         * SERVICE DETAIL PAGES
+         *  Hero Images
+         */
+        DB::table('images')->insert([
+
+            [
+                'title' => 'American Senior Benefits Southwest Services',
+                'default_src' => 'img/heros/lg-services-hero.jpg',
+                //560x228
+                'small_src' => 'img/heros/sm-services-hero.jpg',
+                //768x312
+                'medium_src' => 'img/heros/md-services-hero.jpg',
+                //1200x630
+                'large_src' => 'img/heros/lg-services-hero.jpg',
+                'alt_text' => 'Extensive Service Options With American Senior Benefits',
+                'category' => 'services_hero_images',
+            ],
+        ]);
+
+        Schema::enableForeignKeyConstraints();
     }
 }

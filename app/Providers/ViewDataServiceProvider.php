@@ -41,5 +41,8 @@ class ViewDataServiceProvider extends ServiceProvider
         View::composer(
             '*', 'App\Http\View\Composers\CarrierDataComposer'
         );
+        View::composer(
+            '*', 'App\Http\View\Composers\HeaderDataComposer'
+        );
     }
 }

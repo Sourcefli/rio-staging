@@ -25,12 +25,15 @@ class CreateOfficesTable extends Migration
             $table->string('sm_image_url', '50')->nullable();
             $table->string('md_image_url', '50')->nullable();
             $table->string('lg_image_url', '50')->nullable();
-            $table->string('facebook_url', '50')->nullable();
+            $table->string('facebook_url', '100')->nullable();
             $table->string('facebook_username', '50')->nullable();
-            $table->string('linkedin_url', '50')->nullable();
+            $table->string('facebook_icon', '50')->nullable();
+            $table->string('linkedin_url', '100')->nullable();
             $table->string('linkedin_username', '50')->nullable();
-            $table->string('twitter_url', '50')->nullable();
+            $table->string('linkedin_icon', '50')->nullable();
+            $table->string('twitter_url', '100')->nullable();
             $table->string('twitter_username', '50')->nullable();
+            $table->string('twitter_icon', '50')->nullable();
             $table->string('slack_url', '50')->nullable();
             $table->json('slack_chatrooms');
             $table->string('whatsapp_url', '50')->nullable();

@@ -27,7 +27,7 @@ class NavItemsSeeder extends Seeder
                 "category" => "menu"
             ],
             [
-                "title" => "Retirement Services",
+                "title" => "Retirement Solutions",
                 "uri" => "/services",
                 "url" => "http://retirementinsuranceoptions.com/services",
                 "category" => "menu"
@@ -48,6 +48,12 @@ class NavItemsSeeder extends Seeder
                 "title" => "Get A Quote",
                 "uri" => "/get-a-quote",
                 "url" => "http://retirementinsuranceoptions.com/get-a-quote",
+                "category" => "menu"
+            ],
+            [
+                "title" => "Careers",
+                "uri" => "https://asbsouthwestcareers.com",
+                "url" => "https://asbsouthwestcareers.com",
                 "category" => "menu"
             ],
 
@@ -92,7 +98,7 @@ class NavItemsSeeder extends Seeder
             //Team Items
 
             //Carrier Items
-            
+
             //Product Items
 
         ]);

@@ -249,7 +249,7 @@ class WebpageDataSeeder extends Seeder
                 "pagename"   => 'contact',
                 "category" => 'callToAction',
                 "body" => "Get multiple quotes and shop a multitiude of products, all within one request",
-                "href_text" => 'Try It Out',
+                "href_text" => 'Give It A Try',
                 "type" => 'bannerCallToAction',
             ]
         ]);
@@ -281,6 +281,8 @@ class WebpageDataSeeder extends Seeder
                 "pagename" => 'quote',
                 "category" => 'banner',
                 "html_id" => 'quote-hero',
+                "heading" => "Request A Quote",
+                "subheading" => "Our distinct advantage is our ability to compare quotes from over 150 carriers, for any type of retirement benefit - or benefits",
                 "type" => 'bannerData',
                 "image_id" => 6,
             ]
@@ -306,6 +308,86 @@ class WebpageDataSeeder extends Seeder
                 "heading" => "An Open Letter To Our Website Visitors",
                 "body" => "I've enjoyed 26 years of successful experience in the Insurance industry, and 16 of those years in a management capacity, including the last 11 years in a Branch and/or Regional Manager role. This experience has provided me the opportunity to assist countless clients with the peace of mind that comes with knowing that they and their families are protected. In addition, my experience and management skills have helped to build many successful careers based on the same integrity and client focus vital to the quality service that every client deserves. I am married to my wonderful wife Barbie, and I have four grown Sons, and TEN wonderful grandchildren.",
                 "type" => 'sidebarData',
+            ]
+        ]);
+
+        /* ============ START =======================
+                SERVICE DETAILS PAGES
+         ============================================= */
+
+        /**
+         * All Services Banner Data
+         *
+         */
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'service_details',
+                "category" => 'services_banner',
+                "html_id" => 'service-details-hero',
+                "heading" => "Annuity Services",
+                "subheading" => "Our extensive selection of fixed and fixed index annuities can help you obtain reliable and predictable income throughout your retirement",
+                "type" => 'bannerData',
+                "image_id" => 6,
+            ]
+        ]);
+
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'service_details',
+                "category" => 'services_banner',
+                "html_id" => 'service-details-hero',
+                "heading" => "Extended Care Services",
+                "subheading" => "We have access to a broad range of solutions to pay costs that Medicare won’t cover, and we can provide protection against those future expenses any of us could face. Plus, we now offer new hybrid plans that cover both life insurance and long-term care.",
+                "type" => 'bannerData',
+                "image_id" => 6,
+            ]
+        ]);
+
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'service_details',
+                "category" => 'services_banner',
+                "html_id" => 'service-details-hero',
+                "heading" => "Life Insurance Services",
+                "subheading" => "We help seniors shop smart. And as we believe life insurance is important at any age, we can help our clients protect against the high costs of funeral and burial expenses … and perhaps even leave a caring legacy for those left behind.",
+                "type" => 'bannerData',
+                "image_id" => 6,
+            ]
+        ]);
+
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'service_details',
+                "category" => 'services_banner',
+                "html_id" => 'service-details-hero',
+                "heading" => "Medicare Services",
+                "subheading" => "The plans are standardized but the costs are not and do vary from company to company. We have many carrier partnerships to help ensure our affiliated agents can determine and then present the best solution for a client’s needs … and budget.",
+                "type" => 'bannerData',
+                "image_id" => 6,
+            ]
+        ]);
+
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'service_details',
+                "category" => 'services_banner',
+                "html_id" => 'service-details-hero',
+                "heading" => "Retirement Planning Services",
+                "subheading" => "It is never too late to begin planning for a successful retirement (or early, for that matter). We can help you get the most from your assets now and in the years ahead.",
+                "type" => 'bannerData',
+                "image_id" => 6,
+            ]
+        ]);
+
+        DB::table('webpage_data')->insert([
+            [
+                "pagename" => 'service_details',
+                "category" => 'services_banner',
+                "html_id" => 'service-details-hero',
+                "heading" => "Specialized Healthcare Services",
+                "subheading" => "As Medicare’s coverage of those needs is limited, we offer a range of solutions that address dental and vision care as well as critical issues such as hospitalization, disability, cancer, stroke and heart attack. We can help you get ahead of the uncomfortable prospect of high medical bills.",
+                "type" => 'bannerData',
+                "image_id" => 6,
             ]
         ]);
 

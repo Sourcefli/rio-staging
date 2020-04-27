@@ -76,8 +76,8 @@
         <meta name="theme-color" content="#ffffff" />
 
         {{-- STYLES --}}
-        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/frontend-one.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
         {{-- EXTRA CSS Injection --}}
         @yield('extraCss')
@@ -124,6 +124,7 @@
         <script src="js/gmaps.js"></script>
         <script src="js/script.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/admin.js"></script>
 
         {{-- Extra JS Injection --}}
         @yield('extraJs')

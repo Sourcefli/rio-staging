@@ -76,8 +76,8 @@
         <meta name="theme-color" content="#ffffff" />
 
         {{-- STYLES --}}
-        <link href="{{ asset('css/frontend-one.css') }}" rel="stylesheet" />
-        <link href="public/css/custom.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/frontend-one.css" />
+        <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
         {{-- EXTRA CSS Injection --}}
         @yield('extraCss')

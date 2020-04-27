@@ -74,7 +74,8 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/frontend-one.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
     {{-- EXTRA CSS Injection --}}
     @yield('extraCss')
@@ -121,6 +122,7 @@
 <script src="js/gmaps.js"></script>
 <script src="js/script.js"></script>
 <script src="js/app.js"></script>
+<script src="js/admin.js"></script>
 
 {{-- Extra JS Injection --}}
 @yield('extraJs')

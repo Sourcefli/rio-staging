@@ -14,8 +14,8 @@ class AddFkWebpageDataIdToImagesTable extends Migration
     public function up()
     {
         Schema::table('images', function (Blueprint $table) {
-            $table->unsignedBigInteger('webpage_data_id')->nullable();
-            $table->foreign('webpage_data_id')->references('id')->on('webpage_data');
+//            $table->unsignedBigInteger('webpage_data_id')->nullable();
+//            $table->foreign('webpage_data_id')->references('id')->on('webpage_data');
         });
     }
 

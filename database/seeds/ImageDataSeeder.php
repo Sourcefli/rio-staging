@@ -427,43 +427,43 @@ class ImageDataSeeder extends Seeder
                 'default_src' => 'img/heros/services-heros/child-piggybacking-mom-1920x520.jpg',
                 'alt_text' => 'Annuity Services With American Senior Benefits Southwest',
                 'category' => 'services_hero_images',
-                'webpage_data_id' => 25
+//                'webpage_data_id' => 25
             ],
             [
                 'title' => 'Extended Care Services',
                 'default_src' => 'img/heros/services-heros/young-family-in-forest-1920x520.jpg',
                 'alt_text' => 'Extended Care Services With American Senior Benefits Southwest',
                 'category' => 'services_hero_images',
-                'webpage_data_id' => 26
+//                'webpage_data_id' => 26
             ],
             [
                 'title' => 'Life Insurance and Final Expense Services',
                 'default_src' => 'img/heros/services-heros/kids-graduation-1920x520.jpg',
                 'alt_text' => 'Life Insurance and Final Expense Services With American Senior Benefits Southwest',
                 'category' => 'services_hero_images',
-                'webpage_data_id' => 27
+//                'webpage_data_id' => 27
             ],
             [
                 'title' => 'Medicare Services',
                 'default_src' => 'img/heros/services-heros/newborn-laying-on-mom-1920x520.jpg',
                 'alt_text' => 'Medicare Services With American Senior Benefits Southwest',
                 'category' => 'services_hero_images',
-                'webpage_data_id' => 28
+//                'webpage_data_id' => 28
             ],
             [
                 'title' => 'Retirement Planning Services',
                 'default_src' => 'img/heros/services-heros/kid-piggybacking-dad-dirt-road.webp',
                 'alt_text' => 'Retirement Planning Services With American Senior Benefits Southwest',
                 'category' => 'services_hero_images',
-                'webpage_data_id' => 29
+//                'webpage_data_id' => 29
             ],
             [
                 'title' => 'Specialized Healthcare Services',
                 'default_src' => 'img/heros/services-heros/two-kids-laying-in-the-grass-1920x520.jpg',
                 'alt_text' => 'RSpecialized Healthcare Services With American Senior Benefits Southwest',
                 'category' => 'services_hero_images',
-                'webpage_data_id' => 30
-            ],
+//                'webpage_data_id' => 30
+            ]
         ]);
 
         Schema::enableForeignKeyConstraints();

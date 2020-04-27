@@ -9,6 +9,7 @@
                 <h6 class="color-primary"></h6>
             </div>
             <!-- Feature Row  -->
+{{--            {{dd($rowOneCards)}}--}}
             <div class="row row-feature row-column feature-s5">
                 @for($i = 0; $i < count($rowOneCards); $i++)
                     @if ($i % 2 === 0)

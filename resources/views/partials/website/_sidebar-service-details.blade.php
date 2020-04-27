@@ -5,10 +5,10 @@
             <div class="wgs-content">
                 <ul class="list list-grouped">
                     <li class="list-heading">
-                        <span>Service Navigation</span>
+                        <span>Quick Links To Other Services</span>
                         <ul>
                             @foreach($serviceDetailsSidebarData as $link)
-                                <li @if($link->href === $path){!!'class="current"'!!}@else{{''}}@endif><a href="{{ $link->href }}">{{ $link->title }}</a></li>
+                                <li @if($link->href === $pageContent['path']->href){!!'class="current"'!!}@else{{''}}@endif><a href="{{ $link->href }}">{{ $link->title }}</a></li>
                             @endforeach
                         </ul>
                     </li>
@@ -17,39 +17,17 @@
         </div>
 
         <div class="wgs-box wgs-quoteform">
-            <h3 class="wgs-heading">Free Quote Request</h3>
+            <h3 class="wgs-heading">Reach Out To Us</h3>
             <div class="wgs-content">
-                <p>If you have any questions or would like to book a session please contact us.</p>
-                <form  id="quote-contact-request" class="form-quote" action="form/contact.php" method="post">
-                    <div class="form-results"></div>
-                    <div class="form-group">
-                        <div class="form-field">
-                            <input name="contact-name" type="text" placeholder="Name *" class="form-control required">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-field">
-                            <input name="contact-email" type="email" placeholder="Email *" class="form-control required email">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-field form-m-bttm">
-                            <input name="contact-phone" type="text" placeholder="Phone" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-field">
-                            <input name="contact-service" type="text" placeholder="Interest of Service" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-field">
-                            <textarea name="contact-message" placeholder="Messages *" class="txtarea form-control required"></textarea>
-                        </div>
-                    </div>
-                    <input type="text" class="hidden" name="form-anti-honeypot" value="">
-                    <button type="submit" class="btn btn-alt sb-h">Submit</button>
-                </form>
+                <p>
+                    If you have any questions, please don't hesitate to submit them to us below. <br><br>
+                    <em>To request quotes, you can click <a href="{{ route('getAQuotePage') }}"><strong>here</strong></a>.</em><br><br>
+                    <em>To schedule your own appointment, in person or over the phone, with one of our agents <a
+                            href="{{ getAcuityLink() }}" target="_blank"><strong>here</strong></a>.</em>
+                </p>
+
+                {{-- FIX FORM HANDLER --}}
+                @include('partials.forms.service-details-sidebar-form')
             </div>
         </div>
 

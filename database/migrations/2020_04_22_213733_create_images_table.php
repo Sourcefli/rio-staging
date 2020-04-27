@@ -20,16 +20,16 @@ class CreateImagesTable extends Migration
             $table->string('default_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
             $table->string('default_srcsetsize')->default('(min-width: 769px) 456px');
 
-            $table->string('small_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('small_src')->nullable(true);
             $table->string('small_srcsetsize')->default('(max-width: 560px) 212px');
 
-            $table->string('medium_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('medium_src')->nullable(true);
             $table->string('medium_srcsetsize')->default('(max-width: 768px) 326px');
 
-            $table->string('large_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('large_src')->nullable(true);
             $table->string('large_srcsetsize')->default('(min-width: 769px) 456px');
 
-            $table->string('xlarge_src')->default('img/logos/american-senior-benefits-southwest-with-white-bg-cursive-300x107.png');
+            $table->string('xlarge_src')->nullable(true);
             $table->string('xlarge_srcsetsize')->default('(min-width: 769px) 456px');
 
             $table->text('alt_text')->nullable();

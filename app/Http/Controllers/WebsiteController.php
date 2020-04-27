@@ -25,7 +25,7 @@ class WebsiteController extends Controller
             "Final expense coverage for any health conditions",
             "Income planning and strategies",
             "Short or long term care protection",
-            "Dental &amp; Vision comparisons",
+            "Dental & Vision comparisons",
         ];
         $slidesData = WebpageData::where('category', 'homeSlider')->get();
 
@@ -88,12 +88,12 @@ class WebsiteController extends Controller
 //        $servicesRowTwo = Service::where('row_num', 2)->get();
 
         //New Version - Cards with image background and text overwrite
-        $rowOneCards = SiteCard::where('pages', 'services')
+        $rowOneCards = SiteCard::where('pages', 'service_details')
             ->where('section_number', 'row_one')
             ->get()
             ->toArray();
 
-        $rowTwoCards = SiteCard::where('pages', 'services')
+        $rowTwoCards = SiteCard::where('pages', 'service_details')
             ->where('section_number', 'row_two')
             ->get()
             ->toArray();

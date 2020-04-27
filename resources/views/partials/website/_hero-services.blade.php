@@ -12,18 +12,19 @@
 {{--'carriers' => Source: CarrierDataComposer --}}
 {{-- ============================================--}}
 
-<div class="banner banner-static banner-small bg-light">
+<div class="banner banner-static has-bg banner-cpn-bottom no-filter">
     <div class="banner-cpn">
         <div class="container">
             <div class="content row">
 
-                <div class="banner-text dark pos-center center">
-                    <h1 class="page-title">{!! $servicesData->heading !!}</h1>
-                    <p>{!! $servicesData->subheading !!}</p>
-                    <p><a href="{{ route('getAQuotePage') }}" class="btn-link link-arrow-sm">Request more information at anytime</a></p>
+                <div class="banner-text wide-lg">
+                    <h1 class="page-title">{!! $pageContent['bannerData']->heading !!}</h1>
+                    <p style="margin-top: 2px;"><a href="{{ route('getAQuotePage') }}" class="btn-link link-arrow-sm" style="color: #4ebcff;">Request more information at anytime</a></p>
                 </div>
-
             </div>
         </div>
+    </div>
+    <div class="banner-bg imagebg">
+        <img src="{{ $pageContent['bannerData']->image->default_src }}" alt="{{ $pageContent['bannerData']->image->alt_text }}"/>
     </div>
 </div>

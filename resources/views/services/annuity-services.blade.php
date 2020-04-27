@@ -1,74 +1,35 @@
 @extends('layouts/website/sidebar')
 
+{{--!!! NOT BEING USED !!! --}}
+{{--All Service Details Handled By service-details.blade.php with different data being passed in through controller routes--}}
 
-
-@php
-    $contactPhone = config('sourcefli.companyData.hqData.tollFree');
-@endphp
-
-@section('title', 'Burial Preperation')
-
-@section('hero')
-    @include('partials/website/_hero-slim')
+@section('title')
+    Annuity Services
 @endsection
 
+@section('hero')
+    @include('partials/website/_hero-services')
+@endsection
+
+{{-- VARs AVAILABLE ON THE MAIN $pageContent Variable --}}
+{{-- Access each VARs as an array, then a class prop
+{{-- e.g. $pageContent['bannerData']->heading --}}
+{{--'bannerData',--}}
+{{--'commonQuestionsData',--}}
+{{--'serviceOptionsData',--}}
+{{--'serviceScenariosData',--}}
+{{--'path'--}}
 @section('content')
 
     <div class="col-md-8">
-
-        <h2>Burial Preperation Page</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet debitis dignissimos earum esse est eum expedita fugit mollitia nihil obcaecati, odit omnis optio praesentium quaerat repudiandae sit suscipit voluptas voluptatum.
-        </p>
-
-        <div class="gaps size-sep"></div>
-        <div class="box-s2">
-            <p>If you have any questions or concerns, please <strong><a href="/contact">contact us</a></strong> or call us at <strong>{{ $contactPhone }}</strong>.</p>
-        </div>
-        <div class="gaps size-sep"></div>
-
-        <h3>Final Expense Insurance Options</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab delectus dignissimos, eius excepturi explicabo fugiat ipsum nam, placeat possimus praesentium provident quos reiciendis reprehenderit, sed soluta tenetur vel voluptate voluptatum!
-        </p>
-        <hr class="hr-sm">
-        <div class="icon-box size-md icon-aside icon-inline">
-            <em class="fa fa-heart"></em>
-        </div>
-        <p class="small">
-            <strong>Example:</strong>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet deserunt in ipsa labore minus mollitia nulla obcaecati omnis quibusdam vitae?
-        </p>
-
-        <hr>
-
-        <h3>Indexed Life Products</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad autem culpa delectus deserunt, facilis libero numquam repellat saepe tempora tempore, veritatis voluptatibus! Amet aperiam excepturi molestiae quae, sed veniam.
-        </p>
-        <hr class="hr-sm">
-        <div class="icon-box size-md icon-aside icon-inline">
-            <em class="fa fa-bar-chart"></em>
-        </div>
-        <p class="small">
-            <strong>Example:</strong>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto deserunt fugiat inventore, nemo quas quisquam repellat repudiandae tempora vero!
-        </p>
-
-        <div class="gaps"></div>
-
-        <hr>
-
-        @include('components/_other-services')
-
+        @include('partials.website.service-details-body')
+        @include('components._cta-double-btn')
     </div>
-
-
 
 @endsection
 
 @section('sidebar')
-    @include('partials/website/_sidebar-services')
+    @include('partials/website/_sidebar-service-details')
 @endsection
 
 @section('belowMain')

@@ -65,18 +65,13 @@ class FooterComposer
     {
         //Logo Src Data
         $logo = Image::find(40);
-        $logoSrcSetSize = $logo->srcSetString();
-        $lg = $logoSrcSetSize['lg'];
-        $logoSrcData = [
-            'src' => $logo->large_src,
-            'srcset' => $lg
-        ];
+
 
         //Menu Links Data
         $menuLinks = NavItem::where('category', 'menu')->get();
 
         //Services Links Data
-        $serviceLinks = SiteCard::where('pages', 'service')->get();
+        $serviceLinks = SiteCard::where('pages', 'service_details')->get(['title']);
 
         //HQ Contact Data
         $hqData = Office::find(1);
@@ -84,12 +79,12 @@ class FooterComposer
         //Locations Data
         $locations = Office::get();
 
-        $view->with([
-            'menuLinks' => $menuLinks,
-            'serviceLinks' => $serviceLinks,
-            'hqData' => $hqData,
-            'logoSrcData' => $logoSrcData,
-            'locations' => $locations
-        ]);
+        $view->with(compact([
+            'menuLinks',
+            'serviceLinks',
+            'hqData',
+            'logo',
+            'locations'
+        ]));
     }
 }

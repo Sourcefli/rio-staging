@@ -52,16 +52,23 @@
                     <div class="wgs wgs-footer">
                         <div class="wgs-content">
                             <div class="footer-logo">
-                                <img src="{{ $logoSrcData['src'] }}"
-                                    srcset="{{ $logoSrcData['srcset'] }}"
-                                    alt="{{ $hqData->first_name }} {{ $hqData->last_name }}">
+                                <img src="{{ $logo->default_src }}"
+                                    srcset="{{ $logo->small_src }} {{ $logo->small_srcsetsize }},
+                                            {{ $logo->medium_src }} {{ $logo->medium_srcsetsize }},
+                                            {{ $logo->large_src }} {{ $logo->large_srcsetsize }},
+                                            {{ $logo->xlarge_src }} {{ $logo->xlarge_srcsetsize }}"
+                                     sizes="{{ $logo->small_srcsetsize }},
+                                            {{ $logo->medium_srcsetsize }},
+                                            {{ $logo->large_srcsetsize }},
+                                            {{ $logo->xlarge_srcsetsize }}"
+                                    alt="{{ $logo->alt_text }}">
                             </div>
                             <ul class="contact-info">
                                 <li><span>Toll Free</span>: {{ $hqData->toll_free_phone }}</li>
                                 <li><span>Phone</span>: {{ $hqData->office_phone }}</li>
                                 <li><span>Fax</span>: {{ $hqData->office_fax }}</li>
                                 <li>{{ $hqData->street_one }} {{ $hqData->street_two }}<br>
-                                    {{ $hqData->zip }}</li>
+                                {{$hqData->city}}, {{$hqData->state}} {{ $hqData->zip }}</li>
                             </ul>
                             <ul class="social social-v2">
                                 <li><a href="{{ $hqData->facebook_url }}"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>

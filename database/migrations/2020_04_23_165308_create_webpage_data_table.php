@@ -25,6 +25,7 @@ class CreateWebpageDataTable extends Migration
             $table->string('href_text')->nullable(true);
             $table->string('type');
             $table->text('body')->nullable(true);
+            // FK: image_id => added in a later migration
             $table->timestamps();
         });
 

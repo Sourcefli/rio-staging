@@ -423,16 +423,46 @@ class ImageDataSeeder extends Seeder
         DB::table('images')->insert([
 
             [
-                'title' => 'American Senior Benefits Southwest Services',
-                'default_src' => 'img/heros/lg-services-hero.jpg',
-                //560x228
-                'small_src' => 'img/heros/sm-services-hero.jpg',
-                //768x312
-                'medium_src' => 'img/heros/md-services-hero.jpg',
-                //1200x630
-                'large_src' => 'img/heros/lg-services-hero.jpg',
-                'alt_text' => 'Extensive Service Options With American Senior Benefits',
+                'title' => 'Annuity Services',
+                'default_src' => 'img/heros/services-heros/child-piggybacking-mom-1920x520.jpg',
+                'alt_text' => 'Annuity Services With American Senior Benefits Southwest',
                 'category' => 'services_hero_images',
+                'webpage_data_id' => 25
+            ],
+            [
+                'title' => 'Extended Care Services',
+                'default_src' => 'img/heros/services-heros/young-family-in-forest-1920x520.jpg',
+                'alt_text' => 'Extended Care Services With American Senior Benefits Southwest',
+                'category' => 'services_hero_images',
+                'webpage_data_id' => 26
+            ],
+            [
+                'title' => 'Life Insurance and Final Expense Services',
+                'default_src' => 'img/heros/services-heros/kids-graduation-1920x520.jpg',
+                'alt_text' => 'Life Insurance and Final Expense Services With American Senior Benefits Southwest',
+                'category' => 'services_hero_images',
+                'webpage_data_id' => 27
+            ],
+            [
+                'title' => 'Medicare Services',
+                'default_src' => 'img/heros/services-heros/newborn-laying-on-mom-1920x520.jpg',
+                'alt_text' => 'Medicare Services With American Senior Benefits Southwest',
+                'category' => 'services_hero_images',
+                'webpage_data_id' => 28
+            ],
+            [
+                'title' => 'Retirement Planning Services',
+                'default_src' => 'img/heros/services-heros/kid-piggybacking-dad-dirt-road.webp',
+                'alt_text' => 'Retirement Planning Services With American Senior Benefits Southwest',
+                'category' => 'services_hero_images',
+                'webpage_data_id' => 29
+            ],
+            [
+                'title' => 'Specialized Healthcare Services',
+                'default_src' => 'img/heros/services-heros/two-kids-laying-in-the-grass-1920x520.jpg',
+                'alt_text' => 'RSpecialized Healthcare Services With American Senior Benefits Southwest',
+                'category' => 'services_hero_images',
+                'webpage_data_id' => 30
             ],
         ]);
 

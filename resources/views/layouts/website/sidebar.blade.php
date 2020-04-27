@@ -5,10 +5,10 @@
         @if ( config('app.env') === 'production' )
             @include('partials/website/_async-tracking-master')
         @endif
-        
+
         {{-- MASTER Open Graph File for all pages  --}}
         {{-- @include('../../partials/website/schema.org/_master-schema') --}}
-        
+
         @if (config('app.env') === 'production')
             <script type="application/ld+json">
                 {
@@ -60,7 +60,7 @@
 
         {{-- Social Meta Injection --}}
         @yield('socialMeta')
-        
+
         {{-- TITLE Injection  --}}
         <title>{{ config('sourcefli.companyData.hqData.abbr') }} | @yield('title', 'American Senior Benefits')</title>
 
@@ -74,7 +74,10 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#2b5797" />
         <meta name="theme-color" content="#ffffff" />
-        <link rel="stylesheet" type="text/css" href="css/app.css" />
+
+        {{-- STYLES --}}
+        <link href="{{ asset('css/frontend-one.css') }}" rel="stylesheet" />
+        <link href="public/css/custom.css" rel="stylesheet">
 
         {{-- EXTRA CSS Injection --}}
         @yield('extraCss')
@@ -95,7 +98,7 @@
 		<div class="container">
 			<div class="content row">
 				<div class="row">
-					
+
                         {{-- Content Injection --}}
                         @yield('content')
 
@@ -116,20 +119,20 @@
     {{-- Footer and Copyright Injection --}}
     @include('partials/website/_footer')
     @include('partials/website/_copyright')
-	
+
     {{-- Master JS --}}
     <script src="js/jquery.bundle.js"></script>
     <script src="js/gmaps.js"></script>
     <script src="js/script.js"></script>
     <script src="js/app.js"></script>
-    
+
     {{-- Extra JS Injection --}}
     @yield('extraJs')
-    
+
     {{-- SYNC TRACKING CODES if in PRODUCTION  --}}
     @if ( config('app.env') === 'production' )
         @include('partials/website/_sync-tracking-master')
     @endif
-	
+
 </body>
 </html>

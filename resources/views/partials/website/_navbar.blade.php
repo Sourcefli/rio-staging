@@ -18,7 +18,9 @@
                         <span><a href="tel:{{ $hqData->office_phone }}">{{ $hqData->office_phone }}</a></span>
                     </li>
                     <li class="quote-btn">
-                        <a href="{{ route('getAQuotePage') }}" class="btn">Get A Quote</a>
+                        <a class="btn" href="{{ route('getAQuotePage') }}">Get A Quote</a>
+                        <span style="margin-left: 5px"></span>
+                        <a class="btn" href="{{ route('home') }}">Agent Login</a>
                     </li>
                 </ul>
             </div>
@@ -55,20 +57,33 @@
             </button>
             <!-- Q-Button for Mobile -->
             <div class="quote-btn">
-                <a class="btn" href="{{ route('getAQuotePage') }}"><span>Get A Quote</span></a>
+                <a class="btn" href="{{ route('getAQuotePage') }}"><span>Get Quote</span></a>
             </div>
         </div>
         <!-- #MainNav -->
         <nav class="navbar-collapse collapse" id="mainnav">
             <ul class="nav navbar-nav">
                 @foreach ($links as $navItem)
-                    <li>
-                        @if ($navItem->title === 'Careers')
-                            <a href="{{ $navItem->uri }}" target="_blank">{{ $navItem->title }}</a>
-                        @else
-                            <a href="{{ env('APP_URL') }}{{ $navItem->uri }}">{{ $navItem->title }}</a>
-                        @endif
-                    </li>
+                    @if ($navItem->title === 'Retirement Solutions')
+                        <li class="dropdown"><a href="{{ route('servicesPage') }}" class="dropdown-toggle">{{ $navItem->title }}<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ route('annuity-services') }}"><em>Annuities</em></a></li>
+                                <li><a href="{{ route('extended-care-services') }}"><em>Extended Care</em></a></li>
+                                <li><a href="{{ route('life-insurance-services') }}"><em>Life Insurance And Final Expense</em></a></li>
+                                <li><a href="{{ route('medicare-services') }}"><em></em>Medicare</a></a></li>
+                                <li><a href="{{ route('retirement-planning-services') }}"><em>Retirement Planning</em></a></li>
+                                <li><a href="{{ route('specialized-healthcare-services') }}"><em>Specialized Healthcare</em></a></li>
+                            </ul>
+                        </li>
+                    @else
+                        <li>
+                            @if ($navItem->title === 'Careers')
+                                <a href="{{ $navItem->uri }}" target="_blank">{{ $navItem->title }}</a>
+                            @else
+                                <a href="{{ env('APP_URL') }}{{ $navItem->uri }}">{{ $navItem->title }}</a>
+                            @endif
+                        </li>
+                    @endif
                 @endforeach
             </ul>
         </nav>

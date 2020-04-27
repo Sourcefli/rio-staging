@@ -16,7 +16,9 @@ if (! function_exists('carbon')) {
     }
 }
 
-
+function getAcuityLink() {
+    return 'https://asbsouthwest.as.me/?appointmentType=category:American%20Senior%20Benefits%20Southwest';
+}
 //function getHeroImg($path) {
 //    switch($path) {
 //        case "about":

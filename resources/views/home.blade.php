@@ -10,10 +10,13 @@
 @endsection
 
 @section('belowHero')
+    {{--NON-ACTIVE--}}
 {{--    @include('components/_four-service-cards')--}}
 {{--@include('partials/website/_three-column-two_cards-with-text-overview')--}}
-@include('partials/website/_three-column-three-card-overview')
 {{--@include('partials/website/_two-column-overviews')--}}
+
+{{--ACTIVE--}}
+@include('partials/website/_three-column-three-card-overview')
 @endsection
 
 @section('content')

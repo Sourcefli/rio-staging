@@ -1,98 +1,86 @@
 @extends('layouts/website/sidebar')
 
-{{-- # SIDEBAR LAYOUT BLOCK SECTIONS }
-[ ] { asyncTracking }
-[x] { Title }
-[ ] { extraCss }
-[x] { hero }
-[x] { content }
-[x] { sidebar }
-[x] { belowMain }
-[x] { preFooter }
-[ ] { extraJs #--}}
+{{--!!! NOT BEING USED !!! --}}
+{{--All Service Details Handled By service-details.blade.php with different data being passed in through controller routes--}}
+
 
 @section('title')
-    Protected Investments
+    Specialized Healthcare Services
 @endsection
 
 @section('hero')
-    @include('partials/website/_hero-slim')
+    @include('partials/website/_hero-services')
 @endsection
 
 @section('content')
-   
     <div class="col-md-8">
-
-        <h2>Protected Investments Page</h2>
-        <p>Are you getting quality auto insurance coverage and the value dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-        
-        <div class="gaps"></div>
-        <div class="row row-column-md mgauto">
-            <div class="col-md-6">
-                <div class="box-flat">
-                    <h5 class="color-primary">Standard Coverage</h5>
-                    <p>You can trust Insuance Pro &amp; they able nemo enim ipsam volup tatem quia voluptas sit aspernatur aut odit aut fugit sed.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box-flat">
-                    <h5 class="color-primary">Temporary Vihicle Replacement</h5>
-                    <p>Get access to a rental car eos nissimos ducimus qui bland itiis praes entium volup tatum deleniti atque quos et molest.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row row-column-md">
-            <div class="col-md-6">
-                <div class="box-flat">
-                    <h5 class="color-primary">Roadside Assistance</h5>
-                    <p>No one wants to be left stranded im ipsam voltatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conntur eot.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box-flat">
-                    <h5 class="color-primary">Accident Forgiveness</h5>
-                    <p>Don’t let one mistake affect vero eos et acco usamus et iusto odio dignis simos duimus qui bland itiis praes entium.</p>
-                </div>
-            </div>
-        </div>
-        <div class="gaps size-sep"></div>
-        <div class="box-s2">
-            <p>If you have any questions regarding our services, please <strong>contact us</strong> or call at <strong>800 1234 6789</strong>.</p>
-        </div>
-        <div class="gaps size-sep"></div>
-        
-        <h3>Comprehensive and collision</h3>
-        <p>Not all insurance companies offer that vero eos et accusamus et iusto odio dignissimos ducimus qui blan ditiis praese. Voluptatum deleniti atque corrupti quos dolores et molestias sit amet, consectetur adipiscing elit ullamco laboris nisi ut aliquip.</p>
-        <hr class="hr-sm">
         <div class="icon-box size-md icon-aside icon-inline">
-            <em class="fa fa-car"></em>
+            <i class="fa fa-heart-o"></i>
         </div>
-        <p class="small"><strong>Example:</strong> You motorcycle $1,000 for new, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-        
-        <h3>Guarantees repairs</h3>
-        <p>Not all insurance companies offer that vero eos et accusamus et iusto odio dignissimos ducimus qui blan ditiis praese. Voluptatum deleniti atque corrupti quos dolores et molestias sit amet, consectetur adipiscing elit ullamco laboris nisi ut aliquip.</p>
-        <hr class="hr-sm">
-        <div class="icon-box size-md icon-aside icon-inline">
-            <em class="fa fa-motorcycle"></em>
-        </div>
-        <p class="small"><strong>Example:</strong> You motorcycle $1,000 for new, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <h2>Steady Income You Can Count On</h2>
+        <h3>Most Common Questions</h3>
+        <table class="table table-s1 table-claim table-bordered table-vertical">
+            <tbody>
+            <tr>
+                <td>
+                    <p style="color: #0c97eb;"><strong>Specialized Healthcare: Question 1</strong><br>
+                </td>
+                <td>
+                    <p>Specialized Healthcare: answer 1</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color: #0c97eb;"><strong>Specialized Healthcare: Question 2</strong></p><br>
+                </td>
+                <td>
+                    <p>Specialized Healthcare: answer 2</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-        <div class="gaps size-sep"></div>
-        <div class="wide-md center">
-            <h3>Contact Us With Questions and to Set-Up an Appointment</h3>
-            <a href="#" class="btn">Free Online Quote</a> &nbsp; <a href="#" class="btn">Call 800-123-6789</a>
-        </div>
-        
+        <h3>Specialized Healthcare Options with ASBsw</h3>
+        <table class="table table-s1 table-claim table-bordered table-vertical">
+            <tbody>
+            <tr>
+                <td>
+                    <p style="color: #0c97eb;"><strong>Specialized Healthcare: Option 1</strong></p><br>
+                </td>
+                <td>
+                    <p>Specialized Healthcare: Option 1 description</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="color: #0c97eb;"><strong>Specialized Healthcare: Option 2</strong></p><br>
+                </td>
+                <td>
+                    <p>Specialized Healthcare: Option 2 description</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h4 class="color-primary">Common scenarios where having specialized healthcare is most beneficial</h4>
+        <p>If you find yourself in any of the following situations, please reach out to us. We believe we can help...</p>
+        <ul class="list-style checkmark">
+            <li>Scenario 1</li>
+            <li>Scenario 2</li>
+            <li>Scenario 3</li>
+        </ul>
+
+        @include('components._cta-double-btn')
     </div>
- 
+
 @endsection
 
 @section('sidebar')
-    @include('partials/website/_sidebar-services')
+    @include('partials/website/_sidebar-service-details')
 @endsection
 
 @section('belowMain')
-    
+
 @endsection
 
 @section('preFooter')
@@ -101,5 +89,5 @@
 
 
 @section('extraJs')
-    
+
 @endsection

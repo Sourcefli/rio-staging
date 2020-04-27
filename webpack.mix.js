@@ -1,4 +1,7 @@
-const mix = require("laravel-mix");
+const mix = require('laravel-mix');
+
+require('laravel-mix-tailwind');
+require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,9 +14,13 @@ const mix = require("laravel-mix");
  |
  */
 
-mix.sass("resources/sass/app.scss", "public/css/admin.css")
-    .babel("resources/js/app.js", "public/js/admin.js")
-    .browserSync("http://rio-laravel.test/")
-    .options({
-        processCssUrls: false
-    });
+mix.js('resources/js/app.js', 'public/js/backend-main.js')
+    .sass('resources/sass/app.scss', 'public/css/backend-main.css')
+    .tailwind('./tailwind.config.js');
+
+if (mix.inProduction()) {
+    mix
+        .version()
+        .purgeCss();
+}
+

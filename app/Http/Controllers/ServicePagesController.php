@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Image;
 use App\WebpageData;
+use Clockwork\Web\Web;
 use Illuminate\Http\Request;
 
 class ServicePagesController extends Controller
@@ -16,14 +18,11 @@ class ServicePagesController extends Controller
     */
     public function getAnnuityServicesPage()
     {
-        $servicesData = WebpageData
-                ::where('category', 'services_banner')
-                ->where('heading', 'Annuity Services')
-                ->first();
+        $pageData = new WebpageData();
 
-        return view('services.annuity-services', compact([
-            $servicesData
-        ]));
+        $pageContent = $pageData->serviceDetailsContent('annuity_services');
+
+        return view('services.service-details', ['pageContent' => $pageContent]);
     }
 
     /*
@@ -32,14 +31,10 @@ class ServicePagesController extends Controller
     */
     public function getExtendedCareServicesPage()
     {
-        $servicesData = WebpageData
-            ::where('category', 'services_banner')
-            ->where('heading', 'Extended Care Services')
-            ->first();
+        $pageData = new WebpageData();
+        $pageContent = $pageData->serviceDetailsContent('extended_care_services');
 
-        return view('services.extended-care-services', compact([
-            $servicesData
-        ]));
+        return view('services.service-details', ['pageContent' => $pageContent]);
     }
 
     /*
@@ -48,14 +43,10 @@ class ServicePagesController extends Controller
     */
     public function getLifeInsuranceServicesPage()
     {
-        $servicesData = WebpageData
-            ::where('category', 'services_banner')
-            ->where('heading', 'Life Insurance Services')
-            ->first();
+        $pageData = new WebpageData();
+        $pageContent = $pageData->serviceDetailsContent('life_insurance_services');
 
-        return view('services.life-insurance-services', compact([
-            $servicesData
-        ]));
+        return view('services.service-details', ['pageContent' => $pageContent]);
     }
 
     /*
@@ -64,17 +55,10 @@ class ServicePagesController extends Controller
     */
     public function getMedicareServicesPage()
     {
-        $servicesData = WebpageData
-            ::where('category', 'services_banner')
-            ->where('heading', 'Medicare Services')
-            ->first();
+        $pageData = new WebpageData();
+        $pageContent = $pageData->serviceDetailsContent('medicare_services');
 
-        $path = '/medicare-services';
-
-        return view('services.medicare-services', compact([
-            'servicesData',
-            'path'
-        ]));
+        return view('services.service-details', ['pageContent' => $pageContent]);
     }
 
     /*
@@ -83,14 +67,10 @@ class ServicePagesController extends Controller
     */
     public function getRetirementPlanningServicesPage()
     {
-        $servicesData = WebpageData
-            ::where('category', 'services_banner')
-            ->where('heading', 'Retirement Planning Services')
-            ->first();
+        $pageData = new WebpageData();
+        $pageContent = $pageData->serviceDetailsContent('retirement_planning_services');
 
-        return view('services.retirement-planning-services', compact([
-            $servicesData
-        ]));
+        return view('services.service-details', ['pageContent' => $pageContent]);
     }
 
     /*
@@ -99,13 +79,9 @@ class ServicePagesController extends Controller
     */
     public function getSpecializedHealthcareServicesPage()
     {
-        $servicesData = WebpageData
-            ::where('category', 'services_banner')
-            ->where('heading', 'Specialized Healthcare Services')
-            ->first();
+        $pageData = new WebpageData();
+        $pageContent = $pageData->serviceDetailsContent('specialized_healthcare_services');
 
-        return view('services.specialized-healthcare-services', compact([
-            $servicesData
-        ]));
+        return view('services.service-details', ['pageContent' => $pageContent]);
     }
 }

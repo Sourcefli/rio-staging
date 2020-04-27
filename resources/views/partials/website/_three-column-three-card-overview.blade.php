@@ -1,4 +1,4 @@
-<!-- Content -->
+{{--HOME PAGE - SECTION 1 => Three columns, 2 Image cols, 1 li col--}}
 <div class="section section-content section-pad">
     <div class="container">
         <div class="content row">

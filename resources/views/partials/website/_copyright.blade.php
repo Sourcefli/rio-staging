@@ -14,7 +14,7 @@
                     <a href="{{ route('sitemapPage') }}" target="_blank">Sitemap</a></p>
             </div>
             <div class="site-by col-sm-5 al-right">
-                <p>Made with <em class="fa fa-heart text-danger"></em> &amp; Laravel by <a href="{{ config('sourcefli.devinfo.url') }}" target="_blank">{{ config('sourcefli.devinfo.name') }}</a></p>
+                <p><a href="{{ config('sourcefli.devinfo.url') }}" target="_blank">Contact Website Developer</a></p>
             </div>
         </div>
     </div>

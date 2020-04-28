@@ -32,6 +32,9 @@ class CreateOfficesTable extends Migration
             $table->string('linkedin_username', '50')->nullable();
             $table->string('linkedin_icon', '50')->nullable();
             $table->string('twitter_url', '100')->nullable();
+            $table->string('instagram_username', '50')->nullable();
+            $table->string('instagram_icon', '50')->nullable();
+            $table->string('instagram_url', '100')->nullable();
             $table->string('twitter_username', '50')->nullable();
             $table->string('twitter_icon', '50')->nullable();
             $table->string('slack_url', '50')->nullable();
